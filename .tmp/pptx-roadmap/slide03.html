@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #FFFFFF; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header { background: #1A2B4C; height: 28pt; display: flex; align-items: center; padding: 0 20pt; }
+.header p { color: #FFFFFF; font-size: 8pt; letter-spacing: 1pt; }
+.title-bar { padding: 8pt 20pt 6pt 20pt; border-bottom: 1pt solid #E6E9EF; }
+.main { flex: 1; padding: 6pt 20pt; display: flex; flex-direction: column; gap: 4pt; }
+.card { background: #F6F8FB; border-left: 4pt solid #C03030; border-radius: 4pt; padding: 4pt 12pt; display: flex; align-items: flex-start; gap: 10pt; }
+.case-box { background: #FFF3F3; border: 1pt solid #C03030; border-radius: 4pt; padding: 5pt 12pt; }
+.footer { height: 20pt; display: flex; align-items: center; justify-content: flex-end; padding: 0 20pt; }
+</style>
+</head>
+<body>
+<div class="header">
+  <p>DX PORTAL TEAM  |  ROADMAP</p>
+</div>
+<div class="title-bar">
+  <p style="font-size:7pt; color:#C03030; font-weight:bold; margin:0 0 2pt 0;">現状認識</p>
+  <p style="font-size:14pt; font-weight:bold; color:#1A2B4C;">個人の頭の中にある知恵が、そのまま消えていく</p>
+</div>
+<div class="main">
+  <div class="case-box">
+    <p style="font-size:7pt; color:#C03030; font-weight:bold; margin:0 0 3pt 0;">典型的なケース</p>
+    <p style="font-size:8.5pt; color:#222222;">Aさんが「DBタイムアウトはプール設定で解決」と3時間かけて発見 → 記録せず → 3ヶ月後、Bさんが同じ問題で3時間ハマる</p>
+  </div>
+  <div class="card">
+    <div style="min-width:18pt;"><p style="font-size:11pt; font-weight:bold; color:#C03030;">1</p></div>
+    <div style="flex:1;">
+      <p style="font-size:9pt; font-weight:bold; color:#222222; margin:0 0 1pt 0;">同じ失敗を何度も繰り返す</p>
+      <p style="font-size:8.5pt; color:#8A94A6;">失敗の教訓が個人の頭の中だけ。共有されないまま、別の人がまた同じ時間を使う。</p>
+    </div>
+  </div>
+  <div class="card">
+    <div style="min-width:18pt;"><p style="font-size:11pt; font-weight:bold; color:#C03030;">2</p></div>
+    <div style="flex:1;">
+      <p style="font-size:9pt; font-weight:bold; color:#222222; margin:0 0 1pt 0;">「なぜこう決めたか」が誰も知らない</p>
+      <p style="font-size:8.5pt; color:#8A94A6;">異動・退職で文脈が消える。後から見ても「なぜこうなっているか」が追えない。</p>
+    </div>
+  </div>
+  <div class="card">
+    <div style="min-width:18pt;"><p style="font-size:11pt; font-weight:bold; color:#C03030;">3</p></div>
+    <div style="flex:1;">
+      <p style="font-size:9pt; font-weight:bold; color:#222222; margin:0 0 1pt 0;">良い指示の出し方・失敗パターンが共有されない</p>
+      <p style="font-size:8.5pt; color:#8A94A6;">AIへの良い指示の出し方を見つけても本人だけの財産。チーム全体のレベルが上がらない。</p>
+    </div>
+  </div>
+  <div class="card">
+    <div style="min-width:18pt;"><p style="font-size:11pt; font-weight:bold; color:#C03030;">4</p></div>
+    <div style="flex:1;">
+      <p style="font-size:9pt; font-weight:bold; color:#222222; margin:0 0 1pt 0;">新メンバーが「先輩に聞く」しかない</p>
+      <p style="font-size:8.5pt; color:#8A94A6;">背景・経緯が記録されていない。説明するたびにゼロから。先輩も新人も消耗する。</p>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <p style="font-size:8pt; color:#8A94A6;">3</p>
+</div>
+</body>
+</html>

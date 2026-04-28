@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #FFFFFF; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header { background: #1A2B4C; height: 28pt; display: flex; align-items: center; padding: 0 20pt; }
+.header p { color: #FFFFFF; font-size: 8pt; letter-spacing: 1pt; }
+.title-bar { padding: 6pt 20pt 5pt 20pt; border-bottom: 1pt solid #E6E9EF; }
+.main { flex: 1; padding: 6pt 16pt 5pt 16pt; display: flex; flex-direction: column; gap: 5pt; }
+.grid { flex: 1; display: flex; gap: 8pt; }
+.col { flex: 1; display: flex; flex-direction: column; gap: 8pt; }
+.scene-card { flex: 1; background: #F6F8FB; border-left: 4pt solid #4A90E2; border-radius: 4pt; padding: 7pt 10pt; }
+.contrast-box { background: #EBF3FC; border-radius: 4pt; padding: 6pt 12pt; display: flex; gap: 0pt; align-items: stretch; }
+.contrast-item { flex: 1; padding: 0 10pt; }
+.footer { height: 20pt; display: flex; align-items: center; justify-content: flex-end; padding: 0 20pt; }
+</style>
+</head>
+<body>
+<div class="header">
+  <p>DX PORTAL TEAM  |  ROADMAP</p>
+</div>
+<div class="title-bar">
+  <p style="font-size:7pt; color:#4A90E2; font-weight:bold; margin:0 0 2pt 0;">AI秘書という存在</p>
+  <p style="font-size:13pt; font-weight:bold; color:#1A2B4C;">「何が決まったか」だけでなく、「なぜそう決めたか」まで答える</p>
+</div>
+<div class="main">
+  <div class="grid">
+    <div class="col">
+      <div class="scene-card">
+        <p style="font-size:7pt; color:#4A90E2; font-weight:bold; margin:0 0 4pt 0;">新メンバーの初日</p>
+        <p style="font-size:8pt; color:#222222; margin:0 0 3pt 0;">「なぜこのフレームワークを選んだの？」</p>
+        <p style="font-size:7pt; color:#8A94A6;">→ 導入当時の比較検討・却下した選択肢・採用の決め手まで即答</p>
+      </div>
+      <div class="scene-card">
+        <p style="font-size:7pt; color:#4A90E2; font-weight:bold; margin:0 0 4pt 0;">障害・エラー対応</p>
+        <p style="font-size:8pt; color:#222222; margin:0 0 3pt 0;">「過去に似た問題、なぜその対処法を選んだ？」</p>
+        <p style="font-size:7pt; color:#8A94A6;">→ 試した方法・失敗した理由・最終的な判断根拠ごと引き出せる</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="scene-card">
+        <p style="font-size:7pt; color:#4A90E2; font-weight:bold; margin:0 0 4pt 0;">退職・異動の後</p>
+        <p style="font-size:8pt; color:#222222; margin:0 0 3pt 0;">「Aさんが進めていた件、なぜあの方針にしたの？」</p>
+        <p style="font-size:7pt; color:#8A94A6;">→ Aさんしか知らなかった文脈・背景・判断根拠が消えずに残る</p>
+      </div>
+      <div class="scene-card">
+        <p style="font-size:7pt; color:#4A90E2; font-weight:bold; margin:0 0 4pt 0;">方針変更・振り返り</p>
+        <p style="font-size:8pt; color:#222222; margin:0 0 3pt 0;">「なぜBプランに変えたの？当時の判断根拠は？」</p>
+        <p style="font-size:7pt; color:#8A94A6;">→ 会議の議論・否決した案・採用理由を文脈ごと保存</p>
+      </div>
+    </div>
+  </div>
+  <div class="contrast-box">
+    <div class="contrast-item" style="padding-left:0;">
+      <p style="font-size:7pt; color:#8A94A6; font-weight:bold; margin:0 0 3pt 0;">従来のWiki・ドキュメント</p>
+      <p style="font-size:7.5pt; color:#222222;">「Bプランを採用した」という事実だけ残る</p>
+    </div>
+    <div style="width:1pt; background:#C6D0DC;"></div>
+    <div class="contrast-item">
+      <p style="font-size:7pt; color:#4A90E2; font-weight:bold; margin:0 0 3pt 0;">AI秘書（チームの記憶）</p>
+      <p style="font-size:7.5pt; color:#222222;">「なぜBプランか」「Aプランを避けた理由」「誰がどう判断したか」まで残る</p>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <p style="font-size:8pt; color:#8A94A6;">5</p>
+</div>
+</body>
+</html>

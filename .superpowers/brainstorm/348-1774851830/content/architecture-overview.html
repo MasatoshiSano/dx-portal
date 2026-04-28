@@ -1,0 +1,100 @@
+<h2>全体アーキテクチャ - 3層の関係</h2>
+<p class="subtitle">各層の責務とデータフロー</p>
+
+<div class="mockup" style="margin-bottom:24px">
+  <div class="mockup-header">System Architecture</div>
+  <div class="mockup-body" style="font-family:monospace;font-size:13px;line-height:1.9;padding:20px">
+    <div style="text-align:center;margin-bottom:16px">
+      <span style="color:#f59e0b;font-size:16px;font-weight:bold">[ Developer ]</span>
+    </div>
+    <div style="text-align:center;margin-bottom:8px;color:#888">│ /company, /brain, /sprint, /implement ...</div>
+    <div style="text-align:center;margin-bottom:16px;color:#888">▼</div>
+
+    <!-- Secretary Layer -->
+    <div style="border:2px solid #8b5cf6;border-radius:8px;padding:12px;margin-bottom:12px">
+      <div style="color:#8b5cf6;font-weight:bold;margin-bottom:8px">🏢 Layer 1: ~/.company/ (組織管理層)</div>
+      <div style="display:flex;gap:16px;flex-wrap:wrap">
+        <span style="background:#2d2055;padding:4px 8px;border-radius:4px">秘書室 (窓口)</span>
+        <span style="background:#2d2055;padding:4px 8px;border-radius:4px">PJ管理</span>
+        <span style="background:#2d2055;padding:4px 8px;border-radius:4px">DXグループ</span>
+        <span style="background:#2d2055;padding:4px 8px;border-radius:4px">連携・依頼</span>
+        <span style="background:#2d2055;padding:4px 8px;border-radius:4px">技術ナレッジ</span>
+        <span style="background:#2d2055;padding:4px 8px;border-radius:4px">レビュー</span>
+      </div>
+      <div style="color:#a78bfa;font-size:12px;margin-top:8px">改修: Issue自動提案連携、ダッシュボード強化、自己改善ループ統合</div>
+    </div>
+
+    <div style="text-align:center;color:#888;margin:4px 0">▼ リンク参照(SSoT) ▲</div>
+
+    <!-- DX Portal Layer -->
+    <div style="border:2px solid #f59e0b;border-radius:8px;padding:12px;margin-bottom:12px">
+      <div style="color:#f59e0b;font-weight:bold;margin-bottom:8px">⚙️ Layer 2: dx-portal/ (開発自動化層)</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px">
+        <span style="background:#422006;padding:4px 8px;border-radius:4px">GitHub Actions</span>
+        <span style="background:#422006;padding:4px 8px;border-radius:4px">AIスクラムチーム</span>
+        <span style="background:#422006;padding:4px 8px;border-radius:4px">auto-fix</span>
+        <span style="background:#422006;padding:4px 8px;border-radius:4px">PdM AI</span>
+        <span style="background:#422006;padding:4px 8px;border-radius:4px">自己改善</span>
+      </div>
+      <div style="display:flex;gap:16px;flex-wrap:wrap">
+        <div style="flex:1;min-width:200px;border:1px solid #555;border-radius:4px;padding:8px">
+          <div style="font-size:11px;color:#888;margin-bottom:4px">Actions Workflows</div>
+          <div style="font-size:12px">
+            • pdm-propose.yml (毎朝Issue提案)<br>
+            • auto-fix.yml (ラベル→PR)<br>
+            • plan-first.yml (設計レビュー)<br>
+            • self-improve.yml (週次自己改善)
+          </div>
+        </div>
+        <div style="flex:1;min-width:200px;border:1px solid #555;border-radius:4px;padding:8px">
+          <div style="font-size:11px;color:#888;margin-bottom:4px">AI Agents (8 roles)</div>
+          <div style="font-size:12px">
+            • product-owner<br>
+            • planner / backend / frontend<br>
+            • reviewer / tester<br>
+            • scrum-master / reporter
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;color:#888;margin:4px 0">▼ fork per member ▼</div>
+
+    <!-- Brain Layer -->
+    <div style="border:2px solid #10b981;border-radius:8px;padding:12px">
+      <div style="color:#10b981;font-weight:bold;margin-bottom:8px">🧠 Layer 3: dx-brain/ (個人思考層)</div>
+      <div style="display:flex;gap:16px;flex-wrap:wrap">
+        <div style="flex:1;min-width:180px;border:1px solid #555;border-radius:4px;padding:8px">
+          <div style="font-size:12px">
+            00_Inbox/<br>
+            10_Journal/<br>
+            20_Projects/ → <span style="color:#f59e0b">dx-portal link</span><br>
+            30_Tech_Notes/<br>
+            50_Business_Context/<br>
+            90_System/
+          </div>
+        </div>
+        <div style="flex:1;min-width:180px;border:1px solid #555;border-radius:4px;padding:8px">
+          <div style="font-size:11px;color:#888;margin-bottom:4px">カスタムコマンド</div>
+          <div style="font-size:12px">
+            /brain-status (朝の確認)<br>
+            /kickoff (知識探索)<br>
+            /deep-research (並列調査)<br>
+            /idea (アイデア生成)<br>
+            /weekly-review (振り返り)
+          </div>
+        </div>
+      </div>
+      <div style="color:#6ee7b7;font-size:12px;margin-top:8px">各メンバーがfork → 個人の思考・知見を蓄積</div>
+    </div>
+
+    <!-- Data Flow -->
+    <div style="margin-top:20px;border-top:1px solid #444;padding-top:12px">
+      <div style="font-weight:bold;margin-bottom:8px">データフロー例</div>
+      <div style="font-size:12px;line-height:2">
+        <span style="color:#10b981">brain/Inbox</span> →思考記録→ <span style="color:#10b981">brain/Projects</span> →PJ化→ <span style="color:#8b5cf6">.company/projects</span> →Issue化→ <span style="color:#f59e0b">dx-portal/GitHub Issues</span><br>
+        <span style="color:#f59e0b">dx-portal/auto-fix</span> →PR→ <span style="color:#f59e0b">merge</span> →知見抽出→ <span style="color:#8b5cf6">.company/tech-knowledge</span> →個人学習→ <span style="color:#10b981">brain/Tech_Notes</span>
+      </div>
+    </div>
+  </div>
+</div>

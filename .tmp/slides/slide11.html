@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header-bar { background: #003366; padding: 14pt 40pt; }
+.content { margin: 12pt 40pt 0 40pt; display: flex; flex-direction: column; gap: 7pt; }
+.phase-row { display: flex; flex-direction: row; gap: 0; align-items: stretch; }
+.phase-label {
+  width: 88pt; padding: 8pt 8pt; display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+}
+.phase-content { flex: 1; padding: 8pt 14pt; background: #F5F7FA; border-left: 3pt solid #003366; }
+.phase-0 .phase-label { background: #CC0000; }
+.phase-0 .phase-content { border-left-color: #CC0000; background: #FFF5F5; }
+.phase-1 .phase-label { background: #003366; }
+.phase-2 .phase-label { background: #004D99; }
+.phase-3 .phase-label { background: #006633; }
+.phase-3 .phase-content { border-left-color: #006633; }
+.timeline { display: flex; flex-direction: row; margin-top: 8pt; gap: 0; }
+.tl-item { flex: 1; padding: 4pt 0; text-align: center; }
+.tl-0 { border-top: 3pt solid #CC0000; }
+.tl-1 { border-top: 3pt solid #003366; }
+.tl-2 { border-top: 3pt solid #004D99; }
+.tl-3 { border-top: 3pt solid #006633; }
+</style>
+</head>
+<body>
+<div class="header-bar">
+  <h1 style="color: #ffffff; font-size: 16pt; margin: 0; font-weight: bold;">ステップを踏んで、少しずつ進める</h1>
+</div>
+<div class="content">
+  <div class="phase-row phase-0">
+    <div class="phase-label">
+      <p style="color: #ffffff; font-size: 10pt; margin: 0; font-weight: bold;">Step 0</p>
+      <p style="color: #ffffff; font-size: 7pt; margin: 1pt 0 0 0;">土台をつくる</p>
+    </div>
+    <div class="phase-content">
+      <ul style="color: #333333; font-size: 9pt; margin: 0; padding-left: 14pt; line-height: 1.7;">
+        <li><b>GitHubを開発プロセスに使い始める</b>（Issue・PR・レビュー）</li>
+        <li>チーム共通のAI設定ファイル（CLAUDE.md）を用意する</li>
+        <li>各メンバーにAI秘書をセットアップする</li>
+      </ul>
+    </div>
+  </div>
+  <div class="phase-row phase-1">
+    <div class="phase-label">
+      <p style="color: #ffffff; font-size: 10pt; margin: 0; font-weight: bold;">Step 1</p>
+      <p style="color: #ffffff; font-size: 7pt; margin: 1pt 0 0 0;">開発を変える</p>
+    </div>
+    <div class="phase-content">
+      <ul style="color: #333333; font-size: 9pt; margin: 0; padding-left: 14pt; line-height: 1.7;">
+        <li>壁打ち→設計→実装の流れを秘書に組み込む</li>
+        <li>失敗事例・ノウハウの共有を始める</li>
+        <li>テックブログを開設する</li>
+      </ul>
+    </div>
+  </div>
+  <div class="phase-row phase-2">
+    <div class="phase-label">
+      <p style="color: #ffffff; font-size: 10pt; margin: 0; font-weight: bold;">Step 2</p>
+      <p style="color: #ffffff; font-size: 7pt; margin: 1pt 0 0 0;">知識をつなげる</p>
+    </div>
+    <div class="phase-content">
+      <ul style="color: #333333; font-size: 9pt; margin: 0; padding-left: 14pt; line-height: 1.7;">
+        <li>秘書どうしの知識共有を本格化（3層構造）</li>
+        <li>レビュー結果・壁打ちログの自動蓄積</li>
+        <li>タスク管理アプリとの連動</li>
+      </ul>
+    </div>
+  </div>
+  <div class="phase-row phase-3">
+    <div class="phase-label">
+      <p style="color: #ffffff; font-size: 10pt; margin: 0; font-weight: bold;">Step 3</p>
+      <p style="color: #ffffff; font-size: 7pt; margin: 1pt 0 0 0;">組織に広げる</p>
+    </div>
+    <div class="phase-content">
+      <ul style="color: #333333; font-size: 9pt; margin: 0; padding-left: 14pt; line-height: 1.7;">
+        <li>会議の議事録自動化・決定事項のタスク反映</li>
+        <li>課内ナレッジの蓄積と検索</li>
+        <li>新メンバーの秘書が自動キャッチアップ</li>
+      </ul>
+    </div>
+  </div>
+  <div class="timeline">
+    <div class="tl-item tl-0"><p style="color: #CC0000; font-size: 8pt; margin: 0; font-weight: bold;">1-2ヶ月目</p></div>
+    <div class="tl-item tl-1"><p style="color: #003366; font-size: 8pt; margin: 0; font-weight: bold;">3-4ヶ月目</p></div>
+    <div class="tl-item tl-2"><p style="color: #004D99; font-size: 8pt; margin: 0; font-weight: bold;">5-6ヶ月目</p></div>
+    <div class="tl-item tl-3"><p style="color: #006633; font-size: 8pt; margin: 0; font-weight: bold;">7-8ヶ月目</p></div>
+  </div>
+</div>
+</body>
+</html>

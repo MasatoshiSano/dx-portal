@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm \"C:/Users/dw35816/.claude/skills/post-to-gitea-issue/references/api_reference.md\")",
+      "Bash(PYTHONUTF8=1 PYTHONIOENCODING=utf-8 python \"C:/Users/dw35816/.claude/skills/skill-creator/scripts/package_skill.py\" \"C:/Users/dw35816/.claude/skills/post-to-gitea-issue\")",
+      "Bash(mkdir -p \"C:/Users/dw35816/.claude/bin\")",
+      "Bash(curl -L -o C:/Users/dw35816/.claude/bin/gitea-mcp.zip https://gitea.com/gitea/gitea-mcp/releases/download/v1.1.0/gitea-mcp_Windows_x86_64.zip)",
+      "Bash(rm \"C:/Users/dw35816/.claude/skills/create-gitea-issue/scripts/example.py\")",
+      "Bash(rm \"C:/Users/dw35816/.claude/skills/create-gitea-issue/references/api_reference.md\")",
+      "Bash(rm \"C:/Users/dw35816/.claude/skills/create-gitea-issue/assets/example_asset.txt\")",
+      "Bash(rmdir \"C:/Users/dw35816/.claude/skills/create-gitea-issue/scripts\")",
+      "Bash(rmdir \"C:/Users/dw35816/.claude/skills/create-gitea-issue/assets\")"
+    ]
+  }
+}

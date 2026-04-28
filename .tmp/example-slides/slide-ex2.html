@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F5F7FA; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header {
+  background: #003366; margin: 0; padding: 10pt 30pt;
+}
+.header-title { color: #FFFFFF; font-size: 16pt; font-weight: bold; margin: 0; }
+.header-sub { color: #99BBDD; font-size: 9pt; margin: 3pt 0 0 0; }
+.content { margin: 8pt 30pt 4pt 30pt; display: flex; gap: 12pt; flex: 1; }
+.col { flex: 1; display: flex; flex-direction: column; gap: 0; }
+.step-label { background: #003366; border-radius: 4pt 4pt 0 0; padding: 4pt 8pt; }
+.step-label p { color: #FFFFFF; font-size: 8pt; font-weight: bold; margin: 0; }
+.chat-box { background: #FFFFFF; border-radius: 0 0 6pt 6pt; padding: 8pt; border: 1pt solid #E0E4EA; flex: 1; }
+.msg-user { background: #E8F0FE; border-radius: 4pt; padding: 4pt 6pt; margin: 0 16pt 3pt 0; }
+.msg-user p { font-size: 7pt; color: #333333; margin: 0; }
+.msg-ai { background: #E8FEF0; border-radius: 4pt; padding: 4pt 6pt; margin: 0 0 3pt 16pt; }
+.msg-ai p { font-size: 7pt; color: #333333; margin: 0; }
+.label { margin: 0 0 1pt 0; }
+.label p { font-size: 6pt; color: #666666; font-weight: bold; margin: 0; }
+.output-box { background: #FFFFFF; border-radius: 4pt; padding: 6pt; border: 1pt solid #006633; margin-top: 3pt; }
+.output-box p { font-size: 6.5pt; color: #333333; margin: 0; }
+.output-title { font-size: 7pt; color: #006633; font-weight: bold; margin: 0 0 2pt 0; }
+.output-box ul { font-size: 6.5pt; color: #333333; margin: 2pt 0; padding-left: 12pt; }
+.output-box li { margin: 0; }
+.msg-ai ul { font-size: 7pt; color: #333333; margin: 1pt 0; padding-left: 12pt; }
+.msg-ai li { margin: 0; }
+.bottom { margin: 3pt 30pt 8pt 30pt; background: #E8FEF0; border-radius: 6pt; padding: 6pt 14pt; border-left: 3pt solid #006633; }
+.bottom p { font-size: 8pt; color: #006633; margin: 0; }
+</style>
+</head>
+<body>
+<div class="header">
+  <p class="header-title">秘書との開発、実際の会話はこうなる</p>
+  <p class="header-sub">「集計ツールを作りたい」から壁打ち → 設計 → 実装 → 共有までの流れ</p>
+</div>
+<div class="content">
+  <div class="col">
+    <div class="step-label"><p>STEP 1  壁打ち</p></div>
+    <div class="chat-box">
+      <div class="label"><p>あなた</p></div>
+      <div class="msg-user"><p>CSV集計ツール作りたい。月別で売上まとめたい</p></div>
+      <div class="label"><p>秘書</p></div>
+      <div class="msg-ai"><p>了解です。いくつか確認させてください。</p></div>
+      <div class="msg-ai"><p>1. CSVのフォーマットは決まっていますか？</p></div>
+      <div class="msg-ai"><p>2. 出力形式はExcel？ それともCSV？</p></div>
+      <div class="msg-ai"><p>3. エラー行はスキップ？ それとも中断？</p></div>
+      <div class="label"><p>あなた</p></div>
+      <div class="msg-user"><p>フォーマットは固定。Excel出力で。エラーはスキップしてログに出して</p></div>
+      <div class="msg-ai"><p>承知しました。要件をまとめてIssueを作成しますね</p></div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="step-label"><p>STEP 2  設計 + 実装</p></div>
+    <div class="chat-box">
+      <div class="label"><p>秘書（自動）</p></div>
+      <div class="msg-ai"><p>設計書を作成しました。確認お願いします</p></div>
+      <div class="output-box">
+        <p class="output-title">design.md（自動生成）</p>
+        <ul>
+          <li>入力: 固定フォーマットCSV</li>
+          <li>処理: 月別集計 + エラーハンドリング</li>
+          <li>出力: Excel (.xlsx)</li>
+          <li>テスト: 正常系3件 + 異常系2件</li>
+        </ul>
+      </div>
+      <div class="label"><p>あなた</p></div>
+      <div class="msg-user"><p>OKです。進めて</p></div>
+      <div class="label"><p>秘書（自動）</p></div>
+      <div class="msg-ai"><p>テスト作成 &gt; コード実装 &gt; 全テストPASS。PRを出しました</p></div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="step-label"><p>STEP 3  レビュー + 共有</p></div>
+    <div class="chat-box">
+      <div class="output-box">
+        <p class="output-title">GitHub PR #42（自動作成）</p>
+        <p>Title: CSV月別集計ツールの追加</p>
+        <ul>
+          <li>設計書リンク付き</li>
+          <li>テスト結果付き</li>
+          <li>変更理由が明記</li>
+        </ul>
+      </div>
+      <div class="label"><p>チームメンバー</p></div>
+      <div class="msg-user"><p>LGTM! マージします</p></div>
+      <div class="label"><p>秘書（自動）</p></div>
+      <div class="msg-ai"><p>この開発のノウハウをチーム知識に追加しました:</p></div>
+      <div class="msg-ai">
+        <ul>
+          <li>Excel出力はopenpyxlが安定</li>
+          <li>CSVエラー処理のパターン</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bottom">
+  <p><b>ポイント:</b> あなたが「作りたい」と言うだけで、秘書が壁打ち → 設計 → 実装 → PR → ノウハウ共有まで一貫して進める</p>
+</div>
+</body>
+</html>

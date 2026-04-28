@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #FFFFFF; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header { background: #1A2B4C; height: 28pt; display: flex; align-items: center; padding: 0 20pt; }
+.header p { color: #FFFFFF; font-size: 8pt; letter-spacing: 1pt; }
+.title-bar { padding: 10pt 20pt 6pt 20pt; border-bottom: 1pt solid #E6E9EF; }
+.main { flex: 1; padding: 8pt 20pt; display: flex; flex-direction: column; gap: 4pt; }
+.phases { display: flex; gap: 10pt; flex: 1; }
+.phase-card { flex: 1; border-radius: 6pt; padding: 8pt; display: flex; flex-direction: column; gap: 3pt; }
+.phase-label { border-radius: 3pt; padding: 2pt 8pt; display: inline-block; }
+.arrow { display: flex; align-items: center; justify-content: center; padding-top: 30pt; }
+.timeline { display: flex; gap: 0pt; align-items: center; }
+.footer { height: 20pt; display: flex; align-items: center; justify-content: flex-end; padding: 0 20pt; }
+</style>
+</head>
+<body>
+<div class="header">
+  <p>DX PORTAL TEAM  |  ROADMAP</p>
+</div>
+<div class="title-bar">
+  <p style="font-size:7pt; color:#4A90E2; font-weight:bold; margin:0 0 2pt 0;">進め方の全体像</p>
+  <p style="font-size:14pt; font-weight:bold; color:#1A2B4C;">3フェーズで段階的に、全13名がClaude Codeを活用する状態へ</p>
+</div>
+<div class="main">
+  <div class="phases">
+    <div class="phase-card" style="background:#EBF3FC; border: 1pt solid #4A90E2;">
+      <div class="phase-label" style="background:#4A90E2;">
+        <p style="color:#FFFFFF; font-size:7pt; font-weight:bold;">Phase 1  ・  1〜3ヶ月目</p>
+      </div>
+      <p style="font-size:11pt; font-weight:bold; color:#1A2B4C; margin:4pt 0 0 0;">4名コアで<br/>ワークフロー確立</p>
+      <p style="font-size:8pt; color:#222222; margin:4pt 0 0 0;">・ team-standards構築</p>
+      <p style="font-size:8pt; color:#222222;">・ CLAUDE.md・Skills整備</p>
+      <p style="font-size:8pt; color:#222222;">・ 失敗事例の蓄積開始</p>
+      <p style="font-size:8pt; color:#222222;">・ Gitea Issue/PRフロー定着</p>
+      <div style="background:#4A90E2; border-radius:3pt; margin-top:8pt; padding:4pt 8pt;">
+        <p style="color:#FFFFFF; font-size:7pt; text-align:center;">壁打ち→設計→PR が一気通貫</p>
+      </div>
+    </div>
+    <div class="arrow">
+      <p style="font-size:18pt; color:#8A94A6;">→</p>
+    </div>
+    <div class="phase-card" style="background:#F0F4F8; border: 1pt solid #8A94A6;">
+      <div class="phase-label" style="background:#8A94A6;">
+        <p style="color:#FFFFFF; font-size:7pt; font-weight:bold;">Phase 2  ・  4〜5ヶ月目</p>
+      </div>
+      <p style="font-size:11pt; font-weight:bold; color:#1A2B4C; margin:4pt 0 0 0;">+3名（AIコーダー）<br/>水平展開</p>
+      <p style="font-size:8pt; color:#222222; margin:4pt 0 0 0;">・ 7名が同じフローで開発</p>
+      <p style="font-size:8pt; color:#222222;">・ 誰かの学びが全員に伝わる</p>
+      <p style="font-size:8pt; color:#222222;">・ 並列開発・マージ衝突も秘書が解決</p>
+      <p style="font-size:8pt; color:#222222;">・ オンボーディングパッケージ完成</p>
+      <div style="background:#8A94A6; border-radius:3pt; margin-top:8pt; padding:4pt 8pt;">
+        <p style="color:#FFFFFF; font-size:7pt; text-align:center;">集合知化が機能し始める</p>
+      </div>
+    </div>
+    <div class="arrow">
+      <p style="font-size:18pt; color:#8A94A6;">→</p>
+    </div>
+    <div class="phase-card" style="background:#F0F7F0; border: 1pt solid #2E7D32;">
+      <div class="phase-label" style="background:#2E7D32;">
+        <p style="color:#FFFFFF; font-size:7pt; font-weight:bold;">Phase 3  ・  6ヶ月目〜</p>
+      </div>
+      <p style="font-size:11pt; font-weight:bold; color:#1A2B4C; margin:4pt 0 0 0;">+5名（非コーダー）<br/>全員展開</p>
+      <p style="font-size:8pt; color:#222222; margin:4pt 0 0 0;">・ PPT・Excel生成</p>
+      <p style="font-size:8pt; color:#222222;">・ 会議後アクションアイテム自動化</p>
+      <p style="font-size:8pt; color:#222222;">・ ナレッジ検索・議事録整理</p>
+      <p style="font-size:8pt; color:#222222;">・ 全13名がClaude Codeを活用</p>
+      <div style="background:#2E7D32; border-radius:3pt; margin-top:8pt; padding:4pt 8pt;">
+        <p style="color:#FFFFFF; font-size:7pt; text-align:center;">チーム全員が集合知を活用</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <p style="font-size:8pt; color:#8A94A6;">4</p>
+</div>
+</body>
+</html>

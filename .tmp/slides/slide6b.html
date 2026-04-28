@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header-bar { background: #003366; padding: 14pt 40pt; }
+.content { margin: 10pt 32pt 0 32pt; display: flex; flex-direction: row; gap: 10pt; }
+.column { flex: 1; }
+.sh { background: #003366; padding: 4pt 8pt; margin-bottom: 4pt; }
+.sh-green { background: #006633; padding: 4pt 8pt; margin-bottom: 4pt; margin-top: 5pt; }
+.sh-orange { background: #CC6600; padding: 4pt 8pt; margin-bottom: 4pt; margin-top: 5pt; }
+.item { display: flex; flex-direction: row; gap: 5pt; align-items: flex-start; margin-bottom: 3pt; }
+.num {
+  background: #003366; color: #ffffff; min-width: 15pt; height: 15pt;
+  border-radius: 50%; display: flex; justify-content: center; align-items: center;
+}
+.num-g {
+  background: #006633; color: #ffffff; min-width: 15pt; height: 15pt;
+  border-radius: 50%; display: flex; justify-content: center; align-items: center;
+}
+.num-o {
+  background: #CC6600; color: #ffffff; min-width: 15pt; height: 15pt;
+  border-radius: 50%; display: flex; justify-content: center; align-items: center;
+}
+.txt { flex: 1; }
+</style>
+</head>
+<body>
+<div class="header-bar">
+  <h1 style="color: #ffffff; font-size: 15pt; margin: 0; font-weight: bold;">これを実現するために、23のことをやる</h1>
+</div>
+<div class="content">
+  <div class="column">
+    <div class="sh"><p style="color: #ffffff; font-size: 8pt; margin: 0; font-weight: bold;">開発の流れをつくる</p></div>
+    <div class="item">
+      <div class="num"><p style="color: #ffffff; font-size: 6pt; margin: 0;">1</p></div>
+      <div class="txt"><p style="color: #333333; font-size: 7.5pt; margin: 0;">「こうしたい」をIssueに書く</p></div>
+    </div>
+    <div class="item">
+      <div class="num"><p style="color: #ffffff; font-size: 6pt; margin: 0;">2</p></div>
+      <div class="txt"><p style="color: #333333; font-size: 7.5pt; margin: 0;">秘書と壁打ちしてIssueの中身を詰める</p></div>
+    </div>
+    <div class="item">
+      <div class="num"><p style="color: #ffffff; font-size: 6pt; margin: 0;">3</p></div>
+      <div class="txt"><p style="color: #333333; font-size: 7.5pt; margin: 0;">秘書が設計書を自動で作る</p></div>
+    </div>
+    <div class="item">
+      <div class="num"><p style="color: #ffffff; font-size: 6pt; margin: 0;">4</p></div>
+      <div class="txt"><p style="color: #333333; font-size: 7.5pt; margin: 0;">秘書がテストとコードを自動で書く</p></div>
+    </div>
+    <div class="item">
+      <div class="num"><p style="color: #ffffff; font-size: 6pt; margin: 0;">5</p></div>
+      <div class="txt"><p style="color: #333333; font-size: 7.5pt; margin: 0;">秘書がPR（変更提案）を自動で出す</p></div>
+    </div>
+    <div class="item">
+      <div class="num"><p style="color: #ffffff; font-size: 6pt; margin: 0;">6</p></div>
+      <div class="txt"><p style="color: #333333; font-size: 7.5pt; margin: 0;">チームで見て、採用するか決める</p></div>
+    </div>
+    <div class="sh" style="margin-top: 5pt;"><p style="color: #ffffff; font-size: 8pt; margin: 0; font-weight: bold;">チームの土台をつくる</p></div>
+    <div class="item">
+      <div class="num"><p style="color: #ffffff; font-size: 6pt; margin: 0;">7</p></div>
+      <div class="txt"><p style="color: #333333; font-size: 7.5pt; margin: 0;">タスク管理アプリとIssueを連動させる</p></div>
+    </div>
+    <div class="item">
+      <div class="num"><p style="color: #ffffff; font-size: 6pt; margin: 0;">8</p></div>
+      <div class="txt"><p style="color: #333333; font-size: 7.5pt; margin: 0;">メンバー全員にAI秘書をつける</p></div>
+    </div>
+    <div class="item">
+      <div class="num"><p style="color: #ffffff; font-size: 6pt; margin: 0;">9</p></div>
+      <div class="txt"><p style="color: #333333; font-size: 7.5pt; margin: 0;">チーム共通のルール（CLAUDE.md）を共有する</p></div>
+    </div>
+    <div class="item">
+      <div class="num"><p style="color: #ffffff; font-size: 6pt; margin: 0;">10</p></div>
+      <div class="txt"><p style="color: #333333; font-size: 7.5pt; margin: 0;">秘書どうしで知識を共有する（3層構造）</p></div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="sh-green"><p style="color: #ffffff; font-size: 8pt; margin: 0; font-weight: bold;">秘書が自分から動く</p></div>
+    <div class="item">
+      <div class="num-g"><p style="color: #ffffff; font-size: 6pt; margin: 0;">11</p></div>
+      <div class="txt"><p style="color: #333333; font-size: 7.5pt; margin: 0;">毎朝秘書が「こうしたらどう？」と提案</p></div>
+    </div>
+    <div class="item">
+      <div class="num-g"><p style="color: #ffffff; font-size: 6pt; margin: 0;">12</p></div>
+      <div class="txt"><p style="color: #333333; font-size: 7.5pt; margin: 0;">秘書に話しかけるだけで全部始まる</p></div>
+    </div>
+    <div class="item">
+      <div class="num-g"><p style="color: #ffffff; font-size: 6pt; margin: 0;">13</p></div>
+      <div class="txt"><p style="color: #333333; font-size: 7.5pt; margin: 0;">ラベルを1つ貼るだけで自動修正+PR</p></div>
+    </div>
+    <div class="item">
+      <div class="num-g"><p style="color: #ffffff; font-size: 6pt; margin: 0;">14</p></div>
+      <div class="txt"><p style="color: #333333; font-size: 7.5pt; margin: 0;">危険な操作は自動でブロック（安全装置）</p></div>
+    </div>
+    <div class="sh-green" style="margin-top: 5pt;"><p style="color: #ffffff; font-size: 8pt; margin: 0; font-weight: bold;">経験を次に活かす</p></div>
+    <div class="item">
+      <div class="num-g"><p style="color: #ffffff; font-size: 6pt; margin: 0;">15</p></div>
+      <div class="txt"><p style="color: #333333; font-size: 7.5pt; margin: 0;">レビュー結果を秘書に覚えさせる</p></div>
+    </div>
+    <div class="item">
+      <div class="num-g"><p style="color: #ffffff; font-size: 6pt; margin: 0;">16</p></div>
+      <div class="txt"><p style="color: #333333; font-size: 7.5pt; margin: 0;">過去の壁打ち内容を自動で参照する</p></div>
+    </div>
+    <div class="item">
+      <div class="num-g"><p style="color: #ffffff; font-size: 6pt; margin: 0;">17</p></div>
+      <div class="txt"><p style="color: #333333; font-size: 7.5pt; margin: 0;">失敗事例をチームで共有する</p></div>
+    </div>
+    <div class="item">
+      <div class="num-g"><p style="color: #ffffff; font-size: 6pt; margin: 0;">18</p></div>
+      <div class="txt"><p style="color: #333333; font-size: 7.5pt; margin: 0;">テックブログで開発ノウハウを共有</p></div>
+    </div>
+    <div class="sh-orange" style="margin-top: 5pt;"><p style="color: #ffffff; font-size: 8pt; margin: 0; font-weight: bold;">組織の働き方を変える</p></div>
+    <div class="item">
+      <div class="num-o"><p style="color: #ffffff; font-size: 6pt; margin: 0;">19</p></div>
+      <div class="txt"><p style="color: #333333; font-size: 7.5pt; margin: 0;">会議の議事録を自動で記録・共有</p></div>
+    </div>
+    <div class="item">
+      <div class="num-o"><p style="color: #ffffff; font-size: 6pt; margin: 0;">20</p></div>
+      <div class="txt"><p style="color: #333333; font-size: 7.5pt; margin: 0;">決定事項をタスクに自動反映</p></div>
+    </div>
+    <div class="item">
+      <div class="num-o"><p style="color: #ffffff; font-size: 6pt; margin: 0;">21</p></div>
+      <div class="txt"><p style="color: #333333; font-size: 7.5pt; margin: 0;">秘書に聞けば進捗・経緯がすぐ分かる</p></div>
+    </div>
+    <div class="item">
+      <div class="num-o"><p style="color: #ffffff; font-size: 6pt; margin: 0;">22</p></div>
+      <div class="txt"><p style="color: #333333; font-size: 7.5pt; margin: 0;">新メンバーの秘書が自動でキャッチアップ</p></div>
+    </div>
+    <div class="item">
+      <div class="num-o"><p style="color: #ffffff; font-size: 6pt; margin: 0;">23</p></div>
+      <div class="txt"><p style="color: #333333; font-size: 7.5pt; margin: 0;">課内ナレッジの蓄積・検索</p></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

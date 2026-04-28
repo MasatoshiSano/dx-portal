@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #FFFFFF; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header { background: #1A2B4C; height: 28pt; display: flex; align-items: center; padding: 0 20pt; }
+.header p { color: #FFFFFF; font-size: 8pt; letter-spacing: 1pt; }
+.title-bar { padding: 6pt 20pt 5pt 20pt; border-bottom: 1pt solid #E6E9EF; }
+.main { flex: 1; display: flex; }
+.left { width: 150pt; background: #EBF3FC; padding: 8pt; display: flex; flex-direction: column; gap: 3pt; border-right: 1pt solid #D0E1F5; }
+.right { flex: 1; padding: 5pt 10pt; display: flex; flex-direction: column; gap: 3pt; }
+.step-label { background: #1A2B4C; border-radius: 3pt; padding: 1pt 6pt; display: inline-block; margin-bottom: 2pt; }
+.bubble-you { background: #D0E1F5; border-radius: 7pt; padding: 3pt 7pt; margin-left: 14pt; }
+.bubble-claude { background: #F6F8FB; border: 1pt solid #E6E9EF; border-radius: 7pt; padding: 3pt 7pt; }
+.footer { height: 20pt; display: flex; align-items: center; justify-content: flex-end; padding: 0 20pt; }
+</style>
+</head>
+<body>
+<div class="header">
+  <p>DX PORTAL TEAM  |  ROADMAP</p>
+</div>
+<div class="title-bar">
+  <p style="font-size:7pt; color:#4A90E2; font-weight:bold; margin:0 0 1pt 0;">Phase 1 でできること  ―  4名コア（1〜3ヶ月目）</p>
+  <p style="font-size:12pt; font-weight:bold; color:#1A2B4C;">秘書と壁打ちしながら、設計→PR が一気通貫で動く</p>
+</div>
+<div class="main">
+  <div class="left">
+    <div style="background:#4A90E2; border-radius:3pt; padding:2pt 6pt;">
+      <p style="color:#FFFFFF; font-size:7.5pt; font-weight:bold; text-align:center;">Phase 1  ·  1〜3ヶ月目</p>
+    </div>
+    <p style="font-size:8pt; font-weight:bold; color:#1A2B4C; margin:3pt 0 0 0;">4名コア（積極AIコーダー）</p>
+    <p style="font-size:7pt; color:#8A94A6; margin-top:5pt;">このフェーズで作るもの</p>
+    <p style="font-size:7pt; color:#222222;">・ team-standards リポジトリ</p>
+    <p style="font-size:7pt; color:#222222;">・ CLAUDE.md 骨格（30行〜）</p>
+    <p style="font-size:7pt; color:#222222;">・ 壁打ちログ 20本</p>
+    <p style="font-size:7pt; color:#222222;">・ 失敗事例 5〜10件</p>
+    <p style="font-size:7pt; color:#8A94A6; margin-top:5pt;">使うSkill</p>
+    <p style="font-size:7pt; color:#222222;">superpowers / claude-md-management</p>
+    <p style="font-size:7pt; color:#222222;">gitea-mcp / bash-guard Hook</p>
+  </div>
+  <div class="right">
+    <div>
+      <div class="step-label">
+        <p style="color:#FFFFFF; font-size:6.5pt; font-weight:bold;">STEP 1  Issue 選定・壁打ち開始</p>
+      </div>
+      <div class="bubble-you">
+        <p style="font-size:6.5pt; color:#4A90E2; font-weight:bold;">👤 You</p>
+        <p style="font-size:7.5pt; color:#222222;">Issue #15「申請フォームの改修」について壁打ちしたい。全体設計から相談。</p>
+      </div>
+      <div class="bubble-claude">
+        <p style="font-size:6.5pt; color:#8A94A6; font-weight:bold;">🤖 Claude</p>
+        <p style="font-size:7.5pt; color:#222222;">Issue と CLAUDE.md を確認しました。入力項目 10→6 削減、期限 5/31 ですね。</p>
+        <p style="font-size:7.5pt; color:#222222;">確認したいこと：①削減する項目は決まってますか？　②既存データの移行は必要？</p>
+      </div>
+    </div>
+    <div>
+      <div class="step-label">
+        <p style="color:#FFFFFF; font-size:6.5pt; font-weight:bold;">STEP 2  設計案を2択で提示・過去の失敗事例も自動参照</p>
+      </div>
+      <div class="bubble-you">
+        <p style="font-size:6.5pt; color:#4A90E2; font-weight:bold;">👤 You</p>
+        <p style="font-size:7.5pt; color:#222222;">①未定（ヒアリング中）、②移行必要</p>
+      </div>
+      <div class="bubble-claude">
+        <p style="font-size:6.5pt; color:#8A94A6; font-weight:bold;">🤖 Claude</p>
+        <p style="font-size:7.5pt; color:#222222;"><b>案A：段階的に削減</b>（リスク小・中途半端な期間あり）、<b>案B：新画面で切替</b>（クリーン移行）。</p>
+        <p style="font-size:7.5pt; color:#222222;">過去の失敗事例に「段階的改修は2回作業になる」とあるため、<b>案B を推奨</b>します。</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <p style="font-size:8pt; color:#8A94A6;">5</p>
+</div>
+</body>
+</html>

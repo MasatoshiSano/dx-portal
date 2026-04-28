@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #FFFFFF; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header { background: #1A2B4C; height: 28pt; display: flex; align-items: center; padding: 0 20pt; }
+.header p { color: #FFFFFF; font-size: 8pt; letter-spacing: 1pt; }
+.title-bar { padding: 8pt 20pt 6pt 20pt; border-bottom: 1pt solid #E6E9EF; }
+.main { flex: 1; padding: 8pt 20pt; display: flex; flex-direction: column; gap: 6pt; }
+.why-box { background: #EBF3FC; border-left: 4pt solid #4A90E2; border-radius: 4pt; padding: 6pt 12pt; }
+.groups { display: flex; gap: 8pt; }
+.group-card { flex: 1; border-radius: 5pt; padding: 8pt 10pt; display: flex; flex-direction: column; gap: 3pt; }
+.group-badge { border-radius: 3pt; padding: 2pt 7pt; display: inline-block; margin-bottom: 4pt; }
+.merit { display: flex; gap: 5pt; align-items: flex-start; }
+.footer { height: 20pt; display: flex; align-items: center; justify-content: flex-end; padding: 0 20pt; }
+</style>
+</head>
+<body>
+<div class="header">
+  <p>DX PORTAL TEAM  |  ROADMAP</p>
+</div>
+<div class="title-bar">
+  <p style="font-size:7pt; color:#4A90E2; font-weight:bold; margin:0 0 2pt 0;">なぜ全員で共有するのか</p>
+  <p style="font-size:14pt; font-weight:bold; color:#1A2B4C;">個人管理では解決しない。「チームで積み上げる」から価値が生まれる</p>
+</div>
+<div class="main">
+  <div class="why-box">
+    <p style="font-size:8.5pt; color:#1A2B4C;">個人がメモを取っても、それは<b>個人の資産</b>で終わる。全員が同じ知識ベースを参照するから、<b>1人が学んだことが13人全員の学びになる。</b></p>
+  </div>
+  <div class="groups">
+    <div class="group-card" style="background:#EBF3FC;">
+      <div class="group-badge" style="background:#4A90E2;">
+        <p style="color:#FFFFFF; font-size:7pt; font-weight:bold;">コーダー 4名</p>
+      </div>
+      <div class="merit">
+        <p style="font-size:9pt; color:#4A90E2;">→</p>
+        <p style="font-size:7.5pt; color:#222222;">誰かの失敗が<b>自分の失敗にならない</b></p>
+      </div>
+      <div class="merit">
+        <p style="font-size:9pt; color:#4A90E2;">→</p>
+        <p style="font-size:7.5pt; color:#222222;">過去の設計判断が<b>いつでも追える</b></p>
+      </div>
+      <div class="merit">
+        <p style="font-size:9pt; color:#4A90E2;">→</p>
+        <p style="font-size:7.5pt; color:#222222;">レビュー・壁打ちの<b>品質が揃う</b></p>
+      </div>
+    </div>
+    <div class="group-card" style="background:#F0F4F8;">
+      <div class="group-badge" style="background:#8A94A6;">
+        <p style="color:#FFFFFF; font-size:7pt; font-weight:bold;">AIコーダー 3名</p>
+      </div>
+      <div class="merit">
+        <p style="font-size:9pt; color:#8A94A6;">→</p>
+        <p style="font-size:7.5pt; color:#222222;">追いつくコストが<b>激減する</b></p>
+      </div>
+      <div class="merit">
+        <p style="font-size:9pt; color:#8A94A6;">→</p>
+        <p style="font-size:7.5pt; color:#222222;">4名と<b>同じ水準</b>でday1から動ける</p>
+      </div>
+      <div class="merit">
+        <p style="font-size:9pt; color:#8A94A6;">→</p>
+        <p style="font-size:7.5pt; color:#222222;">良い指示の出し方を<b>最初から知れる</b></p>
+      </div>
+    </div>
+    <div class="group-card" style="background:#F0F7F0;">
+      <div class="group-badge" style="background:#2E7D32;">
+        <p style="color:#FFFFFF; font-size:7pt; font-weight:bold;">非コーダー 5名</p>
+      </div>
+      <div class="merit">
+        <p style="font-size:9pt; color:#2E7D32;">→</p>
+        <p style="font-size:7.5pt; color:#222222;">「あれどうなった？」を<b>人に聞かなくていい</b></p>
+      </div>
+      <div class="merit">
+        <p style="font-size:9pt; color:#2E7D32;">→</p>
+        <p style="font-size:7.5pt; color:#222222;">会議の決定と文脈が<b>自動で残る</b></p>
+      </div>
+      <div class="merit">
+        <p style="font-size:9pt; color:#2E7D32;">→</p>
+        <p style="font-size:7.5pt; color:#222222;">PPT・Excel作成が<b>会話するだけ</b>で完成</p>
+      </div>
+    </div>
+    <div class="group-card" style="background:#FFF8E1; border: 1pt solid #F79646;">
+      <div class="group-badge" style="background:#F79646;">
+        <p style="color:#FFFFFF; font-size:7pt; font-weight:bold;">チーム全体</p>
+      </div>
+      <div class="merit">
+        <p style="font-size:9pt; color:#F79646;">→</p>
+        <p style="font-size:7.5pt; color:#222222;">誰かが抜けても<b>知恵が残る</b></p>
+      </div>
+      <div class="merit">
+        <p style="font-size:9pt; color:#F79646;">→</p>
+        <p style="font-size:7.5pt; color:#222222;">「なぜこうなってるか」に<b>答えられる</b></p>
+      </div>
+      <div class="merit">
+        <p style="font-size:9pt; color:#F79646;">→</p>
+        <p style="font-size:7.5pt; color:#222222;">新メンバーが<b>即戦力</b>になれる</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <p style="font-size:8pt; color:#8A94A6;">4</p>
+</div>
+</body>
+</html>

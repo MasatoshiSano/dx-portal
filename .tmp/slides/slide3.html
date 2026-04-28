@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header-bar { background: #CC0000; padding: 14pt 40pt; }
+.content { margin: 18pt 40pt 0 40pt; display: flex; flex-direction: column; gap: 10pt; }
+.issue-card { display: flex; flex-direction: row; gap: 14pt; align-items: flex-start; }
+.number-circle {
+  background: #CC0000; width: 30pt; height: 30pt; min-width: 30pt;
+  border-radius: 50%; display: flex; justify-content: center; align-items: center;
+}
+.card-body { background: #FFF5F5; padding: 10pt 14pt; flex: 1; border-left: 3pt solid #CC0000; }
+</style>
+</head>
+<body>
+<div class="header-bar">
+  <h1 style="color: #ffffff; font-size: 16pt; margin: 0; font-weight: bold;">今、困っていること</h1>
+</div>
+<div class="content">
+  <div class="issue-card">
+    <div class="number-circle"><p style="color: #ffffff; font-size: 13pt; margin: 0; font-weight: bold;">1</p></div>
+    <div class="card-body">
+      <p style="color: #CC0000; font-size: 12pt; margin: 0 0 3pt 0; font-weight: bold;">ツール開発が属人化している</p>
+      <p style="color: #333333; font-size: 10pt; margin: 0; line-height: 1.5;">バイブコーディングはしているが、各自が自己流。壁打ちや設計のルールがなく、いきなりコードを書かせる人もいる。</p>
+    </div>
+  </div>
+  <div class="issue-card">
+    <div class="number-circle"><p style="color: #ffffff; font-size: 13pt; margin: 0; font-weight: bold;">2</p></div>
+    <div class="card-body">
+      <p style="color: #CC0000; font-size: 12pt; margin: 0 0 3pt 0; font-weight: bold;">人によってアウトプットのレベルに差がある</p>
+      <p style="color: #333333; font-size: 10pt; margin: 0; line-height: 1.5;">AIへの指示の出し方や進め方に差があり、同じような機能でも品質がまちまち。</p>
+    </div>
+  </div>
+  <div class="issue-card">
+    <div class="number-circle"><p style="color: #ffffff; font-size: 13pt; margin: 0; font-weight: bold;">3</p></div>
+    <div class="card-body">
+      <p style="color: #CC0000; font-size: 12pt; margin: 0 0 3pt 0; font-weight: bold;">開発ノウハウが共有できていない</p>
+      <p style="color: #333333; font-size: 10pt; margin: 0; line-height: 1.5;">「こう指示したらうまくいった」「こうしたら失敗した」が個人の頭の中だけ。他の人は知らない。</p>
+    </div>
+  </div>
+  <div class="issue-card">
+    <div class="number-circle"><p style="color: #ffffff; font-size: 13pt; margin: 0; font-weight: bold;">4</p></div>
+    <div class="card-body">
+      <p style="color: #CC0000; font-size: 12pt; margin: 0 0 3pt 0; font-weight: bold;">GitHubが完成コードの置き場になっている</p>
+      <p style="color: #333333; font-size: 10pt; margin: 0; line-height: 1.5;">開発プロセス（Issue・PR・レビュー）には使っていない。コードの変更理由も追えない。</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

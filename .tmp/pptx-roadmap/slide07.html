@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #FFFFFF; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header { background: #1A2B4C; height: 28pt; display: flex; align-items: center; padding: 0 20pt; }
+.header p { color: #FFFFFF; font-size: 8pt; letter-spacing: 1pt; }
+.title-bar { padding: 6pt 20pt 5pt 20pt; border-bottom: 1pt solid #E6E9EF; }
+.main { flex: 1; display: flex; }
+.left { width: 150pt; background: #F0F7F0; padding: 8pt; display: flex; flex-direction: column; gap: 3pt; border-right: 1pt solid #C8E6C9; }
+.right { flex: 1; padding: 5pt 10pt; display: flex; flex-direction: column; gap: 3pt; }
+.auto-badge { background: #E8F5E9; border: 1pt solid #2E7D32; border-radius: 3pt; padding: 2pt 7pt; display: inline-block; }
+.bubble-claude { background: #F6F8FB; border: 1pt solid #E6E9EF; border-radius: 7pt; padding: 5pt 8pt; }
+.action-item { border-left: 2pt solid #4A90E2; padding: 2pt 7pt; margin: 2pt 0; }
+.footer { height: 20pt; display: flex; align-items: center; justify-content: flex-end; padding: 0 20pt; }
+</style>
+</head>
+<body>
+<div class="header">
+  <p>DX PORTAL TEAM  |  ROADMAP</p>
+</div>
+<div class="title-bar">
+  <p style="font-size:7pt; color:#2E7D32; font-weight:bold; margin:0 0 1pt 0;">Phase 3 でできること①  ―  +5名（非コーダー層）6ヶ月目〜</p>
+  <p style="font-size:12pt; font-weight:bold; color:#1A2B4C;">会議が終わると、アクションアイテムが自動でまとまって届く</p>
+</div>
+<div class="main">
+  <div class="left">
+    <div style="background:#2E7D32; border-radius:3pt; padding:2pt 6pt;">
+      <p style="color:#FFFFFF; font-size:7.5pt; font-weight:bold; text-align:center;">Phase 3①  ·  6ヶ月目〜</p>
+    </div>
+    <p style="font-size:8pt; font-weight:bold; color:#1A2B4C; margin:3pt 0 0 0;">会議の自動整理</p>
+    <p style="font-size:7pt; color:#222222;">企画・PM・マネージャー向け</p>
+    <p style="font-size:7pt; color:#8A94A6; margin-top:5pt;">こんな人に刺さる</p>
+    <p style="font-size:7pt; color:#222222;">・ 議事録を書く時間がない</p>
+    <p style="font-size:7pt; color:#222222;">・ 決めたことが流れる</p>
+    <p style="font-size:7pt; color:#222222;">・ 誰が何をするか曖昧になる</p>
+    <p style="font-size:7pt; color:#8A94A6; margin-top:5pt;">仕組み</p>
+    <p style="font-size:7pt; color:#222222;">Hooks → 自動サマリー → Gitea Issue</p>
+  </div>
+  <div class="right">
+    <div class="auto-badge">
+      <p style="font-size:7pt; color:#2E7D32; font-weight:bold;">⚡ 会議終了後、自動で起動</p>
+    </div>
+    <div class="bubble-claude">
+      <p style="font-size:6.5pt; color:#8A94A6; font-weight:bold; margin:0 0 3pt 0;">🤖 Claude  ―  本日の会議サマリー</p>
+      <div class="action-item">
+        <p style="font-size:7pt; color:#4A90E2; font-weight:bold;">【決定事項】</p>
+        <p style="font-size:7.5pt; color:#222222;">・ 申請フォームはBプランで進める（担当：Aさん）</p>
+        <p style="font-size:7.5pt; color:#222222;">・ 次回リリース日を 5/31 に確定</p>
+      </div>
+      <div class="action-item" style="border-color:#2E7D32;">
+        <p style="font-size:7pt; color:#2E7D32; font-weight:bold;">【アクションアイテム】</p>
+        <p style="font-size:7.5pt; color:#222222;">・ Aさん：要件書を 5/20 までに作成</p>
+        <p style="font-size:7.5pt; color:#222222;">・ Bさん：ステークホルダーへの連絡（本日中）</p>
+        <p style="font-size:7.5pt; color:#222222;">・ Cさん：テスト環境の準備（5/25 まで）</p>
+      </div>
+      <div class="action-item" style="border-color:#8A94A6;">
+        <p style="font-size:7pt; color:#8A94A6; font-weight:bold;">【次回会議】</p>
+        <p style="font-size:7.5pt; color:#222222;">5/27（月）10:00〜 同メンバーで進捗確認</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <p style="font-size:8pt; color:#8A94A6;">7</p>
+</div>
+</body>
+</html>

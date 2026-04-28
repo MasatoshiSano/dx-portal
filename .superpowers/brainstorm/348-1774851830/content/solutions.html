@@ -1,0 +1,164 @@
+<h2>6つの問題と解決策</h2>
+<p class="subtitle">各問題の根本原因を分析し、統合的に解決する</p>
+
+<!-- Problem 1 -->
+<div style="border:1px solid #dc2626;border-radius:8px;padding:16px;margin-bottom:16px">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+    <span style="background:#dc2626;color:white;padding:2px 8px;border-radius:4px;font-size:12px">問題1</span>
+    <span style="font-weight:bold">~/.company/ がGit管理されていない</span>
+  </div>
+  <div style="color:#888;font-size:13px;margin-bottom:12px">根本原因: ホームディレクトリ直下 = Gitリポ化しづらい</div>
+  <div style="border:1px solid #22c55e;border-radius:6px;padding:12px;background:#052e16">
+    <div style="color:#22c55e;font-weight:bold;font-size:13px;margin-bottom:4px">解決: dx-company リポ + symlink</div>
+    <div style="font-family:monospace;font-size:12px;line-height:1.8">
+      <span style="color:#f59e0b">dx-company/</span> (Gitリポジトリ)<br>
+      &nbsp; ├── secretary/ , projects/ , tech-knowledge/ ...<br>
+      &nbsp; └── CLAUDE.md<br>
+      <br>
+      <span style="color:#888">~/.company → symlink → ~/Apps/dx-company/</span><br>
+      <span style="color:#888">setup: ln -s ~/Apps/dx-company ~/.company</span>
+    </div>
+  </div>
+</div>
+
+<!-- Problem 2 -->
+<div style="border:1px solid #dc2626;border-radius:8px;padding:16px;margin-bottom:16px">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+    <span style="background:#dc2626;color:white;padding:2px 8px;border-radius:4px;font-size:12px">問題2</span>
+    <span style="font-weight:bold">3層の距離が遠すぎる</span>
+  </div>
+  <div style="color:#888;font-size:13px;margin-bottom:12px">根本原因: Claude Codeはcwdコンテキストで動く</div>
+  <div style="border:1px solid #22c55e;border-radius:6px;padding:12px;background:#052e16">
+    <div style="color:#22c55e;font-weight:bold;font-size:13px;margin-bottom:4px">解決: ~/.dx-config.yml でパスレジストリ</div>
+    <div style="font-family:monospace;font-size:12px;line-height:1.8">
+      <span style="color:#a78bfa"># ~/.dx-config.yml</span><br>
+      company: ~/.company<br>
+      brain: ~/brain<br>
+      portal: ~/Apps/dx-portal<br>
+      projects:<br>
+      &nbsp; app-x: ~/Apps/app-x<br>
+      &nbsp; app-y: ~/Apps/app-y
+    </div>
+    <div style="color:#86efac;font-size:12px;margin-top:8px">全スキルがこのconfigを読んでパス解決。環境依存を1ファイルに集約。</div>
+  </div>
+</div>
+
+<!-- Problem 3 -->
+<div style="border:1px solid #dc2626;border-radius:8px;padding:16px;margin-bottom:16px">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+    <span style="background:#dc2626;color:white;padding:2px 8px;border-radius:4px;font-size:12px">問題3</span>
+    <span style="font-weight:bold">リンクの脆弱性</span>
+  </div>
+  <div style="color:#888;font-size:13px;margin-bottom:12px">根本原因: ファイルシステムパスがメンバーごとに異なる</div>
+  <div style="border:1px solid #22c55e;border-radius:6px;padding:12px;background:#052e16">
+    <div style="color:#22c55e;font-weight:bold;font-size:13px;margin-bottom:4px">解決: 論理IDベースの参照システム</div>
+    <div style="font-size:13px;line-height:1.8">
+      <div style="margin-bottom:8px">リポ間リンクにファイルパスを使わない。<span style="color:#fbbf24">論理ID</span>で参照する:</div>
+      <div style="font-family:monospace;font-size:12px;background:#1a1a2e;padding:8px;border-radius:4px">
+        <!-- in .company/projects/ --><br>
+        related_brain: <span style="color:#fbbf24">brain://20_Projects/dx-portal</span><br>
+        github_issue: <span style="color:#fbbf24">gh://dx-portal#42</span><br>
+        <br>
+        <!-- in brain/ --><br>
+        company_pj: <span style="color:#fbbf24">company://projects/PJ-001</span><br>
+      </div>
+      <div style="color:#86efac;font-size:12px;margin-top:8px">秘書スキルがIDを実際のパスに解決。レイヤー内のリンクは従来通り相対パス。</div>
+    </div>
+  </div>
+</div>
+
+<!-- Problem 4 -->
+<div style="border:1px solid #dc2626;border-radius:8px;padding:16px;margin-bottom:16px">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+    <span style="background:#dc2626;color:white;padding:2px 8px;border-radius:4px;font-size:12px">問題4</span>
+    <span style="font-weight:bold">GitHub-hostedランナーのコスト</span>
+  </div>
+  <div style="color:#888;font-size:13px;margin-bottom:12px">根本原因: Claude Code処理が長時間 → Actions minutes消費大</div>
+  <div style="border:1px solid #22c55e;border-radius:6px;padding:12px;background:#052e16">
+    <div style="color:#22c55e;font-weight:bold;font-size:13px;margin-bottom:4px">解決: 処理を2種に分離 + claude-code-action</div>
+    <table style="width:100%;font-size:12px;border-collapse:collapse;margin-top:8px">
+      <tr style="border-bottom:1px solid #333">
+        <th style="text-align:left;padding:4px;color:#888">処理</th>
+        <th style="text-align:left;padding:4px;color:#888">実行方法</th>
+        <th style="text-align:left;padding:4px;color:#888">コスト</th>
+      </tr>
+      <tr style="border-bottom:1px solid #222">
+        <td style="padding:4px">Issue提案(毎朝)</td>
+        <td style="padding:4px;color:#fbbf24">OpenAI gpt-4o-mini</td>
+        <td style="padding:4px;color:#22c55e">数十円/月</td>
+      </tr>
+      <tr style="border-bottom:1px solid #222">
+        <td style="padding:4px">自己改善(週次)</td>
+        <td style="padding:4px;color:#fbbf24">OpenAI gpt-4o-mini</td>
+        <td style="padding:4px;color:#22c55e">数円/月</td>
+      </tr>
+      <tr style="border-bottom:1px solid #222">
+        <td style="padding:4px">plan-first(設計)</td>
+        <td style="padding:4px;color:#a78bfa">claude-code-action</td>
+        <td style="padding:4px;color:#eab308">API料金のみ</td>
+      </tr>
+      <tr>
+        <td style="padding:4px">auto-fix(実装)</td>
+        <td style="padding:4px;color:#a78bfa">claude-code-action</td>
+        <td style="padding:4px;color:#eab308">API料金のみ</td>
+      </tr>
+    </table>
+    <div style="color:#86efac;font-size:12px;margin-top:8px">
+      anthropics/claude-code-action はAPI直接呼び出し。ランナー時間は最小限。<br>
+      軽量タスク(提案・分析)はgpt-4o-mini、重量タスク(実装)はClaude API。
+    </div>
+  </div>
+</div>
+
+<!-- Problem 5 -->
+<div style="border:1px solid #dc2626;border-radius:8px;padding:16px;margin-bottom:16px">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+    <span style="background:#dc2626;color:white;padding:2px 8px;border-radius:4px;font-size:12px">問題5</span>
+    <span style="font-weight:bold">brainテンプレートのfork更新問題</span>
+  </div>
+  <div style="color:#888;font-size:13px;margin-bottom:12px">根本原因: エンジン(コマンド定義)とデータ(個人ノート)が同一リポに混在</div>
+  <div style="border:1px solid #22c55e;border-radius:6px;padding:12px;background:#052e16">
+    <div style="color:#22c55e;font-weight:bold;font-size:13px;margin-bottom:4px">解決: エンジン/データ分離</div>
+    <div style="font-family:monospace;font-size:12px;line-height:1.8">
+      <span style="color:#f59e0b">dx-portal/.claude/skills/brain/</span> ← エンジン(共有)<br>
+      &nbsp; ├── SKILL.md &nbsp;<span style="color:#888">← /brain-status等のコマンド定義</span><br>
+      &nbsp; └── references/ &nbsp;<span style="color:#888">← テンプレート・ルール</span><br>
+      <br>
+      <span style="color:#10b981">~/brain/</span> ← データ(個人)<br>
+      &nbsp; ├── 00_Inbox/ &nbsp;<span style="color:#888">← 個人のノートだけ</span><br>
+      &nbsp; ├── 10_Journal/<br>
+      &nbsp; └── CLAUDE.md &nbsp;<span style="color:#888">← 最小限(パス設定のみ)</span>
+    </div>
+    <div style="color:#86efac;font-size:12px;margin-top:8px">
+      brainコマンドはdx-portalのスキルとして配信。更新はdx-portal pullだけで全員に反映。<br>
+      個人brainリポにはデータだけ。forkではなく初期化スクリプトで生成。
+    </div>
+  </div>
+</div>
+
+<!-- Problem 6 -->
+<div style="border:1px solid #dc2626;border-radius:8px;padding:16px;margin-bottom:16px">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+    <span style="background:#dc2626;color:white;padding:2px 8px;border-radius:4px;font-size:12px">問題6</span>
+    <span style="font-weight:bold">自己改善のスコープ問題</span>
+  </div>
+  <div style="color:#888;font-size:13px;margin-bottom:12px">根本原因: 基盤(仕組み)とプロジェクト(文脈)の境界が未定義</div>
+  <div style="border:1px solid #22c55e;border-radius:6px;padding:12px;background:#052e16">
+    <div style="color:#22c55e;font-weight:bold;font-size:13px;margin-bottom:4px">解決: メカニズム/コンテキスト分離</div>
+    <div style="font-family:monospace;font-size:12px;line-height:1.8">
+      <span style="color:#f59e0b">dx-portal/</span> ← メカニズム(共通)<br>
+      &nbsp; ├── scripts/pdm-ai.mjs &nbsp;<span style="color:#888">← 提案ロジック</span><br>
+      &nbsp; └── scripts/self-improve.mjs &nbsp;<span style="color:#888">← 改善ロジック</span><br>
+      <br>
+      <span style="color:#38bdf8">各プロジェクトリポ/</span> ← コンテキスト(個別)<br>
+      &nbsp; └── .dx/<br>
+      &nbsp;&nbsp;&nbsp;&nbsp; ├── pdm-config.yml &nbsp;<span style="color:#888">← PJ固有の提案設定</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp; ├── pdm-prompt.md &nbsp;<span style="color:#888">← 自己改善対象</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp; └── pdm-stats.json &nbsp;<span style="color:#888">← 採否統計</span>
+    </div>
+    <div style="color:#86efac;font-size:12px;margin-top:8px">
+      dx-portalは「どう提案するか」の仕組みを提供。<br>
+      各PJリポの.dx/が「何を提案するか」の文脈を持つ。自己改善は.dx/内のプロンプトを更新。
+    </div>
+  </div>
+</div>

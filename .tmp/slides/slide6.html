@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header-bar { background: #003366; padding: 14pt 40pt; }
+.content { margin: 14pt 30pt 0 30pt; display: flex; flex-direction: row; gap: 8pt; align-items: flex-start; }
+.side { flex: 1; }
+.side-header-bad { background: #CC0000; padding: 6pt 10pt; text-align: center; }
+.side-header-good { background: #006633; padding: 6pt 10pt; text-align: center; }
+.side-body { padding: 10pt 8pt; background: #F5F7FA; }
+.arrow-col { display: flex; justify-content: center; align-items: center; width: 30pt; padding-top: 80pt; }
+/* Before diagram: isolated pairs */
+.iso-row { display: flex; flex-direction: row; gap: 12pt; justify-content: center; margin: 8pt 0; }
+.iso-pair { display: flex; flex-direction: column; align-items: center; gap: 2pt; padding: 6pt 8pt; border: 1pt dashed #CC0000; border-radius: 6pt; background: #ffffff; }
+.iso-icon { font-size: 14pt; margin: 0; }
+.iso-ai { background: #E0E0E0; border-radius: 4pt; padding: 2pt 6pt; }
+/* After diagram: connected network */
+.net-people { display: flex; flex-direction: row; gap: 8pt; justify-content: center; margin: 6pt 0 2pt 0; }
+.net-person { display: flex; flex-direction: column; align-items: center; gap: 1pt; }
+.net-icon { font-size: 12pt; margin: 0; }
+.net-sec { background: #006633; border-radius: 50%; width: 20pt; height: 20pt; display: flex; justify-content: center; align-items: center; }
+.net-line { height: 2pt; background: #006633; margin: 0 auto; width: 85%; }
+.net-cloud {
+  background: #F0F4FF; border: 1.5pt solid #003366; border-radius: 8pt;
+  padding: 6pt 8pt; text-align: center; margin: 4pt 6pt 0 6pt;
+}
+.caption { margin-top: 6pt; padding: 4pt 8pt; }
+</style>
+</head>
+<body>
+<div class="header-bar">
+  <h1 style="color: #ffffff; font-size: 16pt; margin: 0; font-weight: bold;">秘書がいると、開発がこう変わる</h1>
+</div>
+<div class="content">
+  <div class="side">
+    <div class="side-header-bad">
+      <p style="color: #ffffff; font-size: 11pt; margin: 0; font-weight: bold;">今：バラバラの個人戦</p>
+    </div>
+    <div class="side-body">
+      <div class="iso-row">
+        <div class="iso-pair">
+          <p class="iso-icon">👤</p>
+          <div class="iso-ai"><p style="color: #666666; font-size: 6pt; margin: 0;">AI</p></div>
+          <p style="color: #999999; font-size: 6pt; margin: 0;">自己流</p>
+        </div>
+        <div class="iso-pair">
+          <p class="iso-icon">👤</p>
+          <div class="iso-ai"><p style="color: #666666; font-size: 6pt; margin: 0;">AI</p></div>
+          <p style="color: #999999; font-size: 6pt; margin: 0;">自己流</p>
+        </div>
+        <div class="iso-pair">
+          <p class="iso-icon">👤</p>
+          <div class="iso-ai"><p style="color: #666666; font-size: 6pt; margin: 0;">AI</p></div>
+          <p style="color: #999999; font-size: 6pt; margin: 0;">自己流</p>
+        </div>
+      </div>
+      <div class="caption">
+        <ul style="color: #333333; font-size: 8pt; margin: 0; padding-left: 10pt; line-height: 1.8;">
+          <li>各自がAIと1対1</li>
+          <li>ルールなし、いきなりコード</li>
+          <li>ノウハウは頭の中だけ</li>
+          <li>完成したらGitHubに置くだけ</li>
+          <li>他の人のやり方を知らない</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="arrow-col">
+    <p style="color: #003366; font-size: 26pt; margin: 0; font-weight: bold;">→</p>
+  </div>
+  <div class="side">
+    <div class="side-header-good">
+      <p style="color: #ffffff; font-size: 11pt; margin: 0; font-weight: bold;">後：秘書でつながるチーム戦</p>
+    </div>
+    <div class="side-body">
+      <div class="net-people">
+        <div class="net-person">
+          <p class="net-icon">👤</p>
+          <div class="net-sec"><p style="color: #ffffff; font-size: 5pt; margin: 0;">秘書</p></div>
+        </div>
+        <div class="net-person">
+          <p class="net-icon">👤</p>
+          <div class="net-sec"><p style="color: #ffffff; font-size: 5pt; margin: 0;">秘書</p></div>
+        </div>
+        <div class="net-person">
+          <p class="net-icon">👤</p>
+          <div class="net-sec"><p style="color: #ffffff; font-size: 5pt; margin: 0;">秘書</p></div>
+        </div>
+      </div>
+      <div class="net-line"></div>
+      <div class="net-cloud">
+        <p style="color: #003366; font-size: 7pt; margin: 0; font-weight: bold;">共有知識</p>
+        <p style="color: #666666; font-size: 6pt; margin: 1pt 0 0 0;">ルール・失敗事例・ノウハウ</p>
+      </div>
+      <div class="caption">
+        <ul style="color: #333333; font-size: 8pt; margin: 0; padding-left: 10pt; line-height: 1.8;">
+          <li>秘書がルールを知っている</li>
+          <li>壁打ち→設計→実装の流れ</li>
+          <li>ノウハウが秘書を通じて共有</li>
+          <li>GitHubでIssue・PR・レビュー</li>
+          <li>失敗を全員の秘書が覚えている</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

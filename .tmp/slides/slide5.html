@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header-bar { background: #006633; padding: 14pt 40pt; }
+.content { margin: 14pt 30pt 0 30pt; display: flex; flex-direction: row; gap: 16pt; }
+.diagram { flex: 2; display: flex; flex-direction: column; align-items: center; position: relative; min-height: 260pt; }
+.person-row { display: flex; flex-direction: row; gap: 30pt; justify-content: center; margin-top: 10pt; }
+.person-unit { display: flex; flex-direction: column; align-items: center; gap: 4pt; }
+.person-icon {
+  width: 36pt; height: 36pt; border-radius: 50%; display: flex;
+  justify-content: center; align-items: center; font-size: 16pt;
+}
+.secretary-icon {
+  width: 30pt; height: 30pt; border-radius: 50%; background: #006633;
+  display: flex; justify-content: center; align-items: center;
+}
+.knowledge-cloud {
+  background: #F0F4FF; border: 2pt solid #003366; border-radius: 12pt;
+  padding: 10pt 16pt; margin-top: 8pt; text-align: center; width: 280pt;
+}
+.connector-line {
+  width: 2pt; height: 12pt; background: #006633; margin: 0 auto;
+}
+.connector-h {
+  display: flex; flex-direction: row; align-items: center; justify-content: center;
+  margin-top: 4pt; gap: 0;
+}
+.h-line { width: 180pt; height: 2pt; background: #006633; }
+.v-down { width: 2pt; height: 10pt; background: #006633; }
+.points { flex: 1; display: flex; flex-direction: column; gap: 8pt; margin-top: 10pt; }
+.point-card { padding: 8pt 10pt; background: #F5F7FA; border-left: 3pt solid #003366; }
+</style>
+</head>
+<body>
+<div class="header-bar">
+  <h1 style="color: #ffffff; font-size: 16pt; margin: 0; font-weight: bold;">解決策：全員にAI秘書がつく</h1>
+</div>
+<div class="content">
+  <div class="diagram">
+    <div class="person-row">
+      <div class="person-unit">
+        <div class="person-icon" style="background: #E8F0FE;">
+          <p style="margin: 0;">👤</p>
+        </div>
+        <p style="color: #333333; font-size: 7pt; margin: 0;">Aさん</p>
+        <div class="connector-line"></div>
+        <div class="secretary-icon">
+          <p style="color: #ffffff; font-size: 7pt; margin: 0; font-weight: bold;">秘書</p>
+        </div>
+      </div>
+      <div class="person-unit">
+        <div class="person-icon" style="background: #FEF0E8;">
+          <p style="margin: 0;">👤</p>
+        </div>
+        <p style="color: #333333; font-size: 7pt; margin: 0;">Bさん</p>
+        <div class="connector-line"></div>
+        <div class="secretary-icon">
+          <p style="color: #ffffff; font-size: 7pt; margin: 0; font-weight: bold;">秘書</p>
+        </div>
+      </div>
+      <div class="person-unit">
+        <div class="person-icon" style="background: #E8FEF0;">
+          <p style="margin: 0;">👤</p>
+        </div>
+        <p style="color: #333333; font-size: 7pt; margin: 0;">Cさん</p>
+        <div class="connector-line"></div>
+        <div class="secretary-icon">
+          <p style="color: #ffffff; font-size: 7pt; margin: 0; font-weight: bold;">秘書</p>
+        </div>
+      </div>
+      <div class="person-unit">
+        <div class="person-icon" style="background: #F0E8FE;">
+          <p style="margin: 0;">👤</p>
+        </div>
+        <p style="color: #333333; font-size: 7pt; margin: 0;">Dさん</p>
+        <div class="connector-line"></div>
+        <div class="secretary-icon">
+          <p style="color: #ffffff; font-size: 7pt; margin: 0; font-weight: bold;">秘書</p>
+        </div>
+      </div>
+    </div>
+    <div class="connector-h">
+      <div class="v-down"></div>
+      <div class="h-line"></div>
+      <div class="v-down"></div>
+    </div>
+    <p style="color: #006633; font-size: 9pt; margin: 2pt 0; font-weight: bold;">⇅ 秘書どうしが知識を自動で共有 ⇅</p>
+    <div class="knowledge-cloud">
+      <p style="color: #003366; font-size: 9pt; margin: 0 0 4pt 0; font-weight: bold;">チームの共有知識</p>
+      <p style="color: #666666; font-size: 7.5pt; margin: 0; line-height: 1.6;">ルール ・ 失敗事例 ・ ノウハウ ・ レビュー結果 ・ 議事録 ・ 壁打ちログ</p>
+    </div>
+    <p style="color: #CC0000; font-size: 7pt; margin: 6pt 0 0 0;">※ 個人のメモ・途中経過は本人の秘書だけが持つ</p>
+  </div>
+  <div class="points">
+    <div class="point-card">
+      <p style="color: #003366; font-size: 9pt; margin: 0 0 3pt 0; font-weight: bold;">品質が揃う</p>
+      <p style="color: #333333; font-size: 8pt; margin: 0; line-height: 1.5;">秘書がチームのルールを知っているから、誰が使っても一定の品質</p>
+    </div>
+    <div class="point-card">
+      <p style="color: #003366; font-size: 9pt; margin: 0 0 3pt 0; font-weight: bold;">失敗を繰り返さない</p>
+      <p style="color: #333333; font-size: 8pt; margin: 0; line-height: 1.5;">誰かの失敗が全員の秘書に伝わる</p>
+    </div>
+    <div class="point-card">
+      <p style="color: #003366; font-size: 9pt; margin: 0 0 3pt 0; font-weight: bold;">やり方が統一される</p>
+      <p style="color: #333333; font-size: 8pt; margin: 0; line-height: 1.5;">壁打ち→設計→実装の流れが秘書に組み込まれている</p>
+    </div>
+    <div class="point-card">
+      <p style="color: #003366; font-size: 9pt; margin: 0 0 3pt 0; font-weight: bold;">開発以外にも使える</p>
+      <p style="color: #333333; font-size: 8pt; margin: 0; line-height: 1.5;">議事録・進捗確認・ナレッジ共有にも秘書が対応</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,2149 @@
+<?xml version="1.0" encoding="ascii"?>
+<p:sld xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main">
+  <p:cSld>
+    <p:bg>
+      <p:bgPr>
+        <a:solidFill>
+          <a:srgbClr val="FFFFFF"/>
+        </a:solidFill>
+        <a:effectLst/>
+      </p:bgPr>
+    </p:bg>
+    <p:spTree>
+      <p:nvGrpSpPr>
+        <p:cNvPr id="1" name=""/>
+        <p:cNvGrpSpPr/>
+        <p:nvPr/>
+      </p:nvGrpSpPr>
+      <p:grpSpPr>
+        <a:xfrm>
+          <a:off x="0" y="0"/>
+          <a:ext cx="0" cy="0"/>
+          <a:chOff x="0" y="0"/>
+          <a:chExt cx="0" cy="0"/>
+        </a:xfrm>
+      </p:grpSpPr>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="2" name="TextBox 1"/>
+          <p:cNvSpPr txBox="1"/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="457200" y="260000"/>
+            <a:ext cx="8229600" cy="150000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" lIns="30000" tIns="20000" rIns="30000" bIns="20000" anchor="t">
+            <a:spAutoFit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="l"/>
+            <a:r>
+              <a:rPr sz="800" b="1">
+                <a:solidFill>
+                  <a:srgbClr val="4A90E2"/>
+                </a:solidFill>
+                <a:latin typeface="Meiryo UI"/>
+              </a:rPr>
+              <a:t>&#27083;&#25104;&#35201;&#32032;&#12398;&#20855;&#20307;&#20363;</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="3" name="TextBox 2"/>
+          <p:cNvSpPr txBox="1"/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="457200" y="380000"/>
+            <a:ext cx="8229600" cy="500000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" lIns="30000" tIns="20000" rIns="30000" bIns="20000" anchor="t">
+            <a:spAutoFit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="l"/>
+            <a:r>
+              <a:rPr sz="1600" b="1">
+                <a:solidFill>
+                  <a:srgbClr val="1A2B4C"/>
+                </a:solidFill>
+                <a:latin typeface="Meiryo UI"/>
+              </a:rPr>
+              <a:t>CLAUDE.md &#12399;&#24120;&#35672;&#12539;Skills &#12399;&#25163;&#38918;&#12539;Subagents &#12399;&#23554;&#38272;&#31192;&#26360; &#8212; &#24441;&#21106;&#12391;&#20351;&#12356;&#20998;&#12369;&#12427;</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:cxnSp>
+        <p:nvCxnSpPr>
+          <p:cNvPr id="4" name="Connector 3"/>
+          <p:cNvCxnSpPr/>
+          <p:nvPr/>
+        </p:nvCxnSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="457200" y="950000"/>
+            <a:ext cx="8229600" cy="0"/>
+          </a:xfrm>
+          <a:prstGeom prst="line">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:ln w="19050">
+            <a:solidFill>
+              <a:srgbClr val="1A2B4C"/>
+            </a:solidFill>
+          </a:ln>
+        </p:spPr>
+        <p:style>
+          <a:lnRef idx="2">
+            <a:schemeClr val="accent1"/>
+          </a:lnRef>
+          <a:fillRef idx="0">
+            <a:schemeClr val="accent1"/>
+          </a:fillRef>
+          <a:effectRef idx="1">
+            <a:schemeClr val="accent1"/>
+          </a:effectRef>
+          <a:fontRef idx="minor">
+            <a:schemeClr val="tx1"/>
+          </a:fontRef>
+        </p:style>
+      </p:cxnSp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="5" name="Rectangle 4"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="457200" y="1150000"/>
+            <a:ext cx="2643200" cy="300000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:srgbClr val="1A2B4C"/>
+          </a:solidFill>
+          <a:ln>
+            <a:noFill/>
+          </a:ln>
+        </p:spPr>
+        <p:style>
+          <a:lnRef idx="1">
+            <a:schemeClr val="accent1"/>
+          </a:lnRef>
+          <a:fillRef idx="3">
+            <a:schemeClr val="accent1"/>
+          </a:fillRef>
+          <a:effectRef idx="2">
+            <a:schemeClr val="accent1"/>
+          </a:effectRef>
+          <a:fontRef idx="minor">
+            <a:schemeClr val="lt1"/>
+          </a:fontRef>
+        </p:style>
+        <p:txBody>
+          <a:bodyPr rtlCol="0" anchor="ctr"/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="ctr"/>
+            <a:endParaRPr/>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="6" name="TextBox 5"/>
+          <p:cNvSpPr txBox="1"/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="557200" y="1200000"/>
+            <a:ext cx="2443200" cy="220000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" lIns="30000" tIns="20000" rIns="30000" bIns="20000" anchor="t">
+            <a:spAutoFit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="l"/>
+            <a:r>
+              <a:rPr sz="1000" b="1">
+                <a:solidFill>
+                  <a:srgbClr val="FFFFFF"/>
+                </a:solidFill>
+                <a:latin typeface="Meiryo UI"/>
+              </a:rPr>
+              <a:t>CLAUDE.md  &#65288;&#24120;&#35672;&#65289;</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="7" name="TextBox 6"/>
+          <p:cNvSpPr txBox="1"/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="557200" y="1480000"/>
+            <a:ext cx="2443200" cy="200000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" lIns="30000" tIns="20000" rIns="30000" bIns="20000" anchor="t">
+            <a:spAutoFit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="l"/>
+            <a:r>
+              <a:rPr sz="800" b="0">
+                <a:solidFill>
+                  <a:srgbClr val="8A94A6"/>
+                </a:solidFill>
+                <a:latin typeface="Meiryo UI"/>
+              </a:rPr>
+              <a:t>&#24120;&#12395;&#35501;&#12414;&#12428;&#12427;&#12290;&#30701;&#12367;&#65288;200&#34892;&#20197;&#20869;&#65289;</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="8" name="Rectangle 7"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="457200" y="1750000"/>
+            <a:ext cx="2643200" cy="2900000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:srgbClr val="F6F8FB"/>
+          </a:solidFill>
+          <a:ln w="6350">
+            <a:solidFill>
+              <a:srgbClr val="E6E9EF"/>
+            </a:solidFill>
+          </a:ln>
+        </p:spPr>
+        <p:style>
+          <a:lnRef idx="1">
+            <a:schemeClr val="accent1"/>
+          </a:lnRef>
+          <a:fillRef idx="3">
+            <a:schemeClr val="accent1"/>
+          </a:fillRef>
+          <a:effectRef idx="2">
+            <a:schemeClr val="accent1"/>
+          </a:effectRef>
+          <a:fontRef idx="minor">
+            <a:schemeClr val="lt1"/>
+          </a:fontRef>
+        </p:style>
+        <p:txBody>
+          <a:bodyPr rtlCol="0" anchor="ctr"/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="ctr"/>
+            <a:endParaRPr/>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="9" name="TextBox 8"/>
+          <p:cNvSpPr txBox="1"/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="557200" y="1830000"/>
+            <a:ext cx="2443200" cy="2740000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" lIns="30000" tIns="20000" rIns="30000" bIns="20000" anchor="t">
+            <a:spAutoFit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="800" b="0" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t># team-standards</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="800" dirty="0">
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t> </a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="800" b="0" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>## </a:t>
+            </a:r>
+            <a:r>
+              <a:rPr sz="800" b="0" dirty="0" err="1">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>&#38283;&#30330;&#12398;&#27969;&#12428;</a:t>
+            </a:r>
+            <a:endParaRPr sz="800" b="0" dirty="0">
+              <a:solidFill>
+                <a:srgbClr val="222222"/>
+              </a:solidFill>
+              <a:latin typeface="Consolas"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="800" b="0" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>1. 15&#20998;&#20197;&#19978;&#8594;Issue</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="800" b="0" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>2. &#22721;&#25171;&#12385;&#8594;4&#38917;&#30446;&#12486;&#12531;&#12503;&#12524;</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="800" b="0" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>3. Draft PR</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="800" b="0" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>4. </a:t>
+            </a:r>
+            <a:r>
+              <a:rPr sz="800" b="0" dirty="0" err="1">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>&#12475;&#12523;&#12501;</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr sz="800" b="0" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>/</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr sz="800" b="0" dirty="0" err="1">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>&#20154;&#38291;&#12524;&#12499;&#12517;</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr sz="800" b="0" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>&#12540;</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="800" b="0" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>5. </a:t>
+            </a:r>
+            <a:r>
+              <a:rPr sz="800" b="0" dirty="0" err="1">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>&#23398;&#12403;&#12399;&#36861;&#35352;PR</a:t>
+            </a:r>
+            <a:endParaRPr sz="800" b="0" dirty="0">
+              <a:solidFill>
+                <a:srgbClr val="222222"/>
+              </a:solidFill>
+              <a:latin typeface="Consolas"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="800" dirty="0">
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t> </a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="800" b="0" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>## </a:t>
+            </a:r>
+            <a:r>
+              <a:rPr sz="800" b="0" dirty="0" err="1">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>&#35215;&#32004;</a:t>
+            </a:r>
+            <a:endParaRPr sz="800" b="0" dirty="0">
+              <a:solidFill>
+                <a:srgbClr val="222222"/>
+              </a:solidFill>
+              <a:latin typeface="Consolas"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="800" b="0" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>- any </a:t>
+            </a:r>
+            <a:r>
+              <a:rPr sz="800" b="0" dirty="0" err="1">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>&#31105;&#27490;</a:t>
+            </a:r>
+            <a:endParaRPr sz="800" b="0" dirty="0">
+              <a:solidFill>
+                <a:srgbClr val="222222"/>
+              </a:solidFill>
+              <a:latin typeface="Consolas"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="800" b="0" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>- </a:t>
+            </a:r>
+            <a:r>
+              <a:rPr sz="800" b="0" dirty="0" err="1">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>Serendie</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr sz="800" b="0" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t> </a:t>
+            </a:r>
+            <a:r>
+              <a:rPr sz="800" b="0" dirty="0" err="1">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>&#20351;&#29992;</a:t>
+            </a:r>
+            <a:endParaRPr sz="800" b="0" dirty="0">
+              <a:solidFill>
+                <a:srgbClr val="222222"/>
+              </a:solidFill>
+              <a:latin typeface="Consolas"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="800" b="0" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>- </a:t>
+            </a:r>
+            <a:r>
+              <a:rPr sz="800" b="0" dirty="0" err="1">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>&#12467;&#12511;&#12483;&#12488;</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr sz="800" b="0" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t> prefix </a:t>
+            </a:r>
+            <a:r>
+              <a:rPr sz="800" b="0" dirty="0" err="1">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>&#24517;&#38920;</a:t>
+            </a:r>
+            <a:endParaRPr sz="800" b="0" dirty="0">
+              <a:solidFill>
+                <a:srgbClr val="222222"/>
+              </a:solidFill>
+              <a:latin typeface="Consolas"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="800" dirty="0">
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t> </a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="800" b="0" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>## </a:t>
+            </a:r>
+            <a:r>
+              <a:rPr sz="800" b="0" dirty="0" err="1">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>&#22833;&#25943;&#12354;&#12427;&#12354;&#12427;</a:t>
+            </a:r>
+            <a:endParaRPr sz="800" b="0" dirty="0">
+              <a:solidFill>
+                <a:srgbClr val="222222"/>
+              </a:solidFill>
+              <a:latin typeface="Consolas"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="800" b="0" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>- </a:t>
+            </a:r>
+            <a:r>
+              <a:rPr sz="800" b="0" dirty="0" err="1">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>DB&#12479;&#12452;&#12512;&#12450;&#12454;&#12488;&#8594;&#12503;&#12540;&#12523;</a:t>
+            </a:r>
+            <a:endParaRPr sz="800" b="0" dirty="0">
+              <a:solidFill>
+                <a:srgbClr val="222222"/>
+              </a:solidFill>
+              <a:latin typeface="Consolas"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="800" b="0" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>- </a:t>
+            </a:r>
+            <a:r>
+              <a:rPr sz="800" b="0" dirty="0" err="1">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>&#37109;&#20415;&#30058;&#21495;&#8594;&#12495;&#12452;&#12501;&#12531;&#23550;&#24540;</a:t>
+            </a:r>
+            <a:endParaRPr sz="800" b="0" dirty="0">
+              <a:solidFill>
+                <a:srgbClr val="222222"/>
+              </a:solidFill>
+              <a:latin typeface="Consolas"/>
+            </a:endParaRPr>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="10" name="Rectangle 9"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="3250400" y="1150000"/>
+            <a:ext cx="2643200" cy="300000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:srgbClr val="4A90E2"/>
+          </a:solidFill>
+          <a:ln>
+            <a:noFill/>
+          </a:ln>
+        </p:spPr>
+        <p:style>
+          <a:lnRef idx="1">
+            <a:schemeClr val="accent1"/>
+          </a:lnRef>
+          <a:fillRef idx="3">
+            <a:schemeClr val="accent1"/>
+          </a:fillRef>
+          <a:effectRef idx="2">
+            <a:schemeClr val="accent1"/>
+          </a:effectRef>
+          <a:fontRef idx="minor">
+            <a:schemeClr val="lt1"/>
+          </a:fontRef>
+        </p:style>
+        <p:txBody>
+          <a:bodyPr rtlCol="0" anchor="ctr"/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="ctr"/>
+            <a:endParaRPr/>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="11" name="TextBox 10"/>
+          <p:cNvSpPr txBox="1"/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="3350400" y="1200000"/>
+            <a:ext cx="2443200" cy="220000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" lIns="30000" tIns="20000" rIns="30000" bIns="20000" anchor="t">
+            <a:spAutoFit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="l"/>
+            <a:r>
+              <a:rPr sz="1000" b="1">
+                <a:solidFill>
+                  <a:srgbClr val="FFFFFF"/>
+                </a:solidFill>
+                <a:latin typeface="Meiryo UI"/>
+              </a:rPr>
+              <a:t>Skills  &#65288;&#25163;&#38918;&#65289;</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="12" name="TextBox 11"/>
+          <p:cNvSpPr txBox="1"/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="3350400" y="1480000"/>
+            <a:ext cx="2443200" cy="200000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" lIns="30000" tIns="20000" rIns="30000" bIns="20000" anchor="t">
+            <a:spAutoFit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="l"/>
+            <a:r>
+              <a:rPr sz="800" b="0">
+                <a:solidFill>
+                  <a:srgbClr val="8A94A6"/>
+                </a:solidFill>
+                <a:latin typeface="Meiryo UI"/>
+              </a:rPr>
+              <a:t>&#21628;&#12403;&#20986;&#12375;&#24335;&#12290;/name &#12391;&#36215;&#21205;</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="13" name="Rectangle 12"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="3250400" y="1750000"/>
+            <a:ext cx="2643200" cy="2900000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:srgbClr val="F6F8FB"/>
+          </a:solidFill>
+          <a:ln w="6350">
+            <a:solidFill>
+              <a:srgbClr val="E6E9EF"/>
+            </a:solidFill>
+          </a:ln>
+        </p:spPr>
+        <p:style>
+          <a:lnRef idx="1">
+            <a:schemeClr val="accent1"/>
+          </a:lnRef>
+          <a:fillRef idx="3">
+            <a:schemeClr val="accent1"/>
+          </a:fillRef>
+          <a:effectRef idx="2">
+            <a:schemeClr val="accent1"/>
+          </a:effectRef>
+          <a:fontRef idx="minor">
+            <a:schemeClr val="lt1"/>
+          </a:fontRef>
+        </p:style>
+        <p:txBody>
+          <a:bodyPr rtlCol="0" anchor="ctr"/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="ctr"/>
+            <a:endParaRPr/>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="14" name="TextBox 13"/>
+          <p:cNvSpPr txBox="1"/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="3350400" y="1830000"/>
+            <a:ext cx="2443200" cy="2740000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" lIns="30000" tIns="20000" rIns="30000" bIns="20000" anchor="t">
+            <a:spAutoFit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="800" b="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>---</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="800" b="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>name: implement-feature</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="800" b="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>description: &#27231;&#33021;&#36861;&#21152;&#12398;&#25163;&#38918;</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="800" b="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>---</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="800">
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t> </a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="800" b="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t># &#27231;&#33021;&#36861;&#21152;&#12398;&#27161;&#28310;&#25163;&#38918;</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="800">
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t> </a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="800" b="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>1. &#35201;&#20214;&#12434; Issue &#12391;&#30906;&#35469;</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="800" b="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>2. &#36942;&#21435;&#20107;&#20363;&#12434;&#26908;&#32034;</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="800" b="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>3. 4&#38917;&#30446;&#12486;&#12531;&#12503;&#12524;&#12391;&#26041;&#37341;&#25972;&#29702;</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="800" b="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>4. Draft PR &#20316;&#25104;</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="800" b="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>5. &#12486;&#12473;&#12488;&#12434;&#20808;&#12395;&#26360;&#12367;</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="800" b="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>6. &#23455;&#35013;&#12377;&#12427;</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="800" b="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>7. /review-my-changes</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="800" b="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Consolas"/>
+              </a:rPr>
+              <a:t>8. Ready for review</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="15" name="Rectangle 14"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="6043600" y="1150000"/>
+            <a:ext cx="2643200" cy="300000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:srgbClr val="2E7D32"/>
+          </a:solidFill>
+          <a:ln>
+            <a:noFill/>
+          </a:ln>
+        </p:spPr>
+        <p:style>
+          <a:lnRef idx="1">
+            <a:schemeClr val="accent1"/>
+          </a:lnRef>
+          <a:fillRef idx="3">
+            <a:schemeClr val="accent1"/>
+          </a:fillRef>
+          <a:effectRef idx="2">
+            <a:schemeClr val="accent1"/>
+          </a:effectRef>
+          <a:fontRef idx="minor">
+            <a:schemeClr val="lt1"/>
+          </a:fontRef>
+        </p:style>
+        <p:txBody>
+          <a:bodyPr rtlCol="0" anchor="ctr"/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="ctr"/>
+            <a:endParaRPr/>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="16" name="TextBox 15"/>
+          <p:cNvSpPr txBox="1"/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="6143600" y="1200000"/>
+            <a:ext cx="2443200" cy="220000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" lIns="30000" tIns="20000" rIns="30000" bIns="20000" anchor="t">
+            <a:spAutoFit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="l"/>
+            <a:r>
+              <a:rPr sz="1000" b="1">
+                <a:solidFill>
+                  <a:srgbClr val="FFFFFF"/>
+                </a:solidFill>
+                <a:latin typeface="Meiryo UI"/>
+              </a:rPr>
+              <a:t>Subagents  &#65288;&#23554;&#38272;&#31192;&#26360;&#65289;</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="17" name="TextBox 16"/>
+          <p:cNvSpPr txBox="1"/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="6143600" y="1480000"/>
+            <a:ext cx="2443200" cy="200000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" lIns="30000" tIns="20000" rIns="30000" bIns="20000" anchor="t">
+            <a:spAutoFit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="l"/>
+            <a:r>
+              <a:rPr sz="800" b="0">
+                <a:solidFill>
+                  <a:srgbClr val="8A94A6"/>
+                </a:solidFill>
+                <a:latin typeface="Meiryo UI"/>
+              </a:rPr>
+              <a:t>&#29305;&#23450;&#20998;&#37326;&#12398;&#23554;&#38272;&#23478;&#12434;&#21628;&#12403;&#20986;&#12377;</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="18" name="Rectangle 17"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="6043600" y="1750000"/>
+            <a:ext cx="2643200" cy="900000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:srgbClr val="FFFFFF"/>
+          </a:solidFill>
+          <a:ln w="6350">
+            <a:solidFill>
+              <a:srgbClr val="E6E9EF"/>
+            </a:solidFill>
+          </a:ln>
+        </p:spPr>
+        <p:style>
+          <a:lnRef idx="1">
+            <a:schemeClr val="accent1"/>
+          </a:lnRef>
+          <a:fillRef idx="3">
+            <a:schemeClr val="accent1"/>
+          </a:fillRef>
+          <a:effectRef idx="2">
+            <a:schemeClr val="accent1"/>
+          </a:effectRef>
+          <a:fontRef idx="minor">
+            <a:schemeClr val="lt1"/>
+          </a:fontRef>
+        </p:style>
+        <p:txBody>
+          <a:bodyPr rtlCol="0" anchor="ctr"/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="ctr"/>
+            <a:endParaRPr/>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="19" name="Rectangle 18"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="6043600" y="1750000"/>
+            <a:ext cx="40000" cy="900000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:srgbClr val="C03030"/>
+          </a:solidFill>
+          <a:ln>
+            <a:noFill/>
+          </a:ln>
+        </p:spPr>
+        <p:style>
+          <a:lnRef idx="1">
+            <a:schemeClr val="accent1"/>
+          </a:lnRef>
+          <a:fillRef idx="3">
+            <a:schemeClr val="accent1"/>
+          </a:fillRef>
+          <a:effectRef idx="2">
+            <a:schemeClr val="accent1"/>
+          </a:effectRef>
+          <a:fontRef idx="minor">
+            <a:schemeClr val="lt1"/>
+          </a:fontRef>
+        </p:style>
+        <p:txBody>
+          <a:bodyPr rtlCol="0" anchor="ctr"/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="ctr"/>
+            <a:endParaRPr/>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="20" name="TextBox 19"/>
+          <p:cNvSpPr txBox="1"/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="6163600" y="1830000"/>
+            <a:ext cx="2443200" cy="240000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" lIns="30000" tIns="20000" rIns="30000" bIns="20000" anchor="t">
+            <a:spAutoFit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="l"/>
+            <a:r>
+              <a:rPr sz="900" b="1">
+                <a:solidFill>
+                  <a:srgbClr val="C03030"/>
+                </a:solidFill>
+                <a:latin typeface="Meiryo UI"/>
+              </a:rPr>
+              <a:t>security-reviewer</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="21" name="TextBox 20"/>
+          <p:cNvSpPr txBox="1"/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="6163600" y="2070000"/>
+            <a:ext cx="2443200" cy="220000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" lIns="30000" tIns="20000" rIns="30000" bIns="20000" anchor="t">
+            <a:spAutoFit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="l"/>
+            <a:r>
+              <a:rPr sz="800" b="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Meiryo UI"/>
+              </a:rPr>
+              <a:t>&#33030;&#24369;&#24615;&#12539;&#35469;&#35388;&#28431;&#12428;</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="22" name="TextBox 21"/>
+          <p:cNvSpPr txBox="1"/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="6163600" y="2300000"/>
+            <a:ext cx="2443200" cy="320000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" lIns="30000" tIns="20000" rIns="30000" bIns="20000" anchor="t">
+            <a:spAutoFit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="700" b="0">
+                <a:solidFill>
+                  <a:srgbClr val="8A94A6"/>
+                </a:solidFill>
+                <a:latin typeface="Meiryo UI"/>
+              </a:rPr>
+              <a:t>SQL&#12452;&#12531;&#12472;&#12455;&#12463;&#12471;&#12519;&#12531;</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="700" b="0">
+                <a:solidFill>
+                  <a:srgbClr val="8A94A6"/>
+                </a:solidFill>
+                <a:latin typeface="Meiryo UI"/>
+              </a:rPr>
+              <a:t>&#27177;&#38480;&#12481;&#12455;&#12483;&#12463;&#28431;&#12428;</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="23" name="Rectangle 22"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="6043600" y="2680000"/>
+            <a:ext cx="2643200" cy="900000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:srgbClr val="FFFFFF"/>
+          </a:solidFill>
+          <a:ln w="6350">
+            <a:solidFill>
+              <a:srgbClr val="E6E9EF"/>
+            </a:solidFill>
+          </a:ln>
+        </p:spPr>
+        <p:style>
+          <a:lnRef idx="1">
+            <a:schemeClr val="accent1"/>
+          </a:lnRef>
+          <a:fillRef idx="3">
+            <a:schemeClr val="accent1"/>
+          </a:fillRef>
+          <a:effectRef idx="2">
+            <a:schemeClr val="accent1"/>
+          </a:effectRef>
+          <a:fontRef idx="minor">
+            <a:schemeClr val="lt1"/>
+          </a:fontRef>
+        </p:style>
+        <p:txBody>
+          <a:bodyPr rtlCol="0" anchor="ctr"/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="ctr"/>
+            <a:endParaRPr/>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="24" name="Rectangle 23"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="6043600" y="2680000"/>
+            <a:ext cx="40000" cy="900000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:srgbClr val="1A2B4C"/>
+          </a:solidFill>
+          <a:ln>
+            <a:noFill/>
+          </a:ln>
+        </p:spPr>
+        <p:style>
+          <a:lnRef idx="1">
+            <a:schemeClr val="accent1"/>
+          </a:lnRef>
+          <a:fillRef idx="3">
+            <a:schemeClr val="accent1"/>
+          </a:fillRef>
+          <a:effectRef idx="2">
+            <a:schemeClr val="accent1"/>
+          </a:effectRef>
+          <a:fontRef idx="minor">
+            <a:schemeClr val="lt1"/>
+          </a:fontRef>
+        </p:style>
+        <p:txBody>
+          <a:bodyPr rtlCol="0" anchor="ctr"/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="ctr"/>
+            <a:endParaRPr/>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="25" name="TextBox 24"/>
+          <p:cNvSpPr txBox="1"/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="6163600" y="2760000"/>
+            <a:ext cx="2443200" cy="240000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" lIns="30000" tIns="20000" rIns="30000" bIns="20000" anchor="t">
+            <a:spAutoFit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="l"/>
+            <a:r>
+              <a:rPr sz="900" b="1">
+                <a:solidFill>
+                  <a:srgbClr val="1A2B4C"/>
+                </a:solidFill>
+                <a:latin typeface="Meiryo UI"/>
+              </a:rPr>
+              <a:t>architecture-reviewer</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="26" name="TextBox 25"/>
+          <p:cNvSpPr txBox="1"/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="6163600" y="3000000"/>
+            <a:ext cx="2443200" cy="220000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" lIns="30000" tIns="20000" rIns="30000" bIns="20000" anchor="t">
+            <a:spAutoFit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="l"/>
+            <a:r>
+              <a:rPr sz="800" b="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Meiryo UI"/>
+              </a:rPr>
+              <a:t>&#35373;&#35336;&#12398;&#22949;&#24403;&#24615;</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="27" name="TextBox 26"/>
+          <p:cNvSpPr txBox="1"/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="6163600" y="3230000"/>
+            <a:ext cx="2443200" cy="320000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" lIns="30000" tIns="20000" rIns="30000" bIns="20000" anchor="t">
+            <a:spAutoFit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="700" b="0">
+                <a:solidFill>
+                  <a:srgbClr val="8A94A6"/>
+                </a:solidFill>
+                <a:latin typeface="Meiryo UI"/>
+              </a:rPr>
+              <a:t>&#36012;&#21209;&#20998;&#38626;</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="700" b="0">
+                <a:solidFill>
+                  <a:srgbClr val="8A94A6"/>
+                </a:solidFill>
+                <a:latin typeface="Meiryo UI"/>
+              </a:rPr>
+              <a:t>&#25313;&#24373;&#24615;</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="28" name="Rectangle 27"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="6043600" y="3610000"/>
+            <a:ext cx="2643200" cy="900000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:srgbClr val="FFFFFF"/>
+          </a:solidFill>
+          <a:ln w="6350">
+            <a:solidFill>
+              <a:srgbClr val="E6E9EF"/>
+            </a:solidFill>
+          </a:ln>
+        </p:spPr>
+        <p:style>
+          <a:lnRef idx="1">
+            <a:schemeClr val="accent1"/>
+          </a:lnRef>
+          <a:fillRef idx="3">
+            <a:schemeClr val="accent1"/>
+          </a:fillRef>
+          <a:effectRef idx="2">
+            <a:schemeClr val="accent1"/>
+          </a:effectRef>
+          <a:fontRef idx="minor">
+            <a:schemeClr val="lt1"/>
+          </a:fontRef>
+        </p:style>
+        <p:txBody>
+          <a:bodyPr rtlCol="0" anchor="ctr"/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="ctr"/>
+            <a:endParaRPr/>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="29" name="Rectangle 28"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="6043600" y="3610000"/>
+            <a:ext cx="40000" cy="900000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:srgbClr val="2E7D32"/>
+          </a:solidFill>
+          <a:ln>
+            <a:noFill/>
+          </a:ln>
+        </p:spPr>
+        <p:style>
+          <a:lnRef idx="1">
+            <a:schemeClr val="accent1"/>
+          </a:lnRef>
+          <a:fillRef idx="3">
+            <a:schemeClr val="accent1"/>
+          </a:fillRef>
+          <a:effectRef idx="2">
+            <a:schemeClr val="accent1"/>
+          </a:effectRef>
+          <a:fontRef idx="minor">
+            <a:schemeClr val="lt1"/>
+          </a:fontRef>
+        </p:style>
+        <p:txBody>
+          <a:bodyPr rtlCol="0" anchor="ctr"/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="ctr"/>
+            <a:endParaRPr/>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="30" name="TextBox 29"/>
+          <p:cNvSpPr txBox="1"/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="6163600" y="3690000"/>
+            <a:ext cx="2443200" cy="240000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" lIns="30000" tIns="20000" rIns="30000" bIns="20000" anchor="t">
+            <a:spAutoFit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="l"/>
+            <a:r>
+              <a:rPr sz="900" b="1">
+                <a:solidFill>
+                  <a:srgbClr val="2E7D32"/>
+                </a:solidFill>
+                <a:latin typeface="Meiryo UI"/>
+              </a:rPr>
+              <a:t>test-coverage-checker</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="31" name="TextBox 30"/>
+          <p:cNvSpPr txBox="1"/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="6163600" y="3930000"/>
+            <a:ext cx="2443200" cy="220000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" lIns="30000" tIns="20000" rIns="30000" bIns="20000" anchor="t">
+            <a:spAutoFit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="l"/>
+            <a:r>
+              <a:rPr sz="800" b="0">
+                <a:solidFill>
+                  <a:srgbClr val="222222"/>
+                </a:solidFill>
+                <a:latin typeface="Meiryo UI"/>
+              </a:rPr>
+              <a:t>&#12486;&#12473;&#12488;&#19981;&#36275;</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="32" name="TextBox 31"/>
+          <p:cNvSpPr txBox="1"/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="6163600" y="4160000"/>
+            <a:ext cx="2443200" cy="320000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" lIns="30000" tIns="20000" rIns="30000" bIns="20000" anchor="t">
+            <a:spAutoFit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="700" b="0">
+                <a:solidFill>
+                  <a:srgbClr val="8A94A6"/>
+                </a:solidFill>
+                <a:latin typeface="Meiryo UI"/>
+              </a:rPr>
+              <a:t>&#12456;&#12483;&#12472;&#12465;&#12540;&#12473;</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:pPr algn="l">
+              <a:lnSpc>
+                <a:spcPct val="120000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="700" b="0">
+                <a:solidFill>
+                  <a:srgbClr val="8A94A6"/>
+                </a:solidFill>
+                <a:latin typeface="Meiryo UI"/>
+              </a:rPr>
+              <a:t>&#30064;&#24120;&#31995;</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="33" name="TextBox 32"/>
+          <p:cNvSpPr txBox="1"/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="7886800" y="4800000"/>
+            <a:ext cx="800000" cy="200000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" lIns="30000" tIns="20000" rIns="30000" bIns="20000" anchor="t">
+            <a:spAutoFit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="r"/>
+            <a:r>
+              <a:rPr sz="900" b="0">
+                <a:solidFill>
+                  <a:srgbClr val="8A94A6"/>
+                </a:solidFill>
+                <a:latin typeface="Meiryo UI"/>
+              </a:rPr>
+              <a:t>12</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:cxnSp>
+        <p:nvCxnSpPr>
+          <p:cNvPr id="34" name="Connector 33"/>
+          <p:cNvCxnSpPr/>
+          <p:nvPr/>
+        </p:nvCxnSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="457200" y="4770000"/>
+            <a:ext cx="8229600" cy="0"/>
+          </a:xfrm>
+          <a:prstGeom prst="line">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:ln w="6350">
+            <a:solidFill>
+              <a:srgbClr val="E6E9EF"/>
+            </a:solidFill>
+          </a:ln>
+        </p:spPr>
+        <p:style>
+          <a:lnRef idx="2">
+            <a:schemeClr val="accent1"/>
+          </a:lnRef>
+          <a:fillRef idx="0">
+            <a:schemeClr val="accent1"/>
+          </a:fillRef>
+          <a:effectRef idx="1">
+            <a:schemeClr val="accent1"/>
+          </a:effectRef>
+          <a:fontRef idx="minor">
+            <a:schemeClr val="tx1"/>
+          </a:fontRef>
+        </p:style>
+      </p:cxnSp>
+    </p:spTree>
+  </p:cSld>
+  <p:clrMapOvr>
+    <a:masterClrMapping/>
+  </p:clrMapOvr>
+</p:sld>

@@ -1,0 +1,93 @@
+<h2>DX Portal - アーキテクチャ提案</h2>
+<p class="subtitle">3つのリポジトリ構成アプローチ</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>モノレポ統合型</h3>
+      <p>1リポジトリに全機能を集約。シンプルだが巨大化リスクあり。</p>
+      <div class="mockup" style="margin-top:12px">
+        <div class="mockup-header">dx-portal (1 repo)</div>
+        <div class="mockup-body" style="font-family:monospace;font-size:13px;line-height:1.6">
+          dx-portal/<br>
+          ├── .github/workflows/ &nbsp;<span style="color:#888">← Actions自動化</span><br>
+          ├── .claude/skills/ &nbsp;<span style="color:#888">← 全スキル定義</span><br>
+          ├── brain-template/ &nbsp;<span style="color:#888">← 個人brain雛形</span><br>
+          ├── company-plugin/ &nbsp;<span style="color:#888">← /company改修版</span><br>
+          ├── agents/ &nbsp;<span style="color:#888">← AIスクラムチーム</span><br>
+          ├── scripts/ &nbsp;<span style="color:#888">← 自動修正スクリプト</span><br>
+          └── docs/
+        </div>
+      </div>
+      <div class="pros-cons" style="margin-top:8px">
+        <div class="pros"><h4>Pros</h4><ul><li>設定・管理が1箇所</li><li>横断的な変更が容易</li></ul></div>
+        <div class="cons"><h4>Cons</h4><ul><li>個人brainと混在</li><li>巨大化で見通し悪化</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)" style="border:2px solid #6366f1">
+    <div class="letter" style="background:#6366f1">B</div>
+    <div class="content">
+      <h3>3層分離型 (推奨)</h3>
+      <p>責務ごとに3リポジトリ。brain/project分離戦略を忠実に実現。</p>
+      <div class="mockup" style="margin-top:12px">
+        <div class="mockup-header">3 repositories</div>
+        <div class="mockup-body" style="font-family:monospace;font-size:13px;line-height:1.8">
+          <span style="color:#f59e0b;font-weight:bold">dx-portal/</span> &nbsp;<span style="color:#888">← 開発自動化基盤（本体）</span><br>
+          &nbsp; ├── .github/workflows/ &nbsp;<span style="color:#888">← Issue提案・自動修正</span><br>
+          &nbsp; ├── .claude/skills/ &nbsp;<span style="color:#888">← スクラムチーム・スキル</span><br>
+          &nbsp; ├── agents/ &nbsp;<span style="color:#888">← 8つの専門エージェント</span><br>
+          &nbsp; ├── scripts/ &nbsp;<span style="color:#888">← auto-fix, pdm-ai等</span><br>
+          &nbsp; └── docs/<br>
+          <br>
+          <span style="color:#10b981;font-weight:bold">dx-brain/</span> &nbsp;<span style="color:#888">← 個人brain雛形（fork用）</span><br>
+          &nbsp; ├── 00_Inbox/<br>
+          &nbsp; ├── 10_Journal/<br>
+          &nbsp; ├── 20_Projects/ &nbsp;<span style="color:#888">← dx-portalへリンク</span><br>
+          &nbsp; ├── 30_Tech_Notes/<br>
+          &nbsp; └── CLAUDE.md &nbsp;<span style="color:#888">← カスタムコマンド定義</span><br>
+          <br>
+          <span style="color:#8b5cf6;font-weight:bold">~/.company/</span> &nbsp;<span style="color:#888">← 組織管理（改修版）</span><br>
+          &nbsp; ├── secretary/ &nbsp;<span style="color:#888">← 秘書室（窓口）</span><br>
+          &nbsp; ├── projects/ &nbsp;<span style="color:#888">← dx-portalのPJとリンク</span><br>
+          &nbsp; └── tech-knowledge/ &nbsp;<span style="color:#888">← チーム共有ナレッジ</span>
+        </div>
+      </div>
+      <div class="pros-cons" style="margin-top:8px">
+        <div class="pros"><h4>Pros</h4><ul><li>brain/project分離が明確</li><li>個人brainは各自fork</li><li>.companyは全PJで共有</li><li>責務が明確で保守しやすい</li></ul></div>
+        <div class="cons"><h4>Cons</h4><ul><li>リポ間のリンク管理が必要</li><li>初期セットアップがやや複雑</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>2層+テンプレート型</h3>
+      <p>dx-portalにbrain雛形を内包。.companyは別管理。</p>
+      <div class="mockup" style="margin-top:12px">
+        <div class="mockup-header">2 repositories + ~/.company</div>
+        <div class="mockup-body" style="font-family:monospace;font-size:13px;line-height:1.6">
+          dx-portal/ &nbsp;<span style="color:#888">← 基盤 + brain雛形同梱</span><br>
+          &nbsp; ├── .github/workflows/<br>
+          &nbsp; ├── templates/brain/ &nbsp;<span style="color:#888">← コピーして使う</span><br>
+          &nbsp; ├── .claude/skills/<br>
+          &nbsp; └── scripts/<br>
+          <br>
+          ~/.company/ &nbsp;<span style="color:#888">← 組織管理（改修版）</span>
+        </div>
+      </div>
+      <div class="pros-cons" style="margin-top:8px">
+        <div class="pros"><h4>Pros</h4><ul><li>管理するリポが少ない</li><li>テンプレート配布が楽</li></ul></div>
+        <div class="cons"><h4>Cons</h4><ul><li>brainの更新が追いにくい</li><li>責務の境界が曖昧になりがち</li></ul></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="margin-top:24px;padding:16px;background:#1e1b4b;border-radius:8px">
+  <h3 style="color:#a5b4fc">推奨: B - 3層分離型</h3>
+  <p style="color:#c7d2fe">yamapiiii記事のbrain/project分離戦略を忠実に実現しつつ、既存の.companyを活かせる構成。リポ間のリンクは秘書が自動管理。</p>
+</div>

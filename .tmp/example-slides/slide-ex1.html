@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F5F7FA; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header {
+  background: #003366; margin: 0; padding: 12pt 30pt;
+}
+.header-title { color: #FFFFFF; font-size: 18pt; font-weight: bold; margin: 0; }
+.header-sub { color: #99BBDD; font-size: 10pt; margin: 4pt 0 0 0; }
+.content { margin: 15pt 30pt 10pt 30pt; display: flex; gap: 18pt; }
+.scenario { flex: 1; background: #FFFFFF; border-radius: 8pt; padding: 14pt; border: 1pt solid #E0E4EA; }
+.scenario-title { font-size: 11pt; font-weight: bold; color: #003366; margin: 0 0 10pt 0; }
+.chat { margin: 6pt 0; }
+.chat-person { background: #E8F0FE; border-radius: 6pt; padding: 6pt 10pt; margin: 0 30pt 4pt 0; }
+.chat-person p { font-size: 8pt; color: #333333; margin: 0; }
+.chat-label-p { font-size: 7pt; color: #666666; margin: 0 0 2pt 0; font-weight: bold; }
+.chat-ai { background: #FFF5F5; border-radius: 6pt; padding: 6pt 10pt; margin: 0 0 4pt 30pt; }
+.chat-ai p { font-size: 8pt; color: #333333; margin: 0; }
+.chat-result { background: #FEF0E8; border-radius: 6pt; padding: 6pt 10pt; margin: 4pt 0; border-left: 3pt solid #CC0000; }
+.chat-result p { font-size: 8pt; color: #CC0000; margin: 0; font-weight: bold; }
+.divider { background: #E0E4EA; margin: 0 30pt; height: 0; }
+.bottom-msg { margin: 8pt 30pt; }
+.bottom-msg p { font-size: 9pt; color: #666666; text-align: center; margin: 0; }
+</style>
+</head>
+<body>
+<div class="header">
+  <p class="header-title">具体的に、こんなことが起きている</p>
+  <p class="header-sub">Slide 3 の課題を、実際のシナリオで見てみる</p>
+</div>
+<div class="content">
+  <!-- Scenario 1: 属人化 -->
+  <div class="scenario">
+    <p class="scenario-title">Scenario 1: ツール開発の属人化</p>
+    <div class="chat">
+      <p class="chat-label-p">Aさん（ターミナルで）</p>
+      <div class="chat-person">
+        <p>新しい集計ツール作って。CSV読み込んで月別にまとめて。</p>
+      </div>
+      <p class="chat-label-p">AI</p>
+      <div class="chat-ai">
+        <p>はい、作成しました。（テストなし・設計なし・いきなりコード）</p>
+      </div>
+      <div class="chat-result">
+        <p>1週間後、バグ発覚。設計がないので修正に3日かかる</p>
+      </div>
+    </div>
+    <div class="chat">
+      <p class="chat-label-p">一方、Bさん（同じツールを知らずに）</p>
+      <div class="chat-person">
+        <p>CSV集計するスクリプトほしいんだけど...</p>
+      </div>
+      <div class="chat-result">
+        <p>同じようなツールが2つ存在。どちらも品質バラバラ</p>
+      </div>
+    </div>
+  </div>
+  <!-- Scenario 2: ノウハウ非共有 -->
+  <div class="scenario">
+    <p class="scenario-title">Scenario 2: 失敗の繰り返し</p>
+    <div class="chat">
+      <p class="chat-label-p">Cさん（月曜日）</p>
+      <div class="chat-person">
+        <p>DBの接続タイムアウトが出る...設定値を変えてみよう</p>
+      </div>
+      <div class="chat-person">
+        <p>（3時間試行錯誤）</p>
+      </div>
+      <div class="chat-person">
+        <p>あ、コネクションプールの設定だった！解決！</p>
+      </div>
+      <div class="chat-result">
+        <p>でも、この経験はCさんの頭の中だけ</p>
+      </div>
+    </div>
+    <div class="chat">
+      <p class="chat-label-p">Dさん（水曜日、同じ問題に遭遇）</p>
+      <div class="chat-person">
+        <p>DBの接続タイムアウトが出る...設定値を変えてみよう</p>
+      </div>
+      <div class="chat-result">
+        <p>Cさんと全く同じ3時間をまた過ごす</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bottom-msg">
+  <p><b>共通の問題:</b> 個人の経験が「その人の頭の中」で止まり、チームに還元されない</p>
+</div>
+</body>
+</html>

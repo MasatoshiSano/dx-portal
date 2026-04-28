@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #FFFFFF; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header { background: #1A2B4C; height: 28pt; display: flex; align-items: center; padding: 0 20pt; }
+.header p { color: #FFFFFF; font-size: 8pt; letter-spacing: 1pt; }
+.title-bar { padding: 6pt 20pt 5pt 20pt; border-bottom: 1pt solid #E6E9EF; }
+.main { flex: 1; display: flex; }
+.left { width: 150pt; background: #F0F4F8; padding: 8pt; display: flex; flex-direction: column; gap: 3pt; border-right: 1pt solid #E6E9EF; }
+.right { flex: 1; padding: 5pt 10pt; display: flex; flex-direction: column; gap: 3pt; }
+.step-label { background: #1A2B4C; border-radius: 3pt; padding: 1pt 6pt; display: inline-block; margin-bottom: 2pt; }
+.bubble-you { background: #D0E1F5; border-radius: 7pt; padding: 3pt 7pt; margin-left: 14pt; }
+.bubble-claude { background: #F6F8FB; border: 1pt solid #E6E9EF; border-radius: 7pt; padding: 3pt 7pt; }
+.memory-card { background: #FFF8E1; border-left: 3pt solid #F79646; border-radius: 3pt; padding: 3pt 8pt; }
+.footer { height: 20pt; display: flex; align-items: center; justify-content: flex-end; padding: 0 20pt; }
+</style>
+</head>
+<body>
+<div class="header">
+  <p>DX PORTAL TEAM  |  ROADMAP</p>
+</div>
+<div class="title-bar">
+  <p style="font-size:7pt; color:#8A94A6; font-weight:bold; margin:0 0 1pt 0;">Phase 2 でできること  ―  +3名（AIコーディング層）4〜5ヶ月目</p>
+  <p style="font-size:12pt; font-weight:bold; color:#1A2B4C;">誰かが学んだことが、全員の秘書の知識になる</p>
+</div>
+<div class="main">
+  <div class="left">
+    <div style="background:#8A94A6; border-radius:3pt; padding:2pt 6pt;">
+      <p style="color:#FFFFFF; font-size:7.5pt; font-weight:bold; text-align:center;">Phase 2  ·  4〜5ヶ月目</p>
+    </div>
+    <p style="font-size:8pt; font-weight:bold; color:#1A2B4C; margin:3pt 0 0 0;">+3名（AIコーダー）計7名</p>
+    <p style="font-size:7pt; color:#8A94A6; margin-top:5pt;">Phase 1 との違い</p>
+    <p style="font-size:7pt; color:#222222;">・ 7名が同じ CLAUDE.md を参照</p>
+    <p style="font-size:7pt; color:#222222;">・ Aさんの失敗がBさんに伝わる</p>
+    <p style="font-size:7pt; color:#222222;">・ 並列開発が当たり前に</p>
+    <p style="font-size:7pt; color:#222222;">・ 衝突の8割は秘書が解決</p>
+    <p style="font-size:7pt; color:#8A94A6; margin-top:5pt;">Phase 1 終了時点で</p>
+    <p style="font-size:7pt; color:#222222;">CLAUDE.md 100〜200行 / 壁打ちログ 20本</p>
+  </div>
+  <div class="right">
+    <div class="memory-card">
+      <p style="font-size:6.5pt; color:#8A94A6; font-weight:bold;">3ヶ月前、AさんがCLAUDE.mdに書いた記録</p>
+      <p style="font-size:7.5pt; color:#222222;">「DBタイムアウトはコネクションプール設定が原因。pool_size=10, max_overflow=20 に変更で解決。ドライバ・タイムアウト値は無関係。」</p>
+    </div>
+    <div>
+      <div class="step-label">
+        <p style="color:#FFFFFF; font-size:6.5pt; font-weight:bold;">STEP 1  3ヶ月後、Bさんが同じ問題に遭遇</p>
+      </div>
+      <div class="bubble-you">
+        <p style="font-size:6.5pt; color:#4A90E2; font-weight:bold;">👤 Bさん</p>
+        <p style="font-size:7.5pt; color:#222222;">DBタイムアウトエラーが出て困ってます。ドライバを調べているんですが原因が分からなくて。</p>
+      </div>
+      <div class="bubble-claude">
+        <p style="font-size:6.5pt; color:#8A94A6; font-weight:bold;">🤖 Claude</p>
+        <p style="font-size:7.5pt; color:#222222;">CLAUDE.mdに同じ事例があります。<b>原因はドライバではなくコネクションプール設定</b>です。</p>
+        <p style="font-size:7.5pt; color:#222222;"><b>対処法：</b>pool_size=10, max_overflow=20 に変更してください。Aさんが3ヶ月前に遭遇し解決した問題です。</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <p style="font-size:8pt; color:#8A94A6;">6</p>
+</div>
+</body>
+</html>

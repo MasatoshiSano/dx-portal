@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header-bar { background: #003366; padding: 14pt 40pt; }
+.content { margin: 20pt 40pt 0 40pt; display: flex; flex-direction: column; gap: 11pt; }
+.step-row { display: flex; flex-direction: row; gap: 12pt; align-items: flex-start; }
+.step-num {
+  background: #003366; width: 36pt; height: 36pt; min-width: 36pt;
+  border-radius: 50%; display: flex; justify-content: center; align-items: center;
+}
+.step-num-red {
+  background: #CC0000; width: 36pt; height: 36pt; min-width: 36pt;
+  border-radius: 50%; display: flex; justify-content: center; align-items: center;
+}
+.step-body { flex: 1; padding-top: 2pt; }
+.step-detail { background: #F5F7FA; padding: 6pt 12pt; margin-top: 3pt; }
+.bottom-bar {
+  position: absolute; bottom: 0; left: 0; width: 720pt; height: 6pt; background: #003366;
+}
+</style>
+</head>
+<body>
+<div class="header-bar">
+  <h1 style="color: #ffffff; font-size: 18pt; margin: 0; font-weight: bold;">まず、やること</h1>
+</div>
+<div class="content">
+  <div class="step-row">
+    <div class="step-num-red">
+      <p style="color: #ffffff; font-size: 16pt; margin: 0; font-weight: bold;">1</p>
+    </div>
+    <div class="step-body">
+      <p style="color: #CC0000; font-size: 13pt; margin: 0; font-weight: bold;">この資料でチームと話す</p>
+      <div class="step-detail">
+        <p style="color: #666666; font-size: 10pt; margin: 0;">「やってみたい」「ここが心配」など、率直な意見を集める</p>
+      </div>
+    </div>
+  </div>
+  <div class="step-row">
+    <div class="step-num">
+      <p style="color: #ffffff; font-size: 16pt; margin: 0; font-weight: bold;">2</p>
+    </div>
+    <div class="step-body">
+      <p style="color: #003366; font-size: 13pt; margin: 0; font-weight: bold;">チーム標準のAI開発環境を整備する</p>
+      <div class="step-detail">
+        <p style="color: #666666; font-size: 10pt; margin: 0;">Claude Code + GitHubを軸に、全員が同じ環境で開発できるようにする</p>
+      </div>
+    </div>
+  </div>
+  <div class="step-row">
+    <div class="step-num">
+      <p style="color: #ffffff; font-size: 16pt; margin: 0; font-weight: bold;">3</p>
+    </div>
+    <div class="step-body">
+      <p style="color: #003366; font-size: 13pt; margin: 0; font-weight: bold;">GitHubで開発プロセスを回してみる</p>
+      <div class="step-detail">
+        <p style="color: #666666; font-size: 10pt; margin: 0;">1プロジェクトで「Issue → 壁打ち → PR → レビュー」を体験する</p>
+      </div>
+    </div>
+  </div>
+  <div class="step-row">
+    <div class="step-num">
+      <p style="color: #ffffff; font-size: 16pt; margin: 0; font-weight: bold;">4</p>
+    </div>
+    <div class="step-body">
+      <p style="color: #003366; font-size: 13pt; margin: 0; font-weight: bold;">チーム共通のAIルールをつくる</p>
+      <div class="step-detail">
+        <p style="color: #666666; font-size: 10pt; margin: 0;">CLAUDE.mdに壁打ち→設計→実装の流れを書き、全員の秘書に共有する</p>
+      </div>
+    </div>
+  </div>
+  <div class="step-row">
+    <div class="step-num">
+      <p style="color: #ffffff; font-size: 16pt; margin: 0; font-weight: bold;">5</p>
+    </div>
+    <div class="step-body">
+      <p style="color: #003366; font-size: 13pt; margin: 0; font-weight: bold;">失敗やノウハウの共有を始める</p>
+      <div class="step-detail">
+        <p style="color: #666666; font-size: 10pt; margin: 0;">「こうしたらうまくいった」「こうしたら失敗した」をチームで共有する場をつくる</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bottom-bar"></div>
+</body>
+</html>

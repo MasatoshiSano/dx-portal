@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #FFFFFF; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header { background: #1A2B4C; height: 28pt; display: flex; align-items: center; padding: 0 20pt; }
+.header p { color: #FFFFFF; font-size: 8pt; letter-spacing: 1pt; }
+.title-bar { padding: 6pt 20pt 5pt 20pt; border-bottom: 1pt solid #E6E9EF; }
+.main { flex: 1; padding: 5pt 14pt; display: flex; gap: 10pt; }
+.chat-col { flex: 1; display: flex; flex-direction: column; gap: 4pt; }
+.col-title { background: #1A2B4C; border-radius: 3pt; padding: 2pt 8pt; margin-bottom: 2pt; }
+.bubble-you { background: #D0E1F5; border-radius: 6pt; padding: 5pt 9pt; }
+.bubble-ai { background: #F6F8FB; border: 1pt solid #E6E9EF; border-radius: 6pt; padding: 5pt 9pt; }
+.ai-point { display: flex; gap: 5pt; align-items: flex-start; margin-top: 3pt; }
+.footer { height: 20pt; display: flex; align-items: center; justify-content: flex-end; padding: 0 20pt; }
+</style>
+</head>
+<body>
+<div class="header">
+  <p>DX PORTAL TEAM  |  ROADMAP</p>
+</div>
+<div class="title-bar">
+  <p style="font-size:7pt; color:#4A90E2; font-weight:bold; margin:0 0 2pt 0;">AI秘書との会話</p>
+  <p style="font-size:13pt; font-weight:bold; color:#1A2B4C;">「なぜ」を問えば、当時の思考プロセスごと答える</p>
+</div>
+<div class="main">
+  <div class="chat-col">
+    <div class="col-title">
+      <p style="color:#FFFFFF; font-size:6.5pt; font-weight:bold;">シーン①  入社1日目</p>
+    </div>
+    <div class="bubble-you">
+      <p style="font-size:6.5pt; color:#4A90E2; font-weight:bold;">👤 You</p>
+      <p style="font-size:7.5pt; color:#222222;">このAPIゲートウェイ、なぜKongじゃなくてEnvoyにしたんですか？</p>
+    </div>
+    <div class="bubble-ai">
+      <p style="font-size:6.5pt; color:#8A94A6; font-weight:bold;">🤖 AI秘書</p>
+      <p style="font-size:7.5pt; color:#222222;">3点の理由でEnvoyを採用しています（2024/3 設計会議より）。</p>
+      <div class="ai-point">
+        <p style="font-size:7.5pt; color:#4A90E2; font-weight:bold;">①</p>
+        <p style="font-size:7.5pt; color:#222222;">Kongはプラグイン管理が複雑化する懸念（Bさん指摘）</p>
+      </div>
+      <div class="ai-point">
+        <p style="font-size:7.5pt; color:#4A90E2; font-weight:bold;">②</p>
+        <p style="font-size:7.5pt; color:#222222;">Envoyはサービスメッシュ構成との親和性が高い</p>
+      </div>
+      <div class="ai-point">
+        <p style="font-size:7.5pt; color:#4A90E2; font-weight:bold;">③</p>
+        <p style="font-size:7.5pt; color:#222222;">却下したKong案の比較ドキュメントも参照できます</p>
+      </div>
+    </div>
+  </div>
+  <div style="width:1pt; background:#E6E9EF;"></div>
+  <div class="chat-col">
+    <div class="col-title">
+      <p style="color:#FFFFFF; font-size:6.5pt; font-weight:bold;">シーン②  担当者退職3ヶ月後</p>
+    </div>
+    <div class="bubble-you">
+      <p style="font-size:6.5pt; color:#4A90E2; font-weight:bold;">👤 You</p>
+      <p style="font-size:7.5pt; color:#222222;">Aさんが設計したDBスキーマ、なぜこのインデックス構成にしたの？</p>
+    </div>
+    <div class="bubble-ai">
+      <p style="font-size:6.5pt; color:#8A94A6; font-weight:bold;">🤖 AI秘書</p>
+      <p style="font-size:7.5pt; color:#222222;">Aさんの実装ログと判断メモが残っています（2024/5）。</p>
+      <div class="ai-point">
+        <p style="font-size:7.5pt; color:#4A90E2; font-weight:bold;">①</p>
+        <p style="font-size:7.5pt; color:#222222;">当初はuser_idのみ → 特定クエリで遅延が発生</p>
+      </div>
+      <div class="ai-point">
+        <p style="font-size:7.5pt; color:#4A90E2; font-weight:bold;">②</p>
+        <p style="font-size:7.5pt; color:#222222;">複合インデックスを3パターン試した失敗記録あり</p>
+      </div>
+      <div class="ai-point">
+        <p style="font-size:7.5pt; color:#4A90E2; font-weight:bold;">③</p>
+        <p style="font-size:7.5pt; color:#222222;">user_id + created_at採用：P99が50ms改善が決め手</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <p style="font-size:8pt; color:#8A94A6;">6</p>
+</div>
+</body>
+</html>

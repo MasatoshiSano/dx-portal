@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #FFFFFF; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header { background: #1A2B4C; height: 28pt; display: flex; align-items: center; padding: 0 20pt; }
+.header p { color: #FFFFFF; font-size: 8pt; letter-spacing: 1pt; }
+.title-bar { padding: 10pt 20pt 6pt 20pt; border-bottom: 1pt solid #E6E9EF; }
+.main { flex: 1; padding: 10pt 20pt; display: flex; flex-direction: column; gap: 6pt; }
+.row { display: flex; align-items: flex-start; gap: 10pt; }
+.num-badge {
+  min-width: 22pt; height: 22pt;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.footer { height: 20pt; display: flex; align-items: center; justify-content: flex-end; padding: 0 20pt; }
+</style>
+</head>
+<body>
+<div class="header">
+  <p>DX PORTAL TEAM  |  ROADMAP</p>
+</div>
+<div class="title-bar">
+  <p style="font-size:7pt; color:#4A90E2; font-weight:bold; margin:0 0 2pt 0;">EXECUTIVE SUMMARY</p>
+  <p style="font-size:14pt; font-weight:bold; color:#1A2B4C;">個人のノウハウをチームの力に変える3フェーズ計画</p>
+</div>
+<div class="main">
+  <div class="row">
+    <div class="num-badge" style="background:#C03030;">
+      <p style="color:#FFFFFF; font-size:9pt; font-weight:bold; text-align:center;">!</p>
+    </div>
+    <div style="flex:1;">
+      <p style="font-size:9pt; font-weight:bold; color:#C03030; margin:0 0 2pt 0;">現状課題</p>
+      <p style="font-size:9pt; color:#222222;">バイブコーディングは各自でやっているが属人化。ノウハウが共有されず、同じ失敗を繰り返している。GitHubがコード置き場になっている。</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="num-badge" style="background:#4A90E2;">
+      <p style="color:#FFFFFF; font-size:9pt; font-weight:bold; text-align:center;">1</p>
+    </div>
+    <div style="flex:1;">
+      <p style="font-size:9pt; font-weight:bold; color:#4A90E2; margin:0 0 2pt 0;">Phase 1（1〜3ヶ月）：4名コア</p>
+      <p style="font-size:9pt; color:#222222;">team-standards構築・ワークフロー確立・失敗事例の蓄積開始。積極AIコーディング組4名で試運転。</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="num-badge" style="background:#4A90E2;">
+      <p style="color:#FFFFFF; font-size:9pt; font-weight:bold; text-align:center;">2</p>
+    </div>
+    <div style="flex:1;">
+      <p style="font-size:9pt; font-weight:bold; color:#4A90E2; margin:0 0 2pt 0;">Phase 2（4〜5ヶ月）：+3名（AIコーディング層）</p>
+      <p style="font-size:9pt; color:#222222;">水平展開。誰かが学んだことが全員の秘書に伝わる「集合知化」が機能し始める。</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="num-badge" style="background:#4A90E2;">
+      <p style="color:#FFFFFF; font-size:9pt; font-weight:bold; text-align:center;">3</p>
+    </div>
+    <div style="flex:1;">
+      <p style="font-size:9pt; font-weight:bold; color:#4A90E2; margin:0 0 2pt 0;">Phase 3（6ヶ月〜）：+5名（非コーダー層）</p>
+      <p style="font-size:9pt; color:#222222;">PPT・Excel生成、議事録整理、アクションアイテム自動化など非コーダー向けユースケースで展開。全13名がClaude Codeを活用。</p>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <p style="font-size:8pt; color:#8A94A6;">2</p>
+</div>
+</body>
+</html>

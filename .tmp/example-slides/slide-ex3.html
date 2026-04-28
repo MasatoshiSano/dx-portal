@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F5F7FA; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header {
+  background: #003366; margin: 0; padding: 12pt 30pt;
+}
+.header-title { color: #FFFFFF; font-size: 18pt; font-weight: bold; margin: 0; }
+.header-sub { color: #99BBDD; font-size: 10pt; margin: 4pt 0 0 0; }
+.content { margin: 12pt 30pt; display: flex; gap: 20pt; flex: 1; }
+.side { flex: 1; display: flex; flex-direction: column; }
+.side-header { padding: 6pt 10pt; border-radius: 4pt 4pt 0 0; }
+.side-header-before { background: #CC0000; }
+.side-header-after { background: #006633; }
+.side-header p { color: #FFFFFF; font-size: 11pt; font-weight: bold; margin: 0; }
+.timeline { background: #FFFFFF; border-radius: 0 0 6pt 6pt; padding: 10pt; border: 1pt solid #E0E4EA; flex: 1; }
+.time-entry { display: flex; margin: 0 0 6pt 0; gap: 6pt; }
+.time-label { background: #F5F7FA; border-radius: 4pt; padding: 3pt 6pt; min-width: 40pt; }
+.time-label p { font-size: 7pt; color: #666666; margin: 0; text-align: center; }
+.time-content { flex: 1; }
+.time-content p { font-size: 7.5pt; color: #333333; margin: 0; }
+.time-bad { border-left: 2pt solid #CC0000; padding-left: 6pt; }
+.time-bad p { color: #CC0000; }
+.time-good { border-left: 2pt solid #006633; padding-left: 6pt; }
+.time-good p { color: #006633; }
+.chat-mini { background: #E8F0FE; border-radius: 4pt; padding: 4pt 6pt; margin: 2pt 0; }
+.chat-mini p { font-size: 7pt; color: #333333; margin: 0; }
+.chat-ai-mini { background: #E8FEF0; border-radius: 4pt; padding: 4pt 6pt; margin: 2pt 0; }
+.chat-ai-mini p { font-size: 7pt; color: #333333; margin: 0; }
+.result-box { margin-top: 6pt; padding: 6pt 8pt; border-radius: 4pt; }
+.result-bad { background: #FFF5F5; border: 1pt solid #CC0000; }
+.result-bad p { font-size: 8pt; color: #CC0000; font-weight: bold; margin: 0; }
+.result-good { background: #E8FEF0; border: 1pt solid #006633; }
+.result-good p { font-size: 8pt; color: #006633; font-weight: bold; margin: 0; }
+.center-arrow { display: flex; align-items: center; justify-content: center; padding: 0 4pt; }
+.center-arrow p { font-size: 20pt; color: #003366; margin: 0; }
+.bottom { margin: 6pt 30pt 10pt 30pt; }
+.bottom p { font-size: 9pt; color: #666666; text-align: center; margin: 0; }
+</style>
+</head>
+<body>
+<div class="header">
+  <p class="header-title">同じ「DBタイムアウト問題」で比べてみる</p>
+  <p class="header-sub">秘書がいる/いないで、解決までの時間と影響がこれだけ変わる</p>
+</div>
+<div class="content">
+  <!-- Before -->
+  <div class="side">
+    <div class="side-header side-header-before"><p>Before: 秘書なし</p></div>
+    <div class="timeline">
+      <div class="time-entry">
+        <div class="time-label"><p>10:00</p></div>
+        <div class="time-content">
+          <div class="chat-mini"><p>Dさん: DBのタイムアウトエラーが出る...</p></div>
+        </div>
+      </div>
+      <div class="time-entry">
+        <div class="time-label"><p>10:30</p></div>
+        <div class="time-content">
+          <div class="chat-mini"><p>Dさん: タイムアウト値を30秒に変えてみよう</p></div>
+          <div class="time-bad"><p>→ 直らない</p></div>
+        </div>
+      </div>
+      <div class="time-entry">
+        <div class="time-label"><p>11:30</p></div>
+        <div class="time-content">
+          <div class="chat-mini"><p>Dさん: ドライバーのバージョン？ネットワーク？</p></div>
+          <div class="time-bad"><p>→ 的外れな調査を2時間</p></div>
+        </div>
+      </div>
+      <div class="time-entry">
+        <div class="time-label"><p>13:00</p></div>
+        <div class="time-content">
+          <div class="chat-mini"><p>Dさん: ...あ、コネクションプールか！</p></div>
+          <div class="time-bad"><p>→ やっと原因に気づく（3時間経過）</p></div>
+        </div>
+      </div>
+      <div class="result-box result-bad">
+        <p>結果: 3時間ロス。しかもCさんが先週同じ問題を解決済みだった</p>
+      </div>
+    </div>
+  </div>
+  <div class="center-arrow"><p>→</p></div>
+  <!-- After -->
+  <div class="side">
+    <div class="side-header side-header-after"><p>After: 秘書あり</p></div>
+    <div class="timeline">
+      <div class="time-entry">
+        <div class="time-label"><p>10:00</p></div>
+        <div class="time-content">
+          <div class="chat-mini"><p>Dさん: DBのタイムアウトエラーが出る</p></div>
+        </div>
+      </div>
+      <div class="time-entry">
+        <div class="time-label"><p>10:01</p></div>
+        <div class="time-content">
+          <div class="chat-ai-mini"><p>秘書: チームの知識に該当する事例があります。先週、コネクションプールの設定が原因で同様のエラーが発生しています。</p></div>
+        </div>
+      </div>
+      <div class="time-entry">
+        <div class="time-label"><p>10:02</p></div>
+        <div class="time-content">
+          <div class="chat-ai-mini"><p>秘書: 解決策 - pool.max を 10 → 20 に変更、pool.idleTimeout を 30000 に設定。修正PRも自動で作成しますか？</p></div>
+        </div>
+      </div>
+      <div class="time-entry">
+        <div class="time-label"><p>10:05</p></div>
+        <div class="time-content">
+          <div class="chat-mini"><p>Dさん: お願い！</p></div>
+          <div class="time-good"><p>→ 秘書がPR作成。5分で解決</p></div>
+        </div>
+      </div>
+      <div class="result-box result-good">
+        <p>結果: 5分で解決。Cさんの経験がチーム全体の力になった</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bottom">
+  <p><b>3時間 → 5分。</b> 秘書どうしが知識を共有しているから、誰かの経験が全員を助ける</p>
+</div>
+</body>
+</html>

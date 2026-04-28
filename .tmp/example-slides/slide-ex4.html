@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F5F7FA; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header {
+  background: #003366; margin: 0; padding: 12pt 30pt;
+}
+.header-title { color: #FFFFFF; font-size: 18pt; font-weight: bold; margin: 0; }
+.header-sub { color: #99BBDD; font-size: 10pt; margin: 4pt 0 0 0; }
+.content { margin: 12pt 30pt; display: flex; flex-direction: column; gap: 10pt; flex: 1; }
+.flow-row { display: flex; gap: 10pt; align-items: flex-start; }
+.flow-step { flex: 1; }
+.layer-label { border-radius: 4pt 4pt 0 0; padding: 4pt 8pt; }
+.layer-team { background: #003366; }
+.layer-anon { background: #666666; }
+.layer-personal { background: #999999; }
+.layer-label p { color: #FFFFFF; font-size: 8pt; font-weight: bold; margin: 0; }
+.layer-box { background: #FFFFFF; border-radius: 0 0 4pt 4pt; padding: 8pt; border: 1pt solid #E0E4EA; }
+.event-title { font-size: 8pt; font-weight: bold; color: #003366; margin: 0 0 4pt 0; }
+.chat-p { background: #E8F0FE; border-radius: 4pt; padding: 4pt 6pt; margin: 3pt 0; }
+.chat-p p { font-size: 7pt; color: #333333; margin: 0; }
+.chat-a { background: #E8FEF0; border-radius: 4pt; padding: 4pt 6pt; margin: 3pt 0; }
+.chat-a p { font-size: 7pt; color: #333333; margin: 0; }
+.arrow-down { text-align: center; padding: 2pt 0; }
+.arrow-down p { font-size: 10pt; color: #003366; margin: 0; }
+.knowledge-item { background: #F0F4FF; border-radius: 4pt; padding: 4pt 6pt; margin: 2pt 0; border-left: 2pt solid #003366; }
+.knowledge-item p { font-size: 7pt; color: #333333; margin: 0; }
+.anon-item { background: #F5F5F5; border-radius: 4pt; padding: 4pt 6pt; margin: 2pt 0; border-left: 2pt solid #666666; }
+.anon-item p { font-size: 7pt; color: #333333; margin: 0; }
+.personal-item { background: #FAFAFA; border-radius: 4pt; padding: 4pt 6pt; margin: 2pt 0; border-left: 2pt solid #999999; }
+.personal-item p { font-size: 7pt; color: #666666; margin: 0; }
+.flow-arrow { display: flex; align-items: center; justify-content: center; padding: 0 2pt; }
+.flow-arrow p { font-size: 14pt; color: #003366; margin: 0; }
+.bottom { margin: 4pt 30pt 10pt 30pt; background: #FFFFFF; border-radius: 6pt; padding: 8pt 14pt; border: 1pt solid #E0E4EA; }
+.bottom p { font-size: 8pt; color: #333333; margin: 0; }
+.bottom-title { font-size: 9pt; font-weight: bold; color: #003366; margin: 0 0 4pt 0; }
+</style>
+</head>
+<body>
+<div class="header">
+  <p class="header-title">3層構造の具体例: Aさんの失敗が、どう共有されるか</p>
+  <p class="header-sub">「DBタイムアウトで3時間ハマった」経験が、チームの知識になるまでの流れ</p>
+</div>
+<div class="content">
+  <div class="flow-row">
+    <!-- Step 1: 個人の経験 -->
+    <div class="flow-step">
+      <div class="layer-label layer-personal"><p>1. Aさんの秘書（個人層）</p></div>
+      <div class="layer-box">
+        <p class="event-title">Aさんの作業ログ（本人だけが見える）</p>
+        <div class="personal-item"><p>10:00 DBタイムアウト発生</p></div>
+        <div class="personal-item"><p>10:30 タイムアウト値変更 → 効果なし</p></div>
+        <div class="personal-item"><p>11:00 ドライバー調査 → 関係なし</p></div>
+        <div class="personal-item"><p>13:00 コネクションプール設定で解決！</p></div>
+        <div class="chat-a">
+          <p>秘書: これ、チームに共有しませんか？同じ問題で困る人がいるかもしれません</p>
+        </div>
+        <div class="chat-p"><p>Aさん: そうだね、共有して</p></div>
+      </div>
+    </div>
+    <div class="flow-arrow"><p>→</p></div>
+    <!-- Step 2: 匿名化 -->
+    <div class="flow-step">
+      <div class="layer-label layer-anon"><p>2. 匿名化ナレッジ層</p></div>
+      <div class="layer-box">
+        <p class="event-title">秘書が自動で匿名化</p>
+        <div class="anon-item"><p><b>Before（個人層）:</b></p></div>
+        <div class="anon-item"><p>「Aさんが3時間ハマった」</p></div>
+        <div class="arrow-down"><p>↓</p></div>
+        <div class="anon-item"><p><b>After（匿名化後）:</b></p></div>
+        <div class="knowledge-item"><p>「DBタイムアウト時はコネクションプール設定を確認」</p></div>
+        <div class="knowledge-item"><p>「pool.max: 10→20, idleTimeout: 30000 で解決」</p></div>
+        <div class="knowledge-item"><p>「タイムアウト値変更やドライバー調査は効果なし」</p></div>
+      </div>
+    </div>
+    <div class="flow-arrow"><p>→</p></div>
+    <!-- Step 3: チーム共有 -->
+    <div class="flow-step">
+      <div class="layer-label layer-team"><p>3. チーム共有層</p></div>
+      <div class="layer-box">
+        <p class="event-title">全員の秘書が自動で同期</p>
+        <div class="knowledge-item"><p>Bさんの秘書 ← 同期済み</p></div>
+        <div class="knowledge-item"><p>Cさんの秘書 ← 同期済み</p></div>
+        <div class="knowledge-item"><p>Dさんの秘書 ← 同期済み</p></div>
+        <div class="arrow-down"><p>↓</p></div>
+        <div class="chat-a">
+          <p>Dさんの秘書（翌週）: DBタイムアウトですね。チームの知識によると、コネクションプール設定が原因の可能性が高いです。確認しますか？</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bottom">
+  <p class="bottom-title">プライバシーのポイント</p>
+  <p>Aさんの名前や試行錯誤の過程は共有されない。共有されるのは「教訓」だけ。本人が「共有して」と言わない限り、秘書は勝手に共有しない。</p>
+</div>
+</body>
+</html>

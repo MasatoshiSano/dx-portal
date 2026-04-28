@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>EPS AI活用プラットフォーム ガイド</title>
+<style>
+html { background: #cccccc; }
+body {
+  width: 720pt; margin: 0 auto; padding: 0;
+  background: #cccccc; font-family: "Meiryo UI", "Yu Gothic UI", Arial, sans-serif;
+  display: flex; flex-direction: column; align-items: center; gap: 32pt;
+  padding: 32pt 0;
+}
+
+/* ===== 共通スライド ===== */
+.slide {
+  width: 720pt; height: 405pt; position: relative; overflow: hidden;
+  background: #ffffff; box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  display: flex; flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* ===== ヘッダーバー共通 ===== */
+.header-bar {
+  padding: 14pt 40pt;
+  flex-shrink: 0;
+}
+.header-bar h1 {
+  color: #ffffff; font-size: 16pt; margin: 0; font-weight: bold;
+}
+.header-bar .sub {
+  color: rgba(255,255,255,0.75); font-size: 8pt; margin: 2pt 0 0 0;
+}
+
+/* ===== カラー定義 ===== */
+.blue { background: #003366; }
+.red  { background: #CC0000; }
+.green{ background: #006633; }
+.navy { background: #003366; }
+
+/* ===== カード・ボックス ===== */
+.card-blue { background: #F0F4FF; border-left: 3pt solid #003366; padding: 8pt 12pt; }
+.card-red  { background: #FFF5F5; border-left: 3pt solid #CC0000; padding: 8pt 12pt; }
+.card-green{ background: #F0FFF0; border-left: 3pt solid #006633; padding: 8pt 12pt; }
+.card-gray { background: #F5F5F5; border-left: 3pt solid #999999; padding: 8pt 12pt; }
+
+/* ===== スライド1: カバー ===== */
+#s1 .top-bar {
+  position: absolute; top: 0; left: 0; width: 720pt; height: 8pt;
+  background: #003366;
+}
+#s1 .title-block {
+  margin: auto; text-align: center; padding: 60pt 60pt 0;
+}
+#s1 .bottom-line {
+  position: absolute; bottom: 55pt; left: 60pt; width: 600pt; height: 1pt;
+  background: #003366;
+}
+#s1 .footer {
+  position: absolute; bottom: 28pt; left: 0; width: 720pt; text-align: center;
+}
+
+/* ===== スライド2: 全体俯瞰 ===== */
+#s2 .content {
+  margin: 12pt 28pt 0; display: flex; flex-direction: row; gap: 12pt; flex: 1;
+}
+#s2 .left-col { flex: 1.1; display: flex; flex-direction: column; gap: 6pt; }
+#s2 .right-col { flex: 0.9; display: flex; flex-direction: column; gap: 6pt; }
+#s2 .feature-row {
+  display: flex; flex-direction: row; gap: 8pt; align-items: flex-start;
+}
+#s2 .icon-box {
+  width: 22pt; height: 22pt; min-width: 22pt; border-radius: 4pt;
+  display: flex; justify-content: center; align-items: center; font-size: 10pt;
+}
+#s2 .feature-body { flex: 1; }
+
+/* ===== スライド3: 全体構成図 ===== */
+#s3 .content {
+  margin: 12pt 28pt 0; display: flex; flex-direction: column; gap: 6pt; flex: 1;
+}
+#s3 .arch-row {
+  display: flex; flex-direction: row; gap: 6pt; align-items: stretch;
+}
+#s3 .arch-label {
+  width: 90pt; padding: 6pt 8pt; display: flex; flex-direction: column;
+  justify-content: center; align-items: center; text-align: center;
+}
+#s3 .arch-items {
+  flex: 1; display: flex; flex-direction: row; gap: 6pt; align-items: stretch;
+}
+#s3 .arch-item {
+  flex: 1; padding: 7pt 8pt; font-size: 7.5pt; line-height: 1.5; color: #333333;
+  display: flex; flex-direction: column; justify-content: center;
+}
+
+/* ===== スライド4: ユースケース一覧 ===== */
+#s4 .content {
+  margin: 10pt 28pt 0; display: grid;
+  grid-template-columns: 1fr 1fr 1fr; gap: 8pt; flex: 1;
+}
+#s4 .use-card {
+  background: #F5F7FA; border-top: 3pt solid #003366; padding: 8pt 10pt;
+}
+#s4 .use-card.red-top { border-top-color: #CC0000; }
+#s4 .use-card.green-top { border-top-color: #006633; }
+#s4 .want-label {
+  background: #003366; color: #fff; font-size: 7pt; font-weight: bold;
+  padding: 2pt 6pt; display: inline-block; margin-bottom: 4pt;
+}
+#s4 .want-label.red { background: #CC0000; }
+#s4 .want-label.green { background: #006633; }
+#s4 .arrow-row {
+  display: flex; align-items: center; gap: 6pt; margin: 4pt 0;
+}
+
+/* ===== スライド5: 調べる・分析する ===== */
+#s5 .content {
+  margin: 10pt 28pt 8pt; display: flex; flex-direction: row; gap: 12pt; flex: 1;
+}
+#s5 .scenario-col { flex: 1; display: flex; flex-direction: column; gap: 8pt; }
+#s5 .scenario-box { padding: 9pt 11pt; flex: 1; }
+#s5 .prompt-box {
+  background: #1a1a2e; border-radius: 4pt; padding: 8pt 12pt; margin-top: 4pt;
+}
+
+/* ===== スライド6: ハードを動かす ===== */
+#s6 .content {
+  margin: 10pt 28pt 0; display: flex; flex-direction: column; gap: 8pt; flex: 1;
+}
+#s6 .hsi-flow {
+  display: flex; flex-direction: row; align-items: center; gap: 8pt;
+}
+#s6 .flow-box {
+  flex: 1; padding: 8pt 10pt; text-align: center;
+  background: #F0F4FF; border: 1.5pt solid #003366; border-radius: 4pt;
+}
+#s6 .flow-arrow {
+  font-size: 14pt; color: #003366; font-weight: bold;
+}
+#s6 .bottom-row {
+  display: flex; flex-direction: row; gap: 8pt;
+}
+
+/* ===== スライド7: 開発を加速する ===== */
+#s7 .content {
+  margin: 10pt 28pt 0; display: flex; flex-direction: row; gap: 12pt; flex: 1;
+}
+#s7 .dev-col { flex: 1; display: flex; flex-direction: column; gap: 6pt; }
+#s7 .step-row {
+  display: flex; flex-direction: row; gap: 8pt; align-items: flex-start;
+}
+#s7 .step-num {
+  width: 20pt; height: 20pt; min-width: 20pt; border-radius: 50%;
+  background: #003366; display: flex; justify-content: center; align-items: center;
+  color: #fff; font-size: 9pt; font-weight: bold;
+}
+#s7 .step-body { flex: 1; }
+
+/* ===== スライド8: 書類を作る ===== */
+#s8 .content {
+  margin: 10pt 28pt 0; display: flex; flex-direction: row; gap: 12pt; flex: 1;
+}
+#s8 .doc-grid {
+  flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 8pt; align-content: start;
+}
+#s8 .doc-card { padding: 8pt 10pt; background: #F0FFF0; border-left: 3pt solid #006633; }
+#s8 .doc-card.blue { background: #F0F4FF; border-left-color: #003366; }
+#s8 .side-col { flex: 0.7; display: flex; flex-direction: column; gap: 8pt; }
+
+/* ===== スライド9: mio エージェント ===== */
+#s9 .content {
+  margin: 10pt 28pt 8pt; display: flex; flex-direction: row; gap: 12pt; flex: 1;
+}
+#s9 .mio-center {
+  flex: 0.75; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  background: #F5F7FA; border-radius: 8pt; padding: 14pt 10pt;
+}
+#s9 .mio-icon {
+  width: 80pt; height: 80pt; background: #003366; border-radius: 50%;
+  display: flex; justify-content: center; align-items: center; margin-bottom: 8pt;
+}
+#s9 .orbit-grid {
+  flex: 1.25; display: grid; grid-template-columns: 1fr 1fr; gap: 8pt; align-content: stretch;
+}
+#s9 .orbit-item { padding: 9pt 11pt; font-size: 7.5pt; line-height: 1.6; }
+
+/* ===== スライド10: Quick Start ===== */
+#s10 .content {
+  margin: 10pt 28pt 0; display: flex; flex-direction: row; gap: 14pt; flex: 1;
+}
+#s10 .steps-col { flex: 1; display: flex; flex-direction: column; gap: 6pt; }
+#s10 .start-step {
+  display: flex; flex-direction: row; gap: 10pt; align-items: flex-start;
+}
+#s10 .step-circle {
+  width: 28pt; height: 28pt; min-width: 28pt; border-radius: 50%;
+  display: flex; justify-content: center; align-items: center;
+  color: #fff; font-size: 12pt; font-weight: bold;
+}
+#s10 .doc-col { flex: 0.85; display: flex; flex-direction: column; gap: 6pt; }
+#s10 .doc-link {
+  background: #F0F4FF; padding: 7pt 10pt; border-left: 3pt solid #003366;
+  display: flex; flex-direction: column;
+}
+</style>
+</head>
+<body>
+
+<!-- ==============================
+     Slide 1: カバー
+     ============================== -->
+<section class="slide" id="s1">
+  <div class="top-bar"></div>
+  <div class="title-block">
+    <p style="color:#003366;font-size:10pt;margin:0 0 8pt;letter-spacing:2pt;">EPS Open-WebUI トライアル</p>
+    <h1 style="color:#003366;font-size:24pt;margin:0 0 10pt;font-weight:bold;line-height:1.3;">
+      AI活用プラットフォーム<br>使い方ガイド
+    </h1>
+    <p style="color:#666666;font-size:11pt;margin:0 0 5pt;">
+      「やりたいこと」からツールを選ぶ実践マニュアル
+    </p>
+    <p style="color:#999999;font-size:9pt;margin:0;">
+      Python 約4万STEP ／ オンプレミスWebアプリ ／ 汎用AIエージェント mio 搭載
+    </p>
+  </div>
+  <div class="bottom-line"></div>
+  <div class="footer">
+    <p style="color:#999999;font-size:9pt;margin:0;">社外秘</p>
+  </div>
+</section>
+
+
+<!-- ==============================
+     Slide 2: このPFで何ができるか
+     ============================== -->
+<section class="slide" id="s2">
+  <div class="header-bar blue">
+    <h1>このプラットフォームでできること — 一枚で全貌</h1>
+  </div>
+  <div class="content">
+    <div class="left-col">
+
+      <div class="feature-row">
+        <div class="icon-box" style="background:#E8F0FE;">📊</div>
+        <div class="feature-body">
+          <p style="color:#003366;font-size:9pt;font-weight:bold;margin:0 0 2pt;">社内データ横断検索・分析</p>
+          <p style="color:#555;font-size:7.5pt;margin:0;line-height:1.5;">
+            Neuron・REDMINE・SharePoint・メール・Teamsを横断し、<br>LLMが自然言語で回答・分析
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="icon-box" style="background:#FEF0E8;">🔧</div>
+        <div class="feature-body">
+          <p style="color:#CC0000;font-size:9pt;font-weight:bold;margin:0 0 2pt;">ハードウェア直接制御</p>
+          <p style="color:#555;font-size:7.5pt;margin:0;line-height:1.5;">
+            AIがPCやEPS製品に直接接続。CAN/UDS Diag/XCPレベルの評価・リプロを自動化
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="icon-box" style="background:#E8FEF0;">💻</div>
+        <div class="feature-body">
+          <p style="color:#006633;font-size:9pt;font-weight:bold;margin:0 0 2pt;">開発・コーディング支援</p>
+          <p style="color:#555;font-size:7.5pt;margin:0;line-height:1.5;">
+            vibe coding / コードインタプリタ / GitLab-GitHub連携 / AUTOSAR対応。<br>テストケースも自動生成
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="icon-box" style="background:#FEF8E8;">📝</div>
+        <div class="feature-body">
+          <p style="color:#996600;font-size:9pt;font-weight:bold;margin:0 0 2pt;">書類・帳票の自動作成</p>
+          <p style="color:#555;font-size:7.5pt;margin:0;line-height:1.5;">
+            DRシート・帳票・議事録・Word/PowerPointをAIが代理作成
+          </p>
+        </div>
+      </div>
+
+    </div>
+    <div class="right-col">
+
+      <div style="background:#003366;border-radius:4pt;padding:10pt 12pt;margin-bottom:6pt;">
+        <p style="color:#fff;font-size:8pt;font-weight:bold;margin:0 0 5pt;">✨ 全部つなぐエージェント「mio」</p>
+        <p style="color:rgba(255,255,255,0.85);font-size:7.5pt;margin:0;line-height:1.7;">
+          上記をすべてオーケストレーション。<br>
+          CodeGenie + Anthropic Agent Skills 対応。<br>
+          数集計・Outlook操作・docx/pptx作成まで<br>
+          自然言語ひとことで実行。
+        </p>
+      </div>
+
+      <div class="card-gray">
+        <p style="color:#333;font-size:8pt;font-weight:bold;margin:0 0 4pt;">インフラ・管理</p>
+        <ul style="color:#555;font-size:7.5pt;margin:0;padding-left:13pt;line-height:1.8;">
+          <li>完全オンプレミス・ボイス機能搭載</li>
+          <li>LangFuse / ビッグデータ KPI管理</li>
+          <li>APIキーによるユーザー毎認証</li>
+          <li>MELGIT-GAI API (OAuth2.0) 対応</li>
+        </ul>
+      </div>
+
+      <div class="card-blue">
+        <p style="color:#003366;font-size:7.5pt;font-weight:bold;margin:0 0 2pt;">ベテラン知識の活用</p>
+        <p style="color:#555;font-size:7.5pt;margin:0;line-height:1.5;">
+          KB・手順・スキルをエージェントがオーケストレーションし、<br>若手メンバーがすぐに活用できる
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ==============================
+     Slide 3: 全体構成図
+     ============================== -->
+<section class="slide" id="s3">
+  <div class="header-bar" style="background:#003366;">
+    <h1>システム全体構成 — どんなツールが繋がっているか</h1>
+  </div>
+  <div class="content">
+
+    <!-- 入力層 -->
+    <div class="arch-row">
+      <div class="arch-label" style="background:#003366;">
+        <p style="color:#fff;font-size:8pt;font-weight:bold;margin:0;">あなた</p>
+        <p style="color:rgba(255,255,255,0.7);font-size:6.5pt;margin:2pt 0 0;">チャット入力</p>
+      </div>
+      <div class="arch-items">
+        <div class="arch-item" style="background:#E8F0FE;border:1.5pt solid #003366;border-radius:3pt;text-align:center;">
+          <p style="color:#003366;font-size:9pt;font-weight:bold;margin:0;">Open WebUI</p>
+          <p style="color:#555;font-size:7pt;margin:2pt 0 0;">チャット画面（ブラウザからアクセス）</p>
+        </div>
+        <div class="arch-item" style="background:#E8F0FE;border:1.5pt solid #003366;border-radius:3pt;text-align:center;">
+          <p style="color:#003366;font-size:9pt;font-weight:bold;margin:0;">ボイス入力</p>
+          <p style="color:#555;font-size:7pt;margin:2pt 0 0;">音声でも操作可能</p>
+        </div>
+        <div class="arch-item" style="background:#E8F0FE;border:1.5pt solid #003366;border-radius:3pt;text-align:center;">
+          <p style="color:#003366;font-size:9pt;font-weight:bold;margin:0;">n8n / Dify</p>
+          <p style="color:#555;font-size:7pt;margin:2pt 0 0;">ノーコードAIフロー</p>
+        </div>
+        <div class="arch-item" style="background:#E8F0FE;border:1.5pt solid #003366;border-radius:3pt;text-align:center;">
+          <p style="color:#003366;font-size:9pt;font-weight:bold;margin:0;">LangChain / API</p>
+          <p style="color:#555;font-size:7pt;margin:2pt 0 0;">外部システムから呼び出し</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;padding:2pt 0;">
+      <p style="color:#003366;font-size:10pt;margin:0;font-weight:bold;">▼ AI処理エンジン ▼</p>
+    </div>
+
+    <!-- AI中核 -->
+    <div class="arch-row">
+      <div class="arch-label" style="background:#CC0000;">
+        <p style="color:#fff;font-size:8pt;font-weight:bold;margin:0;">エージェント</p>
+        <p style="color:rgba(255,255,255,0.7);font-size:6.5pt;margin:2pt 0 0;">mio / スキル</p>
+      </div>
+      <div class="arch-items">
+        <div class="arch-item" style="background:#FFF5F5;border:1.5pt solid #CC0000;border-radius:3pt;text-align:center;">
+          <p style="color:#CC0000;font-size:9pt;font-weight:bold;margin:0;">mio</p>
+          <p style="color:#555;font-size:7pt;margin:2pt 0 0;">汎用AIエージェント</p>
+        </div>
+        <div class="arch-item" style="background:#FFF5F5;border:1.5pt solid #CC0000;border-radius:3pt;text-align:center;">
+          <p style="color:#CC0000;font-size:9pt;font-weight:bold;margin:0;">マルチモーダルRAG</p>
+          <p style="color:#555;font-size:7pt;margin:2pt 0 0;">画像含むドキュメント検索</p>
+        </div>
+        <div class="arch-item" style="background:#FFF5F5;border:1.5pt solid #CC0000;border-radius:3pt;text-align:center;">
+          <p style="color:#CC0000;font-size:9pt;font-weight:bold;margin:0;">コードEmbedding</p>
+          <p style="color:#555;font-size:7pt;margin:2pt 0 0;">ソースと自然言語をリンク</p>
+        </div>
+        <div class="arch-item" style="background:#FFF5F5;border:1.5pt solid #CC0000;border-radius:3pt;text-align:center;">
+          <p style="color:#CC0000;font-size:9pt;font-weight:bold;margin:0;">Code Interpreter</p>
+          <p style="color:#555;font-size:7pt;margin:2pt 0 0;">コードをAIが実行</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;padding:2pt 0;">
+      <p style="color:#006633;font-size:10pt;margin:0;font-weight:bold;">▼ 外部データ・ツール連携 ▼</p>
+    </div>
+
+    <!-- データ層 -->
+    <div class="arch-row">
+      <div class="arch-label" style="background:#006633;">
+        <p style="color:#fff;font-size:8pt;font-weight:bold;margin:0;">データ・</p>
+        <p style="color:#fff;font-size:8pt;font-weight:bold;margin:0;">ツール連携</p>
+      </div>
+      <div class="arch-items">
+        <div class="arch-item" style="background:#F0FFF0;border:1.5pt solid #006633;border-radius:3pt;text-align:center;">
+          <p style="color:#006633;font-size:8.5pt;font-weight:bold;margin:0;">Neuron</p>
+          <p style="color:#555;font-size:6.5pt;margin:1pt 0 0;">社内KB・手順書</p>
+        </div>
+        <div class="arch-item" style="background:#F0FFF0;border:1.5pt solid #006633;border-radius:3pt;text-align:center;">
+          <p style="color:#006633;font-size:8.5pt;font-weight:bold;margin:0;">REDMINE</p>
+          <p style="color:#555;font-size:6.5pt;margin:1pt 0 0;">タスク・課題管理</p>
+        </div>
+        <div class="arch-item" style="background:#F0FFF0;border:1.5pt solid #006633;border-radius:3pt;text-align:center;">
+          <p style="color:#006633;font-size:8.5pt;font-weight:bold;margin:0;">M365</p>
+          <p style="color:#555;font-size:6.5pt;margin:1pt 0 0;">Teams/SharePoint/メール</p>
+        </div>
+        <div class="arch-item" style="background:#F0FFF0;border:1.5pt solid #006633;border-radius:3pt;text-align:center;">
+          <p style="color:#006633;font-size:8.5pt;font-weight:bold;margin:0;">EPS / PC直接接続</p>
+          <p style="color:#555;font-size:6.5pt;margin:1pt 0 0;">SSL Tunnel / CAN / XCP</p>
+        </div>
+        <div class="arch-item" style="background:#F0FFF0;border:1.5pt solid #006633;border-radius:3pt;text-align:center;">
+          <p style="color:#006633;font-size:8.5pt;font-weight:bold;margin:0;">GitLab / GitHub</p>
+          <p style="color:#555;font-size:6.5pt;margin:1pt 0 0;">SVN・ソースコード</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ==============================
+     Slide 4: ユースケース早見表
+     ============================== -->
+<section class="slide" id="s4">
+  <div class="header-bar red">
+    <h1>「こんなことをしたい」 → どれを使えばいいか</h1>
+    <p class="sub">Open WebUI のチャット画面でひとことプロンプトを送るだけ</p>
+  </div>
+  <div class="content">
+
+    <div class="use-card">
+      <div class="want-label">調べる</div>
+      <p style="color:#003366;font-size:8pt;font-weight:bold;margin:2pt 0;">REDMINE / Neuron を検索したい</p>
+      <div class="arrow-row">
+        <span style="color:#CC0000;font-size:9pt;">▶</span>
+        <p style="color:#555;font-size:7.5pt;margin:0;line-height:1.5;"><b>Neuron連携 / REDMINE検索連携</b><br>
+        「MELMBのEPS製部の経営課題をNeuronから調べて」</p>
+      </div>
+    </div>
+
+    <div class="use-card red-top">
+      <div class="want-label red">ハードを動かす</div>
+      <p style="color:#CC0000;font-size:8pt;font-weight:bold;margin:2pt 0;">EPSを直接評価・リプロしたい</p>
+      <div class="arrow-row">
+        <span style="color:#CC0000;font-size:9pt;">▶</span>
+        <p style="color:#555;font-size:7.5pt;margin:0;line-height:1.5;"><b>HSI / SSL Tunnel Client</b><br>
+        「評価仕様書に従って EPSを直接評価して」</p>
+      </div>
+    </div>
+
+    <div class="use-card green-top">
+      <div class="want-label green">書類を作る</div>
+      <p style="color:#006633;font-size:8pt;font-weight:bold;margin:2pt 0;">DRシートや帳票を自動で作りたい</p>
+      <div class="arrow-row">
+        <span style="color:#CC0000;font-size:9pt;">▶</span>
+        <p style="color:#555;font-size:7.5pt;margin:0;line-height:1.5;"><b>DRシートエージェント / mio スキル</b><br>
+        「PR#XXの議事録からDR帳票を作成して」</p>
+      </div>
+    </div>
+
+    <div class="use-card">
+      <div class="want-label">波形分析</div>
+      <p style="color:#003366;font-size:8pt;font-weight:bold;margin:2pt 0;">mdf波形ファイルを解析したい</p>
+      <div class="arrow-row">
+        <span style="color:#CC0000;font-size:9pt;">▶</span>
+        <p style="color:#555;font-size:7.5pt;margin:0;line-height:1.5;"><b>Code Interpreter + FFT</b><br>
+        「XXX.mdfのI軸電流の周波数特性をFFTで評価して」</p>
+      </div>
+    </div>
+
+    <div class="use-card red-top">
+      <div class="want-label red">コーディング</div>
+      <p style="color:#CC0000;font-size:8pt;font-weight:bold;margin:2pt 0;">コンパイル〜修正を自動化したい</p>
+      <div class="arrow-row">
+        <span style="color:#CC0000;font-size:9pt;">▶</span>
+        <p style="color:#555;font-size:7.5pt;margin:0;line-height:1.5;"><b>SSL Tunnel + コードインタプリタ</b><br>
+        「コンパイルして。エラーがあったら修正して」</p>
+      </div>
+    </div>
+
+    <div class="use-card green-top">
+      <div class="want-label green">タスク管理</div>
+      <p style="color:#006633;font-size:8pt;font-weight:bold;margin:2pt 0;">自分のタスクを一覧・可視化したい</p>
+      <div class="arrow-row">
+        <span style="color:#CC0000;font-size:9pt;">▶</span>
+        <p style="color:#555;font-size:7.5pt;margin:0;line-height:1.5;"><b>redmine agent</b><br>
+        「私のタスクを調べてmermaidでガントチャートも表示して」</p>
+      </div>
+    </div>
+
+    <div class="use-card">
+      <div class="want-label">テスト生成</div>
+      <p style="color:#003366;font-size:8pt;font-weight:bold;margin:2pt 0;">テストケースをまとめて作りたい</p>
+      <div class="arrow-row">
+        <span style="color:#CC0000;font-size:9pt;">▶</span>
+        <p style="color:#555;font-size:7.5pt;margin:0;line-height:1.5;"><b>mio + Agent Skills</b><br>
+        「Issue#XXでコミットしたソフトのテストケースをinstructionを基に作って」</p>
+      </div>
+    </div>
+
+    <div class="use-card red-top">
+      <div class="want-label red">ブラウザ操作</div>
+      <p style="color:#CC0000;font-size:8pt;font-weight:bold;margin:2pt 0;">Webブラウザ操作を自動化したい</p>
+      <div class="arrow-row">
+        <span style="color:#CC0000;font-size:9pt;">▶</span>
+        <p style="color:#555;font-size:7.5pt;margin:0;line-height:1.5;"><b>ブラウザ連携</b><br>
+        ブラウザをAIが直接操作して情報収集・入力</p>
+      </div>
+    </div>
+
+    <div class="use-card green-top">
+      <div class="want-label green">ノーコード開発</div>
+      <p style="color:#006633;font-size:8pt;font-weight:bold;margin:2pt 0;">プログラム不要でAIフローを作りたい</p>
+      <div class="arrow-row">
+        <span style="color:#CC0000;font-size:9pt;">▶</span>
+        <p style="color:#555;font-size:7.5pt;margin:0;line-height:1.5;"><b>n8n / Dify 連携</b><br>
+        ドラッグ&ドロップでAIワークフローを構築</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ==============================
+     Slide 5: 社内データ検索・分析
+     ============================== -->
+<section class="slide" id="s5">
+  <div class="header-bar blue">
+    <h1>使い方① 社内データを調べる・分析する</h1>
+    <p class="sub">Neuron・REDMINE・M365 に自然言語で聞く</p>
+  </div>
+  <div class="content">
+
+    <div class="scenario-col">
+      <div class="scenario-box card-blue">
+        <p style="color:#003366;font-size:9pt;font-weight:bold;margin:0 0 3pt;">📊 Neuron連携 — 社内ナレッジをAIで検索</p>
+        <p style="color:#555;font-size:7.5pt;margin:0 0 5pt;line-height:1.6;">
+          Neuronに蓄積したKB・手順書・技術情報をLLMが理解して回答。<br>
+          従来のキーワード検索では見つからなかった情報も表面化。
+        </p>
+        <div class="prompt-box">
+          <p style="color:#7dd3fc;font-size:7pt;margin:0 0 2pt;">プロンプト例</p>
+          <p style="color:#ffffff;font-size:7.5pt;margin:0;line-height:1.6;">
+            「MELMBのEPS製部における経営課題は何か、Neuronから調べて」<br>
+            「EPS制御ゲイン設定の手順をNeuronで探して要約して」
+          </p>
+        </div>
+      </div>
+
+      <div class="scenario-box card-red">
+        <p style="color:#CC0000;font-size:9pt;font-weight:bold;margin:0 0 3pt;">📋 REDMINE検索連携 — タスク・課題を即把握</p>
+        <p style="color:#555;font-size:7.5pt;margin:0 0 5pt;line-height:1.6;">
+          REDMINEの全文検索と組み合わせ、プロジェクト横断で課題状況を確認。<br>
+          ガントチャートも自動生成。
+        </p>
+        <div class="prompt-box">
+          <p style="color:#7dd3fc;font-size:7pt;margin:0 0 2pt;">プロンプト例</p>
+          <p style="color:#ffffff;font-size:7.5pt;margin:0;line-height:1.6;">
+            「REDMINEで私のタスクを調べてmermaidでガントチャートも表示して」<br>
+            「今週〆切が近いIssueを全プロジェクトから抽出して」
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="scenario-col">
+      <div class="scenario-box card-green">
+        <p style="color:#006633;font-size:9pt;font-weight:bold;margin:0 0 3pt;">📧 M365連携 — メール・Teams・SharePointも対象</p>
+        <p style="color:#555;font-size:7.5pt;margin:0 0 5pt;line-height:1.6;">
+          社内メール・Teams・SharePointの情報をRAGに組み込み、<br>
+          「あのメールに書いてあった件は？」が即解決。
+        </p>
+        <div class="prompt-box">
+          <p style="color:#7dd3fc;font-size:7pt;margin:0 0 2pt;">プロンプト例</p>
+          <p style="color:#ffffff;font-size:7.5pt;margin:0;line-height:1.6;">
+            「先週Teamsで相談したCANの件のまとめを教えて」<br>
+            「SharePointのEPS規格書からタイムアウト仕様を抜き出して」
+          </p>
+        </div>
+      </div>
+
+      <div class="scenario-box" style="background:#FFF8E0;border-left:3pt solid #996600;padding:8pt 10pt;">
+        <p style="color:#996600;font-size:9pt;font-weight:bold;margin:0 0 3pt;">🖼️ マルチモーダルRAG — 画像入りドキュメントも対象</p>
+        <p style="color:#555;font-size:7.5pt;margin:0;line-height:1.6;">
+          PDFや仕様書に埋め込まれた図・グラフも画像→言語化してRAG対象に。<br>
+          「あの回路図の説明をして」も可能。
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ==============================
+     Slide 6: ハードを動かす・評価する
+     ============================== -->
+<section class="slide" id="s6">
+  <div class="header-bar red">
+    <h1>使い方② ハードウェアを直接動かす・評価する</h1>
+    <p class="sub">AIがあなたのPCやEPS製品に直接接続して作業を代行</p>
+  </div>
+  <div class="content">
+
+    <div class="hsi-flow">
+      <div class="flow-box" style="background:#F0F4FF;border-color:#003366;">
+        <p style="color:#003366;font-size:8pt;font-weight:bold;margin:0;">あなた</p>
+        <p style="color:#555;font-size:7pt;margin:3pt 0 0;">自然言語で指示</p>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box" style="background:#FFF5F5;border-color:#CC0000;">
+        <p style="color:#CC0000;font-size:8pt;font-weight:bold;margin:0;">mio エージェント</p>
+        <p style="color:#555;font-size:7pt;margin:3pt 0 0;">指示を解釈・実行計画</p>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box" style="background:#FFFAF0;border-color:#996600;">
+        <p style="color:#996600;font-size:8pt;font-weight:bold;margin:0;">SSL Tunnel Client</p>
+        <p style="color:#555;font-size:7pt;margin:3pt 0 0;">PCに安全接続</p>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box" style="background:#F0FFF0;border-color:#006633;">
+        <p style="color:#006633;font-size:8pt;font-weight:bold;margin:0;">EPS / PC</p>
+        <p style="color:#555;font-size:7pt;margin:3pt 0 0;">物理・仮想CAN経由で制御</p>
+      </div>
+    </div>
+
+    <div class="bottom-row">
+
+      <div style="flex:1;background:#FFF5F5;border:1.5pt solid #CC0000;border-radius:4pt;padding:9pt 11pt;">
+        <p style="color:#CC0000;font-size:8.5pt;font-weight:bold;margin:0 0 5pt;">🔌 できること（HSIレベル）</p>
+        <ul style="color:#333;font-size:7.5pt;margin:0;padding-left:13pt;line-height:1.8;">
+          <li>CAN / 仮想CAN を介した EPS への Vibe coding</li>
+          <li>UDS Diag でのDiagnostic自動操作</li>
+          <li>XCP 経由でのキャリブレーション操作</li>
+          <li><b>無料のリプロツール（vFlash代替）</b>をその場で作成・実行</li>
+          <li>評価仕様書に沿った自動評価とレポート出力</li>
+        </ul>
+      </div>
+
+      <div style="flex:1;background:#F5F5F5;border:1.5pt solid #666;border-radius:4pt;padding:9pt 11pt;">
+        <p style="color:#444;font-size:8.5pt;font-weight:bold;margin:0 0 5pt;">📊 波形ファイル分析（Code Interpreter）</p>
+        <div class="prompt-box" style="margin-top:0;">
+          <p style="color:#7dd3fc;font-size:7pt;margin:0 0 2pt;">プロンプト例</p>
+          <p style="color:#fff;font-size:7.5pt;margin:0;line-height:1.7;">
+            「XXX.mdfにおけるI軸電流の周波数特性をFFTで評価して」<br>
+            「測定データのCSVからトルクリップルを解析してグラフ出力して」
+          </p>
+        </div>
+        <p style="color:#555;font-size:7pt;margin:6pt 0 0;line-height:1.5;">
+          PythonをAIが書いてその場で実行。結果をグラフで即表示。
+        </p>
+      </div>
+
+    </div>
+
+    <div style="background:#E8F0FE;border-left:3pt solid #003366;padding:6pt 12pt;margin-top:2pt;">
+      <p style="color:#003366;font-size:7.5pt;margin:0;line-height:1.6;">
+        <b>💡 ポイント：</b>
+        AIと EPS が直接繋がることで「仕様書を渡したらEPSが自動評価」「評価中にエラーが出たらその場で修正」が実現。
+        評価自動化・高度なCD活用が可能になる。
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ==============================
+     Slide 7: 開発を加速する
+     ============================== -->
+<section class="slide" id="s7">
+  <div class="header-bar green">
+    <h1>使い方③ ソフトウェア開発を加速する</h1>
+    <p class="sub">コーディング支援 → レビュー → テスト生成まで一気通貫</p>
+  </div>
+  <div class="content">
+
+    <div class="dev-col">
+
+      <div class="step-row">
+        <div class="step-num">1</div>
+        <div class="step-body card-blue" style="padding:7pt 10pt;">
+          <p style="color:#003366;font-size:8.5pt;font-weight:bold;margin:0 0 2pt;">コーディング支援（vibe coding / コードインタプリタ）</p>
+          <p style="color:#555;font-size:7.5pt;margin:0;line-height:1.5;">
+            自然言語でコードを記述・修正。「コンパイルして、エラーがあったら修正して」と言えばAIが全部やる。<br>
+            cline / roo code / continue とも連携。ローカルPC上のフォルダを直接操作。
+          </p>
+        </div>
+      </div>
+
+      <div class="step-row">
+        <div class="step-num">2</div>
+        <div class="step-body card-red" style="padding:7pt 10pt;">
+          <p style="color:#CC0000;font-size:8.5pt;font-weight:bold;margin:0 0 2pt;">コードレビュー（MELGIT-GAI 連携）</p>
+          <p style="color:#555;font-size:7.5pt;margin:0;line-height:1.5;">
+            GitLab / GitHub と連携。「ローカルPCのXXフォルダの実装 diff をレビューして、添付した要求を全部満たしているか確認して」
+          </p>
+        </div>
+      </div>
+
+      <div class="step-row">
+        <div class="step-num">3</div>
+        <div class="step-body card-green" style="padding:7pt 10pt;">
+          <p style="color:#006633;font-size:8.5pt;font-weight:bold;margin:0 0 2pt;">テストケース自動生成</p>
+          <p style="color:#555;font-size:7.5pt;margin:0;line-height:1.5;">
+            「Issue#XXでコミットしたソフトのテストケースをinstructionを基に作って」<br>
+            コードEmbeddingでソースと自然言語がリンク — 関連テストを自動特定。
+          </p>
+        </div>
+      </div>
+
+      <div class="step-row">
+        <div class="step-num" style="background:#996600;">4</div>
+        <div class="step-body" style="background:#FFF8E0;border-left:3pt solid #996600;padding:7pt 10pt;">
+          <p style="color:#996600;font-size:8.5pt;font-weight:bold;margin:0 0 2pt;">AUTOSAR対応 / 車載特化</p>
+          <p style="color:#555;font-size:7.5pt;margin:0;line-height:1.5;">
+            AUTOSARの構成ファイル解析・変更提案にも対応。<br>
+            SVN / GitLab / GitHub から履歴を参照しながら差分管理。
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="dev-col">
+      <div style="background:#1a1a2e;border-radius:4pt;padding:12pt 14pt;height:100%;box-sizing:border-box;">
+        <p style="color:#7dd3fc;font-size:8pt;font-weight:bold;margin:0 0 8pt;">💬 実際のプロンプト例</p>
+        <p style="color:#aaa;font-size:7pt;margin:0 0 3pt;">① コンパイル＋自動修正</p>
+        <p style="color:#fff;font-size:7.5pt;margin:0 0 8pt;background:#2a2a3e;padding:4pt 8pt;border-radius:3pt;">
+          「コンパイルして。エラーがあったら修正して」
+        </p>
+        <p style="color:#aaa;font-size:7pt;margin:0 0 3pt;">② リプロツール自作</p>
+        <p style="color:#fff;font-size:7.5pt;margin:0 0 8pt;background:#2a2a3e;padding:4pt 8pt;border-radius:3pt;">
+          「VectorのvFlashみたいな無料でリプロできるツールを作って」
+        </p>
+        <p style="color:#aaa;font-size:7pt;margin:0 0 3pt;">③ レビュー＋要求確認</p>
+        <p style="color:#fff;font-size:7.5pt;margin:0 0 8pt;background:#2a2a3e;padding:4pt 8pt;border-radius:3pt;">
+          「ローカルPCのXXフォルダで実装したdiffをレビュー、<br>添付した要求全部満たしてるか確認」
+        </p>
+        <p style="color:#aaa;font-size:7pt;margin:0 0 3pt;">④ テストケース生成</p>
+        <p style="color:#fff;font-size:7.5pt;margin:0;background:#2a2a3e;padding:4pt 8pt;border-radius:3pt;">
+          「Issue#XXでコミットしたソフトのテストケースを<br>instructionを基に作って」
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ==============================
+     Slide 8: 書類を作る・管理する
+     ============================== -->
+<section class="slide" id="s8">
+  <div class="header-bar" style="background:#006633;">
+    <h1>使い方④ 書類・帳票を自動で作る・管理する</h1>
+    <p class="sub">mio エージェントが M365 / REDMINE と連携して書類作業を代行</p>
+  </div>
+  <div class="content">
+
+    <div class="doc-grid">
+      <div class="doc-card">
+        <p style="color:#006633;font-size:8.5pt;font-weight:bold;margin:0 0 3pt;">📋 DRシート自動作成</p>
+        <p style="color:#555;font-size:7.5pt;margin:0 0 4pt;line-height:1.5;">
+          GitLab の Pull Request（DR議事録）を読み込み、EPS規準拠のDRシートをAIが代理作成・評価
+        </p>
+        <div style="background:#1a1a2e;border-radius:3pt;padding:5pt 8pt;">
+          <p style="color:#fff;font-size:7pt;margin:0;line-height:1.5;">
+            「DR議事録(PR)をもとに、EPS規準拠のDR帳票を作成して」
+          </p>
+        </div>
+      </div>
+
+      <div class="doc-card blue">
+        <p style="color:#003366;font-size:8.5pt;font-weight:bold;margin:0 0 3pt;">⏱️ 作業時間集計エージェント</p>
+        <p style="color:#555;font-size:7.5pt;margin:0 0 4pt;line-height:1.5;">
+          work-time skill がREDMINEの工数データを集計してレポート化。<br>
+          手作業集計が不要に。
+        </p>
+        <div style="background:#1a1a2e;border-radius:3pt;padding:5pt 8pt;">
+          <p style="color:#fff;font-size:7pt;margin:0;line-height:1.5;">
+            「今月の自分の作業時間をREDMINEから集計して」
+          </p>
+        </div>
+      </div>
+
+      <div class="doc-card">
+        <p style="color:#006633;font-size:8.5pt;font-weight:bold;margin:0 0 3pt;">📧 Outlook・メール操作</p>
+        <p style="color:#555;font-size:7.5pt;margin:0 0 4pt;line-height:1.5;">
+          mio の Agent Skills でOutlookを操作。<br>
+          定型メールの作成・送信・返信対応を自動化。
+        </p>
+        <div style="background:#1a1a2e;border-radius:3pt;padding:5pt 8pt;">
+          <p style="color:#fff;font-size:7pt;margin:0;line-height:1.5;">
+            「先週受け取った品証からのメールに返信して、進捗は80%と伝えて」
+          </p>
+        </div>
+      </div>
+
+      <div class="doc-card blue">
+        <p style="color:#003366;font-size:8.5pt;font-weight:bold;margin:0 0 3pt;">📄 Word / PowerPoint 生成</p>
+        <p style="color:#555;font-size:7.5pt;margin:0 0 4pt;line-height:1.5;">
+          mio が docx / pptx を直接作成。<br>
+          「議事録のdocxを作って」「進捗報告のスライドを作って」が一発。
+        </p>
+        <div style="background:#1a1a2e;border-radius:3pt;padding:5pt 8pt;">
+          <p style="color:#fff;font-size:7pt;margin:0;line-height:1.5;">
+            「今日の会議内容をもとに議事録のWordを作って」
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col">
+      <div style="background:#003366;border-radius:4pt;padding:10pt 12pt;flex:1;">
+        <p style="color:#fff;font-size:8.5pt;font-weight:bold;margin:0 0 6pt;">🔗 連携すると...</p>
+        <div style="display:flex;flex-direction:column;gap:5pt;">
+          <div style="background:rgba(255,255,255,0.1);border-radius:3pt;padding:5pt 8pt;">
+            <p style="color:#7dd3fc;font-size:7pt;font-weight:bold;margin:0 0 1pt;">REDMINE + mio</p>
+            <p style="color:rgba(255,255,255,0.85);font-size:7pt;margin:0;line-height:1.5;">タスク確認→帳票作成→メール送信を一気に実行</p>
+          </div>
+          <div style="background:rgba(255,255,255,0.1);border-radius:3pt;padding:5pt 8pt;">
+            <p style="color:#7dd3fc;font-size:7pt;font-weight:bold;margin:0 0 1pt;">GitLab PR + DRシートAgent</p>
+            <p style="color:rgba(255,255,255,0.85);font-size:7pt;margin:0;line-height:1.5;">マージと同時にDR帳票を自動生成</p>
+          </div>
+          <div style="background:rgba(255,255,255,0.1);border-radius:3pt;padding:5pt 8pt;">
+            <p style="color:#7dd3fc;font-size:7pt;font-weight:bold;margin:0 0 1pt;">M365 + Work-time skill</p>
+            <p style="color:rgba(255,255,255,0.85);font-size:7pt;margin:0;line-height:1.5;">月次報告書を自動生成してTeamsに投稿</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ==============================
+     Slide 9: mio — 全部つなぐエージェント
+     ============================== -->
+<section class="slide" id="s9">
+  <div class="header-bar red">
+    <h1>汎用AIエージェント「mio」— すべてをオーケストレーションする</h1>
+    <p class="sub">GitHub Copilot 相当 + α。自然言語ひとことで複数ツールを連携実行</p>
+  </div>
+  <div class="content">
+
+    <div class="mio-center">
+      <div class="mio-icon">
+        <p style="color:#fff;font-size:16pt;font-weight:bold;margin:0;">mio</p>
+      </div>
+      <p style="color:#003366;font-size:8pt;font-weight:bold;margin:0 0 4pt;text-align:center;">フルオーケストレーション</p>
+      <p style="color:#555;font-size:7pt;text-align:center;margin:0;line-height:1.6;">
+        CodeGenie 対応<br>
+        Anthropic Agent Skills 対応<br>
+        Custom Command 拡張可能<br>
+        Task Scheduler 自動実行<br>
+        EPS Skills Market で共有
+      </p>
+    </div>
+
+    <div class="orbit-grid">
+
+      <div class="orbit-item" style="background:#E8F0FE;border-left:3pt solid #003366;">
+        <p style="color:#003366;font-size:8pt;font-weight:bold;margin:0 0 2pt;">📊 調べる・分析する</p>
+        <p style="color:#555;font-size:7pt;margin:0;line-height:1.5;">Neuron / REDMINE / M365 横断検索。マルチモーダルRAGで画像も対象。</p>
+      </div>
+
+      <div class="orbit-item" style="background:#FFF5F5;border-left:3pt solid #CC0000;">
+        <p style="color:#CC0000;font-size:8pt;font-weight:bold;margin:0 0 2pt;">🔌 ハードを動かす</p>
+        <p style="color:#555;font-size:7pt;margin:0;line-height:1.5;">SSL Tunnel でPC・EPSに直接接続。CAN/XCP/UDS Diag を自動操作。</p>
+      </div>
+
+      <div class="orbit-item" style="background:#F0FFF0;border-left:3pt solid #006633;">
+        <p style="color:#006633;font-size:8pt;font-weight:bold;margin:0 0 2pt;">💻 コーディング支援</p>
+        <p style="color:#555;font-size:7pt;margin:0;line-height:1.5;">コンパイル〜修正〜テスト生成まで。cline/roo code/continue 連携。</p>
+      </div>
+
+      <div class="orbit-item" style="background:#FFF8E0;border-left:3pt solid #996600;">
+        <p style="color:#996600;font-size:8pt;font-weight:bold;margin:0 0 2pt;">📝 書類作成</p>
+        <p style="color:#555;font-size:7pt;margin:0;line-height:1.5;">DR帳票・議事録・Word/PowerPoint をAIが代理作成。</p>
+      </div>
+
+      <div class="orbit-item" style="background:#F5F0FF;border-left:3pt solid #6600CC;">
+        <p style="color:#6600CC;font-size:8pt;font-weight:bold;margin:0 0 2pt;">🌐 ブラウザ操作</p>
+        <p style="color:#555;font-size:7pt;margin:0;line-height:1.5;">ブラウザをAIが直接操作。Web情報収集・フォーム入力を自動化。</p>
+      </div>
+
+      <div class="orbit-item" style="background:#F0FFFF;border-left:3pt solid #006699;">
+        <p style="color:#006699;font-size:8pt;font-weight:bold;margin:0 0 2pt;">⚙️ n8n / Dify 連携</p>
+        <p style="color:#555;font-size:7pt;margin:0;line-height:1.5;">ノーコードAIフローとも連携。LangChainからも呼び出し可能。</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ==============================
+     Slide 10: まず始めよう
+     ============================== -->
+<section class="slide" id="s10">
+  <div class="header-bar blue">
+    <h1>まず始めよう — Quick Start</h1>
+    <p class="sub">最初の3ステップで基本機能がすぐ使える</p>
+  </div>
+  <div class="content">
+
+    <div class="steps-col">
+
+      <div class="start-step">
+        <div class="step-circle" style="background:#003366;">1</div>
+        <div style="flex:1;">
+          <div class="card-blue" style="padding:8pt 10pt;">
+            <p style="color:#003366;font-size:9pt;font-weight:bold;margin:0 0 2pt;">Open WebUI に登録する</p>
+            <p style="color:#555;font-size:7.5pt;margin:0;line-height:1.5;">
+              ブラウザから Open WebUI にアクセスしてアカウント作成。<br>
+              MELGIT-GAI API キーを取得して設定すれば即利用開始。<br>
+              詳細: OneNote「登録方法」ページを参照
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="start-step">
+        <div class="step-circle" style="background:#CC0000;">2</div>
+        <div style="flex:1;">
+          <div class="card-red" style="padding:8pt 10pt;">
+            <p style="color:#CC0000;font-size:9pt;font-weight:bold;margin:0 0 2pt;">まずチャットで試す</p>
+            <p style="color:#555;font-size:7.5pt;margin:0;line-height:1.5;">
+              通常のChatGPTのように質問するだけでOK。<br>
+              RAGを使いたい場合はナレッジベースにファイルをアップロード。<br>
+              詳細: OneNote「使用方法」ページを参照
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="start-step">
+        <div class="step-circle" style="background:#006633;">3</div>
+        <div style="flex:1;">
+          <div class="card-green" style="padding:8pt 10pt;">
+            <p style="color:#006633;font-size:9pt;font-weight:bold;margin:0 0 2pt;">mio エージェントを使う</p>
+            <p style="color:#555;font-size:7.5pt;margin:0;line-height:1.5;">
+              mio を選択してツールと連携したタスクを依頼する。<br>
+              カスタムスキル（Agent Skills）を追加することで機能を拡張可能。<br>
+              詳細: OneNote「汎用AIエージェント mio」ページを参照
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="doc-col">
+      <p style="color:#003366;font-size:9pt;font-weight:bold;margin:0 0 6pt;">📚 詳しく知りたい場合</p>
+
+      <div class="doc-link">
+        <p style="color:#003366;font-size:8pt;font-weight:bold;margin:0 0 1pt;">OWUI関連ドキュメント</p>
+        <p style="color:#555;font-size:7pt;margin:0;line-height:1.5;">
+          登録方法 / 使用方法 / RAGのやり方<br>
+          コード特化型Embedding / MELGIT-GAI連携<br>
+          ブラウザ連携 / SSL Tunnel / mioユースケース
+        </p>
+      </div>
+
+      <div class="doc-link" style="border-left-color:#006633;background:#F0FFF0;">
+        <p style="color:#006633;font-size:8pt;font-weight:bold;margin:0 0 1pt;">n8n / Dify 関連</p>
+        <p style="color:#555;font-size:7pt;margin:0;line-height:1.5;">
+          ノーコードでAIフローを組みたい場合<br>
+          n8n登録方法 / n8n使用方法 / Dify登録方法
+        </p>
+      </div>
+
+      <div class="doc-link" style="border-left-color:#CC0000;background:#FFF5F5;">
+        <p style="color:#CC0000;font-size:8pt;font-weight:bold;margin:0 0 1pt;">PS技二 AI関連ツールサーバー</p>
+        <p style="color:#555;font-size:7pt;margin:0;line-height:1.5;">
+          サーバーで稼働しているツール情報・<br>インフラ構成の詳細
+        </p>
+      </div>
+
+      <div style="background:#FFF8E0;border-left:3pt solid #996600;padding:7pt 10pt;">
+        <p style="color:#996600;font-size:7.5pt;font-weight:bold;margin:0 0 2pt;">📖 勉強会資料もあります</p>
+        <p style="color:#555;font-size:7pt;margin:0;line-height:1.5;">
+          SharePoint上のOpenWebUI接続方法.pptxで<br>
+          詳細な操作説明を確認できます
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+</body>
+</html>

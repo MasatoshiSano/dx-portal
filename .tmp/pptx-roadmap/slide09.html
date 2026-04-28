@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #FFFFFF; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header { background: #1A2B4C; height: 28pt; display: flex; align-items: center; padding: 0 20pt; }
+.header p { color: #FFFFFF; font-size: 8pt; letter-spacing: 1pt; }
+.title-bar { padding: 8pt 20pt 6pt 20pt; border-bottom: 1pt solid #E6E9EF; }
+.main { flex: 1; padding: 10pt 20pt; display: flex; gap: 14pt; }
+.steps { flex: 3; display: flex; gap: 8pt; }
+.step-col { flex: 1; background: #F6F8FB; border-radius: 6pt; padding: 10pt; display: flex; flex-direction: column; gap: 4pt; }
+.step-header { background: #1A2B4C; border-radius: 3pt; padding: 4pt 8pt; margin-bottom: 6pt; }
+.todo { display: flex; gap: 6pt; align-items: flex-start; }
+.questions { flex: 2; border-left: 1pt solid #E6E9EF; padding-left: 14pt; display: flex; flex-direction: column; gap: 6pt; }
+.q-item { display: flex; gap: 8pt; align-items: flex-start; }
+.footer { height: 20pt; display: flex; align-items: center; justify-content: flex-end; padding: 0 20pt; }
+</style>
+</head>
+<body>
+<div class="header">
+  <p>DX PORTAL TEAM  |  ROADMAP</p>
+</div>
+<div class="title-bar">
+  <p style="font-size:7pt; color:#4A90E2; font-weight:bold; margin:0 0 1pt 0;">まず来週やること</p>
+  <p style="font-size:14pt; font-weight:bold; color:#1A2B4C;">合意できたら、来週から動き始める</p>
+</div>
+<div class="main">
+  <div class="steps">
+    <div class="step-col">
+      <div class="step-header">
+        <p style="color:#FFFFFF; font-size:8pt; font-weight:bold; text-align:center;">Day 1-2</p>
+        <p style="color:#D0E1F5; font-size:7pt; text-align:center;">準備</p>
+      </div>
+      <div class="todo">
+        <p style="font-size:10pt; color:#4A90E2;">□</p>
+        <p style="font-size:8pt; color:#222222;">team-standardsリポジトリをGiteaに作成</p>
+      </div>
+      <div class="todo">
+        <p style="font-size:10pt; color:#4A90E2;">□</p>
+        <p style="font-size:8pt; color:#222222;">CLAUDE.md初版を4名で書く（30行の骨格）</p>
+      </div>
+      <div class="todo">
+        <p style="font-size:10pt; color:#4A90E2;">□</p>
+        <p style="font-size:8pt; color:#222222;">各自Claude Codeのセットアップ確認</p>
+      </div>
+      <div class="todo">
+        <p style="font-size:10pt; color:#4A90E2;">□</p>
+        <p style="font-size:8pt; color:#222222;">Gitea MCP + Token 発行</p>
+      </div>
+    </div>
+    <div class="step-col">
+      <div class="step-header">
+        <p style="color:#FFFFFF; font-size:8pt; font-weight:bold; text-align:center;">Day 3-4</p>
+        <p style="color:#D0E1F5; font-size:7pt; text-align:center;">試運転</p>
+      </div>
+      <div class="todo">
+        <p style="font-size:10pt; color:#4A90E2;">□</p>
+        <p style="font-size:8pt; color:#222222;">小さなIssueで全フローを試す</p>
+      </div>
+      <div class="todo">
+        <p style="font-size:10pt; color:#4A90E2;">□</p>
+        <p style="font-size:8pt; color:#222222;">壁打ち → 4項目テンプレ → PR の一連を体験</p>
+      </div>
+      <div class="todo">
+        <p style="font-size:10pt; color:#4A90E2;">□</p>
+        <p style="font-size:8pt; color:#222222;">つまずき記録（後でCLAUDE.mdに入れる）</p>
+      </div>
+    </div>
+    <div class="step-col">
+      <div class="step-header">
+        <p style="color:#FFFFFF; font-size:8pt; font-weight:bold; text-align:center;">Day 5</p>
+        <p style="color:#D0E1F5; font-size:7pt; text-align:center;">振り返り</p>
+      </div>
+      <div class="todo">
+        <p style="font-size:10pt; color:#4A90E2;">□</p>
+        <p style="font-size:8pt; color:#222222;">4名で15分振り返り</p>
+      </div>
+      <div class="todo">
+        <p style="font-size:10pt; color:#4A90E2;">□</p>
+        <p style="font-size:8pt; color:#222222;">良い点・悪い点を整理</p>
+      </div>
+      <div class="todo">
+        <p style="font-size:10pt; color:#4A90E2;">□</p>
+        <p style="font-size:8pt; color:#222222;">CLAUDE.mdを早速更新（PR出す）</p>
+      </div>
+      <div class="todo">
+        <p style="font-size:10pt; color:#4A90E2;">□</p>
+        <p style="font-size:8pt; color:#222222;">週1の15分振り返り定例を仮設定</p>
+      </div>
+    </div>
+  </div>
+  <div class="questions">
+    <p style="font-size:9pt; font-weight:bold; color:#1A2B4C; margin-bottom:4pt;">みんなに聞きたいこと</p>
+    <div class="q-item">
+      <div style="background:#4A90E2; min-width:16pt; height:16pt; border-radius:50%; display:flex; align-items:center; justify-content:center;">
+        <p style="color:#FFFFFF; font-size:9pt; text-align:center;">?</p>
+      </div>
+      <p style="font-size:8.5pt; color:#222222;">この方向性、ピンと来る？</p>
+    </div>
+    <div class="q-item">
+      <div style="background:#4A90E2; min-width:16pt; height:16pt; border-radius:50%; display:flex; align-items:center; justify-content:center;">
+        <p style="color:#FFFFFF; font-size:9pt; text-align:center;">?</p>
+      </div>
+      <p style="font-size:8.5pt; color:#222222;">パイロット4名、誰が入る？</p>
+    </div>
+    <div class="q-item">
+      <div style="background:#4A90E2; min-width:16pt; height:16pt; border-radius:50%; display:flex; align-items:center; justify-content:center;">
+        <p style="color:#FFFFFF; font-size:9pt; text-align:center;">?</p>
+      </div>
+      <p style="font-size:8.5pt; color:#222222;">不安・懸念は？率直に</p>
+    </div>
+    <div class="q-item">
+      <div style="background:#4A90E2; min-width:16pt; height:16pt; border-radius:50%; display:flex; align-items:center; justify-content:center;">
+        <p style="color:#FFFFFF; font-size:9pt; text-align:center;">?</p>
+      </div>
+      <p style="font-size:8.5pt; color:#222222;">もっと良い進め方がある？</p>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <p style="font-size:8pt; color:#8A94A6;">9</p>
+</div>
+</body>
+</html>

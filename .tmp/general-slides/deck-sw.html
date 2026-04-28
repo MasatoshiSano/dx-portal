@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ソフトウェアエンジニアのための AI活用ガイド</title>
+<style>
+html { background: #cccccc; }
+body {
+  width: 720pt; margin: 0 auto; padding: 32pt 0;
+  background: #cccccc; font-family: "Meiryo UI", "Yu Gothic UI", Arial, sans-serif;
+  display: flex; flex-direction: column; align-items: center; gap: 32pt;
+}
+
+/* ===== 共通スライド ===== */
+.slide {
+  width: 720pt; height: 405pt; position: relative; overflow: hidden;
+  background: #ffffff; box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  display: flex; flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* ===== ヘッダーバー共通 ===== */
+.header-bar {
+  padding: 14pt 40pt;
+  flex-shrink: 0;
+}
+.header-bar h1 {
+  color: #ffffff; font-size: 16pt; margin: 0; font-weight: bold;
+}
+.header-bar .sub {
+  color: rgba(255,255,255,0.75); font-size: 8pt; margin: 2pt 0 0 0;
+}
+
+/* ===== カラー定義 ===== */
+.bg-blue  { background: #003366; }
+.bg-red   { background: #CC0000; }
+.bg-green { background: #006633; }
+
+/* ===== カード ===== */
+.card-blue  { background: #F0F4FF; border-left: 3pt solid #003366; padding: 8pt 12pt; }
+.card-red   { background: #FFF5F5; border-left: 3pt solid #CC0000; padding: 8pt 12pt; }
+.card-green { background: #F0FFF0; border-left: 3pt solid #006633; padding: 8pt 12pt; }
+
+/* ===== プロンプトボックス ===== */
+.prompt-box {
+  background: #1a1a2e; border-radius: 4pt; padding: 8pt 12pt;
+}
+.prompt-box p {
+  color: #ffffff; font-size: 7.5pt; margin: 0 0 3pt 0; line-height: 1.6;
+}
+.prompt-box p:last-child { margin-bottom: 0; }
+.prompt-label {
+  color: #aaaacc; font-size: 6.5pt; font-weight: bold;
+  margin: 0 0 4pt 0; letter-spacing: 0.5pt;
+}
+
+/* ===== フロー矢印 ===== */
+.flow-arrow {
+  font-size: 12pt; color: #003366; font-weight: bold; flex-shrink: 0;
+}
+
+/* ===== 汎用 ===== */
+p { margin: 0; }
+ul { margin: 0; padding-left: 14pt; }
+li { margin: 0 0 2pt 0; }
+.txt-blue  { color: #003366; }
+.txt-red   { color: #CC0000; }
+.txt-green { color: #006633; }
+.txt-gray  { color: #666666; }
+.txt-lt    { color: #999999; }
+.fw-bold   { font-weight: bold; }
+.fs-7  { font-size: 7pt; }
+.fs-75 { font-size: 7.5pt; }
+.fs-8  { font-size: 8pt; }
+.fs-9  { font-size: 9pt; }
+.fs-10 { font-size: 10pt; }
+.fs-11 { font-size: 11pt; }
+
+/* ========================================
+   スライド 1 : カバー
+   ======================================== */
+#s1 .top-bar {
+  position: absolute; top: 0; left: 0; width: 720pt; height: 8pt;
+  background: #003366;
+}
+#s1 .title-block {
+  margin: auto; text-align: center;
+  padding: 50pt 70pt 0;
+}
+#s1 .main-title {
+  font-size: 22pt; color: #003366; font-weight: bold;
+  line-height: 1.35; margin: 0 0 16pt 0;
+}
+#s1 .sub-title {
+  font-size: 11pt; color: #666666;
+  margin: 0 0 12pt 0;
+}
+#s1 .note-txt {
+  font-size: 9pt; color: #999999;
+  margin: 0;
+}
+#s1 .bottom-line {
+  position: absolute; bottom: 55pt; left: 60pt; width: 600pt; height: 1pt;
+  background: #003366;
+}
+#s1 .footer {
+  position: absolute; bottom: 30pt; left: 0; width: 720pt; text-align: center;
+  font-size: 8pt; color: #999999;
+}
+
+/* ========================================
+   スライド 2 : Before / After
+   ======================================== */
+#s2 .content {
+  margin: 10pt 28pt 0; display: flex; flex-direction: row; gap: 10pt; flex: 1;
+}
+#s2 .ba-col {
+  flex: 1; display: flex; flex-direction: column; gap: 0;
+}
+#s2 .ba-col-title {
+  font-size: 9pt; font-weight: bold; text-align: center;
+  padding: 5pt 8pt; margin-bottom: 5pt; border-radius: 2pt;
+}
+#s2 .ba-col-title.red   { background: #CC0000; color: #fff; }
+#s2 .ba-col-title.green { background: #006633; color: #fff; }
+#s2 .ba-col { justify-content: space-between; }
+#s2 .ba-item {
+  padding: 5pt 10pt; font-size: 7.5pt; line-height: 1.5;
+  display: flex; flex-direction: row; align-items: flex-start; gap: 5pt;
+  margin-bottom: 0; border-radius: 2pt; flex: 1;
+}
+#s2 .ba-item .num {
+  font-weight: bold; min-width: 14pt; flex-shrink: 0;
+}
+#s2 .highlight-box {
+  margin: 6pt 28pt 8pt; padding: 8pt 14pt;
+  background: #EDF2FF; border-left: 4pt solid #003366; border-radius: 2pt;
+}
+#s2 .highlight-box p {
+  font-size: 8.5pt; color: #003366; font-weight: bold; line-height: 1.6;
+}
+
+/* ========================================
+   スライド 3 : コーディング・デバッグ
+   ======================================== */
+#s3 .content {
+  margin: 8pt 28pt 0; display: flex; flex-direction: column; gap: 8pt; flex: 1;
+}
+#s3 .flow-row {
+  display: flex; flex-direction: row; align-items: stretch; gap: 0;
+}
+#s3 .flow-step {
+  flex: 1; background: #F0F4FF; border: 1.5pt solid #003366;
+  padding: 7pt 8pt; text-align: center; font-size: 7.5pt;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  line-height: 1.4; gap: 3pt;
+}
+#s3 .flow-step .step-num {
+  background: #003366; color: #fff; font-size: 7pt; font-weight: bold;
+  padding: 1pt 5pt; border-radius: 2pt;
+}
+#s3 .flow-sep {
+  display: flex; align-items: center; padding: 0 3pt;
+  font-size: 13pt; color: #003366; font-weight: bold;
+}
+#s3 .mid-row {
+  display: flex; flex-direction: row; gap: 10pt; flex: 1;
+}
+#s3 .mid-col { flex: 1; display: flex; flex-direction: column; gap: 5pt; }
+#s3 .mid-col-title {
+  font-size: 8.5pt; font-weight: bold; color: #003366;
+  border-bottom: 1.5pt solid #003366; padding-bottom: 3pt; margin-bottom: 3pt;
+}
+#s3 .can-item {
+  font-size: 7.5pt; color: #333; padding: 3pt 6pt 3pt 6pt;
+  display: flex; gap: 5pt; align-items: flex-start; line-height: 1.45;
+}
+#s3 .can-item::before {
+  content: "•"; color: #003366; font-weight: bold; flex-shrink: 0;
+}
+#s3 .embed-banner {
+  margin: 0 28pt 8pt; padding: 7pt 14pt;
+  background: #FFFBE6; border-left: 4pt solid #CC6600;
+  font-size: 8pt; color: #663300; line-height: 1.5;
+}
+
+/* ========================================
+   スライド 4 : レビュー・テスト生成
+   ======================================== */
+#s4 .content {
+  margin: 8pt 28pt 0; display: flex; flex-direction: column; gap: 8pt; flex: 1;
+}
+#s4 .flow-row {
+  display: flex; flex-direction: row; align-items: stretch; gap: 0;
+}
+#s4 .flow-step {
+  flex: 1; background: #F0FFF0; border: 1.5pt solid #006633;
+  padding: 7pt 8pt; text-align: center; font-size: 7.5pt;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  line-height: 1.4;
+}
+#s4 .flow-sep {
+  display: flex; align-items: center; padding: 0 3pt;
+  font-size: 13pt; color: #006633; font-weight: bold;
+}
+#s4 .mid-row {
+  display: flex; flex-direction: row; gap: 10pt; flex: 1;
+}
+#s4 .mid-col { flex: 1; display: flex; flex-direction: column; gap: 5pt; }
+#s4 .mid-col-title {
+  font-size: 8.5pt; font-weight: bold;
+  border-bottom: 1.5pt solid; padding-bottom: 3pt; margin-bottom: 3pt;
+}
+#s4 .mid-col-title.green { color: #006633; border-color: #006633; }
+#s4 .mid-col-title.blue  { color: #003366; border-color: #003366; }
+#s4 .can-item {
+  font-size: 7.5pt; color: #333; padding: 3pt 6pt;
+  display: flex; gap: 5pt; align-items: flex-start; line-height: 1.45;
+}
+#s4 .can-item::before {
+  content: "•"; font-weight: bold; flex-shrink: 0;
+}
+#s4 .can-item.green::before { color: #006633; }
+#s4 .can-item.blue::before  { color: #003366; }
+#s4 .svn-banner {
+  margin: 0 28pt 8pt; padding: 7pt 14pt;
+  background: #EDF2FF; border-left: 4pt solid #003366;
+  font-size: 8pt; color: #003366; line-height: 1.5;
+}
+
+/* ========================================
+   スライド 5 : こんな時に使えます
+   ======================================== */
+#s5 .content {
+  margin: 8pt 22pt 0; display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 8pt; flex: 1;
+}
+#s5 .use-card {
+  background: #F5F7FA; padding: 8pt 10pt;
+  border-top: 3pt solid #003366;
+  display: flex; flex-direction: column; gap: 3pt;
+}
+#s5 .use-card.red-top   { border-top-color: #CC0000; }
+#s5 .use-card.green-top { border-top-color: #006633; }
+#s5 .uc-label {
+  display: inline-block; font-size: 6.5pt; font-weight: bold;
+  padding: 1.5pt 6pt; color: #fff; border-radius: 2pt; margin-bottom: 2pt;
+}
+#s5 .uc-label.blue  { background: #003366; }
+#s5 .uc-label.red   { background: #CC0000; }
+#s5 .uc-label.green { background: #006633; }
+#s5 .uc-want {
+  font-size: 8pt; font-weight: bold; color: #222; line-height: 1.35;
+}
+#s5 .uc-arrow {
+  font-size: 8pt; color: #666; margin: 1pt 0;
+}
+#s5 .uc-tool {
+  font-size: 7pt; color: #003366; font-weight: bold;
+}
+#s5 .uc-prompt {
+  font-size: 7pt; color: #555; line-height: 1.45;
+  background: #1a1a2e; color: #fff;
+  padding: 3pt 7pt; border-radius: 3pt; margin-top: 2pt;
+}
+#s5 .footer-bar {
+  margin: 0 22pt 10pt; padding: 8pt 16pt;
+  background: #003366; border-radius: 2pt;
+  font-size: 7.5pt; color: #ffffff; line-height: 1.6;
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     Slide 1: カバー
+     ============================================================ -->
+<section class="slide" id="s1">
+  <div class="top-bar"></div>
+  <div class="title-block">
+    <p class="main-title">ソフトウェアエンジニアのための AI活用ガイド</p>
+    <p class="sub-title">コーディング・レビュー・テストをAIと一緒に回す</p>
+    <p class="note-txt">cline / roo code / continue との連携、AUTOSAR対応、GitLab/GitHub連携まで対応しています</p>
+  </div>
+  <div class="bottom-line"></div>
+  <div class="footer">社外秘</div>
+</section>
+
+<!-- ============================================================
+     Slide 2: Before / After
+     ============================================================ -->
+<section class="slide" id="s2">
+  <div class="header-bar bg-red">
+    <h1>開発サイクル、こう変わります</h1>
+  </div>
+  <div class="content">
+    <!-- Before -->
+    <div class="ba-col">
+      <div class="ba-col-title red">Before（今まで）</div>
+      <div class="ba-item card-red">
+        <span class="num txt-red fs-8">1.</span>
+        <span class="fs-75">Issueの内容を読んで設計を考える</span>
+      </div>
+      <div class="ba-item card-red">
+        <span class="num txt-red fs-8">2.</span>
+        <span class="fs-75">コードを書いてコンパイル・デバッグ</span>
+      </div>
+      <div class="ba-item card-red">
+        <span class="num txt-red fs-8">3.</span>
+        <span class="fs-75">手動でテストケースを作成</span>
+      </div>
+      <div class="ba-item card-red">
+        <span class="num txt-red fs-8">4.</span>
+        <span class="fs-75">レビュー依頼 → コメント対応</span>
+      </div>
+      <div class="ba-item card-red">
+        <span class="num txt-red fs-8">5.</span>
+        <span class="fs-75">AUTOSAR構成は手作業で確認</span>
+      </div>
+    </div>
+    <!-- After -->
+    <div class="ba-col">
+      <div class="ba-col-title green">After（AIを使うと）</div>
+      <div class="ba-item card-green">
+        <span class="num txt-green fs-8">1.</span>
+        <span class="fs-75">AIと壁打ちしながら設計を固める</span>
+      </div>
+      <div class="ba-item card-green">
+        <span class="num txt-green fs-8">2.</span>
+        <span class="fs-75">vibe codingでコード生成→コンパイル→修正を一気に</span>
+      </div>
+      <div class="ba-item card-green">
+        <span class="num txt-green fs-8">3.</span>
+        <span class="fs-75">Issueのコードからテストケースを自動生成</span>
+      </div>
+      <div class="ba-item card-green">
+        <span class="num txt-green fs-8">4.</span>
+        <span class="fs-75">AIがdiffをレビューして改善提案</span>
+      </div>
+      <div class="ba-item card-green">
+        <span class="num txt-green fs-8">5.</span>
+        <span class="fs-75">AUTOSAR構成ファイルもAIが解析・提案</span>
+      </div>
+    </div>
+  </div>
+  <div class="highlight-box">
+    <p>&#10003; あなたがやることは：要件を伝える &#8594; AIのアウトプットをレビューする &#8594; 判断する、だけ</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     Slide 3: コーディング・デバッグをAIと回す
+     ============================================================ -->
+<section class="slide" id="s3">
+  <div class="header-bar bg-blue">
+    <h1>コーディング・デバッグをAIと回す</h1>
+  </div>
+  <div class="content">
+    <!-- 4ステップフロー -->
+    <div class="flow-row">
+      <div class="flow-step">
+        <span class="step-num">&#9312;</span>
+        <span>要件をAIに伝える</span>
+      </div>
+      <div class="flow-sep">&#9658;</div>
+      <div class="flow-step">
+        <span class="step-num">&#9313;</span>
+        <span>AIがコード生成<br>（vibe coding）</span>
+      </div>
+      <div class="flow-sep">&#9658;</div>
+      <div class="flow-step">
+        <span class="step-num">&#9314;</span>
+        <span>コンパイル＋<br>エラー自動修正</span>
+      </div>
+      <div class="flow-sep">&#9658;</div>
+      <div class="flow-step">
+        <span class="step-num">&#9315;</span>
+        <span>ローカルPCで<br>直接実行確認</span>
+      </div>
+    </div>
+    <!-- 中段 2カラム -->
+    <div class="mid-row">
+      <!-- 左: できること -->
+      <div class="mid-col">
+        <div class="mid-col-title">できること</div>
+        <div class="can-item">自然言語でのコード生成（vibe coding）</div>
+        <div class="can-item">cline / roo code / continue との連携</div>
+        <div class="can-item">コンパイル〜エラー修正を自動ループ</div>
+        <div class="can-item">ローカルPCのフォルダに直接アクセス（SSL Tunnel）</div>
+        <div class="can-item">Code Interpreterでその場でコード実行・確認</div>
+      </div>
+      <!-- 右: プロンプト例 -->
+      <div class="mid-col">
+        <div class="mid-col-title">プロンプト例</div>
+        <div class="prompt-box">
+          <p class="prompt-label">PROMPT EXAMPLES</p>
+          <p>「コンパイルして。エラーがあったら修正して」</p>
+          <p>「ローカルPCのXXフォルダのコードを修正して」</p>
+          <p>「VectorのvFlash代替ツールをPythonで作って」</p>
+          <p>「AUTOSAR構成ファイルを読んでXX部分の変更提案をして」</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="embed-banner">
+    &#128161; コードEmbedding機能：ソースコードと自然言語がリンク。関連ファイルをAIが自動特定。
+  </div>
+</section>
+
+<!-- ============================================================
+     Slide 4: レビュー・テスト生成をAIに任せる
+     ============================================================ -->
+<section class="slide" id="s4">
+  <div class="header-bar bg-green">
+    <h1>レビュー・テスト生成をAIに任せる</h1>
+  </div>
+  <div class="content">
+    <!-- GitLab/GitHub連携フロー -->
+    <div class="flow-row">
+      <div class="flow-step">
+        <span class="fs-75 fw-bold">コード / PR を<br>GitLab・GitHubにプッシュ</span>
+      </div>
+      <div class="flow-sep">&#9658;</div>
+      <div class="flow-step">
+        <span class="fs-75 fw-bold">AIがdiffを読み込む</span>
+      </div>
+      <div class="flow-sep">&#9658;</div>
+      <div class="flow-step">
+        <span class="fs-75 fw-bold">要求との突合・改善提案・<br>テストケース生成</span>
+      </div>
+    </div>
+    <!-- 中段 2カラム -->
+    <div class="mid-row">
+      <!-- 左: コードレビュー -->
+      <div class="mid-col">
+        <div class="mid-col-title green">コードレビュー</div>
+        <div class="card-green" style="padding:7pt 10pt; flex:0 0 auto;">
+          <div class="can-item green" style="padding:0;">diffに対してAIが自動レビュー</div>
+          <div class="can-item green" style="padding:0;">添付した要求仕様を全部満たしているか確認</div>
+          <div class="can-item green" style="padding:0;">MELGIT-GAI API (OAuth2.0) 経由で連携</div>
+        </div>
+        <div class="prompt-box" style="margin-top:4pt;">
+          <p class="prompt-label">PROMPT EXAMPLE</p>
+          <p>「ローカルPCのXXフォルダで実装したdiffをレビュー、添付した要求全部満たしてるか確認」</p>
+        </div>
+      </div>
+      <!-- 右: テストケース自動生成 -->
+      <div class="mid-col">
+        <div class="mid-col-title blue">テストケース自動生成</div>
+        <div class="card-blue" style="padding:7pt 10pt; flex:0 0 auto;">
+          <div class="can-item blue" style="padding:0;">Issue番号を指定するだけで対応テストを生成</div>
+          <div class="can-item blue" style="padding:0;">instructionファイルに基づく形式で出力</div>
+          <div class="can-item blue" style="padding:0;">コードEmbeddingで関連コードを自動特定</div>
+        </div>
+        <div class="prompt-box" style="margin-top:4pt;">
+          <p class="prompt-label">PROMPT EXAMPLE</p>
+          <p>「Issue#XXでコミットしたソフトのテストケースをinstructionを基に作って」</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="svn-banner">
+    SVN / GitLab / GitHub いずれにも対応。既存の開発環境に組み込み可能。
+  </div>
+</section>
+
+<!-- ============================================================
+     Slide 5: こんな時に使えます
+     ============================================================ -->
+<section class="slide" id="s5">
+  <div class="header-bar bg-blue">
+    <h1>こんな時に使えます</h1>
+  </div>
+  <div class="content">
+    <!-- カード 1 -->
+    <div class="use-card">
+      <span class="uc-label blue">コーディング</span>
+      <div class="uc-want">コードを書きたい（vibe coding）</div>
+      <div class="uc-arrow">&#8595;</div>
+      <div class="uc-tool">Code Interpreter + SSL Tunnel</div>
+      <div class="uc-prompt">「コンパイルして、エラーがあったら修正して」</div>
+    </div>
+    <!-- カード 2 -->
+    <div class="use-card red-top">
+      <span class="uc-label red">レビュー</span>
+      <div class="uc-want">コードをレビューしてほしい</div>
+      <div class="uc-arrow">&#8595;</div>
+      <div class="uc-tool">MELGIT-GAI連携</div>
+      <div class="uc-prompt">「diffをレビュー、添付要求を全部満たしてるか確認して」</div>
+    </div>
+    <!-- カード 3 -->
+    <div class="use-card green-top">
+      <span class="uc-label green">テスト</span>
+      <div class="uc-want">テストケースを作りたい</div>
+      <div class="uc-arrow">&#8595;</div>
+      <div class="uc-tool">mio + Agent Skills</div>
+      <div class="uc-prompt">「Issue#XXのテストケースをinstructionを基に作って」</div>
+    </div>
+    <!-- カード 4 -->
+    <div class="use-card">
+      <span class="uc-label blue">AUTOSAR</span>
+      <div class="uc-want">AUTOSARの構成を確認したい</div>
+      <div class="uc-arrow">&#8595;</div>
+      <div class="uc-tool">コード特化型Embedding</div>
+      <div class="uc-prompt">「AUTOSAR構成ファイルのXX部分の変更点を教えて」</div>
+    </div>
+    <!-- カード 5 -->
+    <div class="use-card red-top">
+      <span class="uc-label red">履歴調査</span>
+      <div class="uc-want">SVN/GitLabの履歴を調べたい</div>
+      <div class="uc-arrow">&#8595;</div>
+      <div class="uc-tool">MELGIT-GAI連携</div>
+      <div class="uc-prompt">「XX機能の変更履歴をGitLabから教えて」</div>
+    </div>
+    <!-- カード 6 -->
+    <div class="use-card green-top">
+      <span class="uc-label green">Quick Start</span>
+      <div class="uc-want">まず試してみたい</div>
+      <div class="uc-arrow">&#8595;</div>
+      <div class="uc-tool">Quick Start</div>
+      <div class="uc-prompt">Open WebUIに登録 &#8594; チャットで試す &#8594; mioとコーディング</div>
+    </div>
+  </div>
+  <div class="footer-bar">
+    詳細は OneNote ドキュメントを参照 ／ cline/roo code との接続設定は コーディングアシスタント連携 ページへ
+  </div>
+</section>
+
+</body>
+</html>

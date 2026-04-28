@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header-bar { background: #003366; padding: 14pt 40pt; }
+.content { margin: 14pt 40pt 0 40pt; display: flex; flex-direction: column; gap: 8pt; }
+.layer {
+  display: flex; flex-direction: row; gap: 0; align-items: stretch;
+}
+.layer-label {
+  width: 110pt; padding: 10pt 10pt; display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+}
+.layer-body { flex: 1; padding: 10pt 14pt; }
+.layer-1 .layer-label { background: #003366; }
+.layer-1 .layer-body { background: #F0F4FF; border-left: 3pt solid #003366; }
+.layer-2 .layer-label { background: #006633; }
+.layer-2 .layer-body { background: #F0FFF0; border-left: 3pt solid #006633; }
+.layer-3 .layer-label { background: #666666; }
+.layer-3 .layer-body { background: #F5F5F5; border-left: 3pt solid #666666; }
+.arrow-row { display: flex; justify-content: center; }
+</style>
+</head>
+<body>
+<div class="header-bar">
+  <h1 style="color: #ffffff; font-size: 15pt; margin: 0; font-weight: bold;">秘書の知識は3層で管理する ー 共有するもの、しないもの</h1>
+</div>
+<div class="content">
+  <div class="layer layer-1">
+    <div class="layer-label">
+      <p style="color: #ffffff; font-size: 10pt; margin: 0; font-weight: bold;">チーム共有層</p>
+      <p style="color: #ffffff; font-size: 7pt; margin: 2pt 0 0 0;">全秘書が自動で同期</p>
+    </div>
+    <div class="layer-body">
+      <ul style="color: #333333; font-size: 8pt; margin: 0; padding-left: 12pt; line-height: 1.7;">
+        <li>チームルール（壁打ち→設計→実装の流れ）</li>
+        <li>レビュー結果・うまくいったやり方の蓄積</li>
+        <li>AI失敗事例 / テックブログ / 開発状況</li>
+        <li><b>会議の議事録</b>（決定事項・背景・アクション）</li>
+      </ul>
+    </div>
+  </div>
+  <div class="arrow-row">
+    <p style="color: #006633; font-size: 10pt; margin: 0;">▲ 秘書が「これ共有しませんか？」と提案 ▲</p>
+  </div>
+  <div class="layer layer-2">
+    <div class="layer-label">
+      <p style="color: #ffffff; font-size: 10pt; margin: 0; font-weight: bold;">匿名化ナレッジ層</p>
+      <p style="color: #ffffff; font-size: 7pt; margin: 2pt 0 0 0;">誰かは伏せて共有</p>
+    </div>
+    <div class="layer-body">
+      <p style="color: #333333; font-size: 8pt; margin: 0 0 4pt 0;">個人の経験から「誰が」を消して、教訓だけを共有する</p>
+      <p style="color: #333333; font-size: 8pt; margin: 0 0 2pt 0;"><b>例:</b></p>
+      <p style="color: #666666; font-size: 8pt; margin: 0 0 1pt 0;">Aさん:「DBのタイムアウトで3時間ハマった」</p>
+      <p style="color: #006633; font-size: 8pt; margin: 0;">→ 共有されるのは「DBタイムアウト設定に注意」だけ。Aさんの名前は出ない</p>
+    </div>
+  </div>
+  <div class="arrow-row">
+    <p style="color: #666666; font-size: 10pt; margin: 0;">▲ 本人が「共有して」と言った場合のみ ▲</p>
+  </div>
+  <div class="layer layer-3">
+    <div class="layer-label">
+      <p style="color: #ffffff; font-size: 10pt; margin: 0; font-weight: bold;">個人層</p>
+      <p style="color: #ffffff; font-size: 7pt; margin: 2pt 0 0 0;">その人の秘書だけ</p>
+    </div>
+    <div class="layer-body">
+      <ul style="color: #333333; font-size: 8pt; margin: 0; padding-left: 12pt; line-height: 1.7;">
+        <li>個人のメモ・思考の下書き</li>
+        <li>作業の途中経過</li>
+        <li>個人の好みや作業スタイル</li>
+        <li>まだ共有したくないアイデア</li>
+      </ul>
+      <p style="color: #CC0000; font-size: 7pt; margin: 4pt 0 0 0; font-weight: bold;">※ 本人が許可しない限り、他の秘書には一切見えない</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

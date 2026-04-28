@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F5F7FA; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header {
+  background: #003366; margin: 0; padding: 10pt 30pt;
+}
+.header-title { color: #FFFFFF; font-size: 16pt; font-weight: bold; margin: 0; }
+.header-sub { color: #99BBDD; font-size: 9pt; margin: 3pt 0 0 0; }
+.content { margin: 8pt 25pt; display: flex; gap: 12pt; flex: 1; }
+.scenario { flex: 1; background: #FFFFFF; border-radius: 6pt; padding: 8pt; border: 1pt solid #E0E4EA; display: flex; flex-direction: column; }
+.scenario-num { background: #003366; border-radius: 50%; width: 16pt; height: 16pt; display: flex; align-items: center; justify-content: center; margin: 0 auto 3pt auto; }
+.scenario-num p { font-size: 9pt; color: #FFFFFF; font-weight: bold; margin: 0; }
+.scenario-title { font-size: 9pt; font-weight: bold; color: #003366; margin: 0 0 6pt 0; text-align: center; }
+.msg-user { background: #E8F0FE; border-radius: 4pt; padding: 3pt 5pt; margin: 2pt 8pt 2pt 0; }
+.msg-user p { font-size: 6.5pt; color: #333333; margin: 0; }
+.msg-ai { background: #E8FEF0; border-radius: 4pt; padding: 3pt 5pt; margin: 2pt 0 2pt 8pt; }
+.msg-ai p { font-size: 6.5pt; color: #333333; margin: 0; }
+.label-sm { margin: 3pt 0 1pt 0; }
+.label-sm p { font-size: 5.5pt; color: #666666; font-weight: bold; margin: 0; }
+.output-mini { background: #F0F4FF; border-radius: 4pt; padding: 3pt 5pt; margin: 2pt 0; border-left: 2pt solid #003366; }
+.output-mini p { font-size: 6pt; color: #333333; margin: 0; }
+.output-mini ul { font-size: 6pt; color: #333333; margin: 1pt 0; padding-left: 10pt; }
+.output-mini li { margin: 0; }
+.result-mini { background: #E8FEF0; border-radius: 4pt; padding: 4pt 5pt; margin-top: 4pt; border: 1pt solid #006633; }
+.result-mini p { font-size: 7pt; color: #006633; font-weight: bold; margin: 0; text-align: center; }
+.bottom { margin: 4pt 25pt 8pt 25pt; }
+.bottom p { font-size: 8pt; color: #666666; text-align: center; margin: 0; }
+</style>
+</head>
+<body>
+<div class="header">
+  <p class="header-title">組織の働き方が変わる具体例</p>
+  <p class="header-sub">会議・進捗確認・新メンバー受入 ー 秘書がいるとこう変わる</p>
+</div>
+<div class="content">
+  <div class="scenario">
+    <div class="scenario-num"><p>1</p></div>
+    <p class="scenario-title">会議の議事録と展開</p>
+    <div class="label-sm"><p>会議中（秘書が自動記録）</p></div>
+    <div class="output-mini">
+      <p><b>議事録（自動生成）</b></p>
+      <ul>
+        <li>API仕様の変更を決定</li>
+        <li>担当: Bさん、期限: 4/15</li>
+        <li>CさんはUI側の影響を調査</li>
+      </ul>
+    </div>
+    <div class="label-sm"><p>会議後（秘書が自動展開）</p></div>
+    <div class="msg-ai"><p>Bさんの秘書: API仕様変更が決まりました。4/15期限でIssueを作成しました</p></div>
+    <div class="msg-ai"><p>Cさんの秘書: UI影響調査のタスクが振られています</p></div>
+    <div class="msg-ai"><p>Eさんの秘書（不参加）: API仕様変更が決まりました。バッチ処理に影響があります</p></div>
+    <div class="result-mini"><p>全員参加不要。関係ある情報だけ届く</p></div>
+  </div>
+  <div class="scenario">
+    <div class="scenario-num"><p>2</p></div>
+    <p class="scenario-title">進捗確認</p>
+    <div class="label-sm"><p>リーダー</p></div>
+    <div class="msg-user"><p>API仕様変更の進捗はどうなってる？</p></div>
+    <div class="label-sm"><p>秘書</p></div>
+    <div class="msg-ai"><p>現在の状況をまとめます:</p></div>
+    <div class="output-mini">
+      <p><b>API仕様変更（4/15期限）</b></p>
+      <ul>
+        <li>Bさん: 設計完了、実装中（PR #51）</li>
+        <li>Cさん: UI影響調査完了。変更2件</li>
+        <li>Eさん: バッチ処理の修正PR準備中</li>
+        <li>リスク: テスト環境のDB移行が未完了</li>
+      </ul>
+    </div>
+    <div class="result-mini"><p>誰にも聞かず、秘書に聞くだけで全容把握</p></div>
+  </div>
+  <div class="scenario">
+    <div class="scenario-num"><p>3</p></div>
+    <p class="scenario-title">新メンバーの受入</p>
+    <div class="label-sm"><p>新メンバーFさん</p></div>
+    <div class="msg-user"><p>このプロジェクトの全体像を教えて</p></div>
+    <div class="label-sm"><p>Fさんの秘書</p></div>
+    <div class="msg-ai"><p>プロジェクトの概要をまとめますね:</p></div>
+    <div class="output-mini">
+      <p><b>プロジェクト概要</b></p>
+      <ul>
+        <li>目的: 社内DXポータルの構築</li>
+        <li>技術: React + Python + PostgreSQL</li>
+        <li>現在: Phase 2（API設計中）</li>
+      </ul>
+    </div>
+    <div class="msg-ai"><p>最近の重要な決定事項:</p></div>
+    <div class="output-mini">
+      <ul>
+        <li>4/8 API仕様変更（認証方式をJWTに統一）</li>
+        <li>3/25 DBをMySQL→PostgreSQLに移行決定</li>
+      </ul>
+    </div>
+    <div class="result-mini"><p>先輩の時間を奪わず、自分のペースでキャッチアップ</p></div>
+  </div>
+</div>
+<div class="bottom">
+  <p><b>秘書は開発だけでなく、組織の「情報の流れ」そのものを改善する</b></p>
+</div>
+</body>
+</html>

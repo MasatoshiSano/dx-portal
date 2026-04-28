@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #FFFFFF; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header { background: #1A2B4C; height: 28pt; display: flex; align-items: center; padding: 0 20pt; }
+.header p { color: #FFFFFF; font-size: 8pt; letter-spacing: 1pt; }
+.title-bar { padding: 6pt 20pt 5pt 20pt; border-bottom: 1pt solid #E6E9EF; }
+.main { flex: 1; display: flex; }
+.left { width: 150pt; background: #F0F7F0; padding: 8pt; display: flex; flex-direction: column; gap: 3pt; border-right: 1pt solid #C8E6C9; }
+.right { flex: 1; padding: 5pt 12pt; display: flex; gap: 8pt; }
+.chat-col { flex: 1; display: flex; flex-direction: column; gap: 3pt; }
+.bubble-you { background: #D0E1F5; border-radius: 6pt; padding: 3pt 7pt; }
+.bubble-claude { background: #F6F8FB; border: 1pt solid #E6E9EF; border-radius: 6pt; padding: 3pt 7pt; }
+.file-badge { background: #E8F5E9; border: 1pt solid #2E7D32; border-radius: 3pt; padding: 2pt 6pt; display: inline-block; margin-top: 2pt; }
+.col-title { background: #1A2B4C; border-radius: 3pt; padding: 2pt 6pt; margin-bottom: 3pt; }
+.footer { height: 20pt; display: flex; align-items: center; justify-content: flex-end; padding: 0 20pt; }
+</style>
+</head>
+<body>
+<div class="header">
+  <p>DX PORTAL TEAM  |  ROADMAP</p>
+</div>
+<div class="title-bar">
+  <p style="font-size:7pt; color:#2E7D32; font-weight:bold; margin:0 0 1pt 0;">Phase 3 でできること②  ―  +5名（非コーダー層）6ヶ月目〜</p>
+  <p style="font-size:12pt; font-weight:bold; color:#1A2B4C;">会議メモを渡すだけで、報告用スライドができあがる</p>
+</div>
+<div class="main">
+  <div class="left">
+    <div style="background:#2E7D32; border-radius:3pt; padding:2pt 6pt;">
+      <p style="color:#FFFFFF; font-size:7.5pt; font-weight:bold; text-align:center;">Phase 3②</p>
+    </div>
+    <p style="font-size:8pt; font-weight:bold; color:#1A2B4C; margin:3pt 0 0 0;">資料作成の自動化</p>
+    <p style="font-size:7pt; color:#222222;">全員・特に非コーダー向け</p>
+    <p style="font-size:7pt; color:#8A94A6; margin-top:6pt;">できること</p>
+    <p style="font-size:7pt; color:#222222;">・ 会議メモ → PPT生成</p>
+    <p style="font-size:7pt; color:#222222;">・ データ → グラフ付きExcel</p>
+    <p style="font-size:7pt; color:#222222;">・ 既存PPTにスライド追加</p>
+    <p style="font-size:7pt; color:#8A94A6; margin-top:6pt;">使うSkill</p>
+    <p style="font-size:7pt; color:#222222;">pptx スキル / xlsx スキル</p>
+  </div>
+  <div class="right">
+    <div class="chat-col">
+      <div class="col-title">
+        <p style="color:#FFFFFF; font-size:6.5pt; font-weight:bold;">STEP 1  PPTを依頼</p>
+      </div>
+      <div class="bubble-you">
+        <p style="font-size:6.5pt; color:#4A90E2; font-weight:bold;">👤 You</p>
+        <p style="font-size:7.5pt; color:#222222;">今日の会議メモを渡すので、経営報告用のPowerPointにまとめて。</p>
+        <p style="font-size:7pt; color:#8A94A6;">（メモをペースト...）</p>
+      </div>
+      <div class="bubble-claude">
+        <p style="font-size:6.5pt; color:#8A94A6; font-weight:bold;">🤖 Claude</p>
+        <p style="font-size:7.5pt; color:#222222;">以下の構成で作成します。</p>
+        <p style="font-size:7.5pt; color:#222222;">1. 進捗サマリー</p>
+        <p style="font-size:7.5pt; color:#222222;">2. 完了した施策（3件）</p>
+        <p style="font-size:7.5pt; color:#222222;">3. 来月の計画</p>
+        <p style="font-size:7.5pt; color:#222222;">4. 課題と対応方針</p>
+        <p style="font-size:7.5pt; color:#222222;">このまま作成しますか？</p>
+      </div>
+    </div>
+    <div class="chat-col">
+      <div class="col-title">
+        <p style="color:#FFFFFF; font-size:6.5pt; font-weight:bold;">STEP 2  ファイル完成</p>
+      </div>
+      <div class="bubble-you">
+        <p style="font-size:6.5pt; color:#4A90E2; font-weight:bold;">👤 You</p>
+        <p style="font-size:7.5pt; color:#222222;">お願いします。</p>
+      </div>
+      <div class="bubble-claude">
+        <p style="font-size:6.5pt; color:#8A94A6; font-weight:bold;">🤖 Claude</p>
+        <p style="font-size:7.5pt; color:#222222;">完成しました。</p>
+        <div class="file-badge">
+          <p style="font-size:7.5pt; color:#2E7D32; font-weight:bold;">📊 report_2026-04.pptx</p>
+        </div>
+        <p style="font-size:7pt; color:#8A94A6; margin-top:3pt;">「このスライドを〇〇に変えて」で修正も対応します。</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <p style="font-size:8pt; color:#8A94A6;">8</p>
+</div>
+</body>
+</html>

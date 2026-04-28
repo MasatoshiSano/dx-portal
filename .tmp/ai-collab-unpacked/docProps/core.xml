@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ascii"?>
+<cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dcmitype="http://purl.org/dc/dcmitype/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <dc:title>&#20840;&#21729;&#12395;AI&#31192;&#26360;&#12364;&#12388;&#12367;&#38283;&#30330;&#12392;&#20685;&#12365;&#26041;</dc:title>
+  <dc:subject>PptxGenJS Presentation</dc:subject>
+  <dc:creator>DX Solutions Group</dc:creator>
+  <cp:lastModifiedBy>Sano Masatoshi/&#20304;&#37326; &#38597;&#20426;(MELCO/&#23019;&#20107; &#12477;&#20225;)</cp:lastModifiedBy>
+  <cp:revision>3</cp:revision>
+  <dcterms:created xsi:type="dcterms:W3CDTF">2026-04-02T06:04:42Z</dcterms:created>
+  <dcterms:modified xsi:type="dcterms:W3CDTF">2026-04-02T06:16:06Z</dcterms:modified>
+</cp:coreProperties>

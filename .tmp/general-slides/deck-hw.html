@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>評価・HWエンジニアのための AI活用ガイド</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 720pt;
+      margin: 0 auto;
+      padding: 32pt 0;
+      background: #cccccc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32pt;
+      font-family: "Meiryo UI", "Yu Gothic UI", Arial, sans-serif;
+    }
+
+    .slide {
+      width: 720pt;
+      height: 405pt;
+      position: relative;
+      overflow: hidden;
+      background: #ffffff;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+
+    .header-bar {
+      padding: 14pt 40pt;
+      flex-shrink: 0;
+    }
+
+    .header-bar h1 {
+      color: #fff;
+      font-size: 16pt;
+      margin: 0;
+      font-weight: bold;
+    }
+
+    .card-blue {
+      background: #F0F4FF;
+      border-left: 3pt solid #003366;
+      padding: 8pt 12pt;
+    }
+
+    .card-red {
+      background: #FFF5F5;
+      border-left: 3pt solid #CC0000;
+      padding: 8pt 12pt;
+    }
+
+    .card-green {
+      background: #F0FFF0;
+      border-left: 3pt solid #006633;
+      padding: 8pt 12pt;
+    }
+
+    .prompt-box {
+      background: #1a1a2e;
+      border-radius: 4pt;
+      padding: 8pt 12pt;
+    }
+
+    .prompt-box p,
+    .prompt-box span {
+      color: #ffffff;
+      font-size: 7.5pt;
+    }
+
+    /* ===== Slide 1: Cover ===== */
+    #s1 .top-bar {
+      height: 8pt;
+      background: #003366;
+      flex-shrink: 0;
+    }
+
+    #s1 .cover-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 60pt;
+      text-align: center;
+    }
+
+    #s1 .cover-title {
+      font-size: 22pt;
+      color: #003366;
+      font-weight: bold;
+      line-height: 1.3;
+      margin-bottom: 12pt;
+    }
+
+    #s1 .cover-subtitle {
+      font-size: 11pt;
+      color: #666666;
+      margin-bottom: 10pt;
+    }
+
+    #s1 .cover-note {
+      font-size: 9pt;
+      color: #999999;
+      margin-bottom: 20pt;
+      max-width: 480pt;
+      line-height: 1.5;
+    }
+
+    #s1 .cover-divider {
+      width: 200pt;
+      height: 1pt;
+      background: #003366;
+      margin-bottom: 10pt;
+    }
+
+    #s1 .cover-footer {
+      font-size: 8pt;
+      color: #999999;
+      letter-spacing: 2pt;
+    }
+
+    /* ===== Slide 2: Before / After ===== */
+    #s2 .content-area {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 10pt 24pt 8pt;
+      gap: 8pt;
+      overflow: hidden;
+    }
+
+    #s2 .columns {
+      display: flex;
+      gap: 12pt;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    #s2 .col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 4pt;
+      overflow: hidden;
+      justify-content: space-between;
+    }
+    #s2 .step-card { flex: 1; }
+
+    #s2 .col-title {
+      font-size: 9pt;
+      font-weight: bold;
+      margin-bottom: 3pt;
+    }
+
+    #s2 .col-title.before {
+      color: #CC0000;
+    }
+
+    #s2 .col-title.after {
+      color: #006633;
+    }
+
+    #s2 .step-card {
+      padding: 4pt 8pt;
+      border-radius: 2pt;
+      font-size: 7.5pt;
+      display: flex;
+      align-items: center;
+      gap: 5pt;
+    }
+
+    #s2 .step-card.before-card {
+      background: #FFF5F5;
+      border-left: 3pt solid #CC0000;
+    }
+
+    #s2 .step-card.after-card {
+      background: #F0FFF0;
+      border-left: 3pt solid #006633;
+    }
+
+    #s2 .step-num {
+      font-weight: bold;
+      font-size: 8pt;
+      flex-shrink: 0;
+      width: 12pt;
+    }
+
+    #s2 .step-num.red { color: #CC0000; }
+    #s2 .step-num.green { color: #006633; }
+
+    #s2 .summary-box {
+      background: #F0F4FF;
+      border-left: 4pt solid #003366;
+      padding: 6pt 12pt;
+      font-size: 8pt;
+      color: #003366;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    /* ===== Slide 3: EPS AI direct ===== */
+    #s3 .content-area {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 8pt 24pt 6pt;
+      gap: 6pt;
+      overflow: hidden;
+    }
+
+    #s3 .flow-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      flex-shrink: 0;
+      padding: 4pt 0;
+    }
+
+    #s3 .flow-box {
+      background: #F0F4FF;
+      border: 1.5pt solid #003366;
+      border-radius: 4pt;
+      padding: 6pt 8pt;
+      text-align: center;
+      font-size: 7pt;
+      color: #003366;
+      font-weight: bold;
+      min-width: 110pt;
+      line-height: 1.3;
+    }
+
+    #s3 .flow-box .label {
+      font-size: 6pt;
+      color: #666;
+      font-weight: normal;
+      display: block;
+    }
+
+    #s3 .flow-arrow {
+      font-size: 14pt;
+      color: #003366;
+      padding: 0 4pt;
+      flex-shrink: 0;
+    }
+
+    #s3 .columns {
+      display: flex;
+      gap: 12pt;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    #s3 .col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 4pt;
+    }
+
+    #s3 .col-title {
+      font-size: 8.5pt;
+      font-weight: bold;
+      color: #CC0000;
+      margin-bottom: 2pt;
+    }
+
+    #s3 .feature-item {
+      font-size: 7.5pt;
+      color: #333;
+      padding: 3pt 0 3pt 8pt;
+      border-left: 2pt solid #CC0000;
+      background: #FFF5F5;
+      margin-bottom: 2pt;
+      padding-right: 4pt;
+    }
+
+    #s3 .prompt-label {
+      font-size: 8pt;
+      color: #ffffff;
+      font-weight: bold;
+      margin-bottom: 4pt;
+    }
+
+    #s3 .point-box {
+      background: #FFFBF0;
+      border-left: 4pt solid #CC9900;
+      padding: 5pt 12pt;
+      font-size: 7.5pt;
+      color: #664400;
+      flex-shrink: 0;
+    }
+
+    /* ===== Slide 4: Data Analysis ===== */
+    #s4 .content-area {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 8pt 24pt 6pt;
+      gap: 6pt;
+      overflow: hidden;
+    }
+
+    #s4 .flow-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      flex-shrink: 0;
+      padding: 4pt 0;
+    }
+
+    #s4 .flow-box {
+      background: #F0FFF0;
+      border: 1.5pt solid #006633;
+      border-radius: 4pt;
+      padding: 6pt 8pt;
+      text-align: center;
+      font-size: 7pt;
+      color: #006633;
+      font-weight: bold;
+      min-width: 130pt;
+      line-height: 1.3;
+    }
+
+    #s4 .flow-box .label {
+      font-size: 6pt;
+      color: #666;
+      font-weight: normal;
+      display: block;
+    }
+
+    #s4 .flow-arrow {
+      font-size: 14pt;
+      color: #006633;
+      padding: 0 4pt;
+      flex-shrink: 0;
+    }
+
+    #s4 .columns {
+      display: flex;
+      gap: 12pt;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    #s4 .col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 4pt;
+    }
+
+    #s4 .col-title {
+      font-size: 8.5pt;
+      font-weight: bold;
+      color: #006633;
+      margin-bottom: 2pt;
+    }
+
+    #s4 .feature-item {
+      font-size: 7.5pt;
+      color: #333;
+      padding: 3pt 0 3pt 8pt;
+      border-left: 2pt solid #006633;
+      background: #F0FFF0;
+      margin-bottom: 2pt;
+      padding-right: 4pt;
+    }
+
+    #s4 .neuron-box {
+      background: #F0F4FF;
+      border-left: 3pt solid #003366;
+      padding: 5pt 8pt;
+      font-size: 7pt;
+      color: #003366;
+      margin-top: 4pt;
+      flex-shrink: 0;
+    }
+
+    #s4 .neuron-box strong {
+      display: block;
+      font-size: 7.5pt;
+      margin-bottom: 2pt;
+    }
+
+    /* ===== Slide 5: Use Cases ===== */
+    #s5 .content-area {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 8pt 24pt 0;
+      gap: 6pt;
+      overflow: hidden;
+    }
+
+    #s5 .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 6pt;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    #s5 .use-card {
+      border: 1pt solid #e0e0e0;
+      border-radius: 4pt;
+      padding: 6pt 8pt;
+      display: flex;
+      flex-direction: column;
+      gap: 3pt;
+      overflow: hidden;
+    }
+
+    #s5 .use-label {
+      font-size: 7pt;
+      font-weight: bold;
+      padding: 2pt 6pt;
+      border-radius: 2pt;
+      display: inline-block;
+      align-self: flex-start;
+    }
+
+    #s5 .use-label.blue {
+      background: #003366;
+      color: #fff;
+    }
+
+    #s5 .use-label.red {
+      background: #CC0000;
+      color: #fff;
+    }
+
+    #s5 .use-label.green {
+      background: #006633;
+      color: #fff;
+    }
+
+    #s5 .use-label.gray {
+      background: #555555;
+      color: #fff;
+    }
+
+    #s5 .use-title {
+      font-size: 8.5pt;
+      font-weight: bold;
+      color: #222;
+    }
+
+    #s5 .use-arrow {
+      font-size: 7pt;
+      color: #999;
+    }
+
+    #s5 .use-tool {
+      font-size: 7pt;
+      color: #555;
+      font-weight: bold;
+    }
+
+    #s5 .use-prompt {
+      font-size: 6.5pt;
+      color: #777;
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    #s5 .footer-bar {
+      background: #003366;
+      color: #ffffff;
+      font-size: 8pt;
+      padding: 6pt 24pt;
+      text-align: center;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===========================
+       Slide 1: Cover
+       =========================== -->
+  <section class="slide" id="s1">
+    <div class="top-bar"></div>
+    <div class="cover-body">
+      <p class="cover-title">評価・HWエンジニアのための<br>AI活用ガイド</p>
+      <p class="cover-subtitle">評価作業の段取りがこう変わる</p>
+      <p class="cover-note">AI が EPS に直接つながり、仕様書を渡すだけで評価・リプロ・帳票作成を代行します</p>
+      <div class="cover-divider"></div>
+      <p class="cover-footer">社 外 秘</p>
+    </div>
+  </section>
+
+  <!-- ===========================
+       Slide 2: Before / After
+       =========================== -->
+  <section class="slide" id="s2">
+    <div class="header-bar" style="background: #CC0000;">
+      <h1>評価作業、こう変わります</h1>
+    </div>
+    <div class="content-area">
+      <div class="columns">
+        <!-- Before -->
+        <div class="col">
+          <p class="col-title before">Before（今まで）</p>
+          <div class="step-card before-card">
+            <span class="step-num red">1.</span>
+            <span>EPS接続・環境セットアップ（手動）</span>
+          </div>
+          <div class="step-card before-card">
+            <span class="step-num red">2.</span>
+            <span>評価仕様書を見ながら手順実施</span>
+          </div>
+          <div class="step-card before-card">
+            <span class="step-num red">3.</span>
+            <span>測定データ収集・mdfファイル整理</span>
+          </div>
+          <div class="step-card before-card">
+            <span class="step-num red">4.</span>
+            <span>Excelで集計・グラフ作成</span>
+          </div>
+          <div class="step-card before-card">
+            <span class="step-num red">5.</span>
+            <span>DR帳票・報告書を手作業で記入</span>
+          </div>
+        </div>
+        <!-- After -->
+        <div class="col">
+          <p class="col-title after">After（AIを使うと）</p>
+          <div class="step-card after-card">
+            <span class="step-num green">1.</span>
+            <span>評価仕様書をAIに渡す</span>
+          </div>
+          <div class="step-card after-card">
+            <span class="step-num green">2.</span>
+            <span>AIがEPSに直接接続して評価実施</span>
+          </div>
+          <div class="step-card after-card">
+            <span class="step-num green">3.</span>
+            <span>データ収集・FFT解析もAIが実行</span>
+          </div>
+          <div class="step-card after-card">
+            <span class="step-num green">4.</span>
+            <span>グラフ・レポートを自動生成</span>
+          </div>
+          <div class="step-card after-card">
+            <span class="step-num green">5.</span>
+            <span>DR帳票も自動作成して提出</span>
+          </div>
+        </div>
+      </div>
+      <div class="summary-box">
+        &#10003; あなたがやることは：仕様書を渡す &rarr; 結果を確認する &rarr; 判断する、だけ
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       Slide 3: EPS AI Direct
+       =========================== -->
+  <section class="slide" id="s3">
+    <div class="header-bar" style="background: #003366;">
+      <h1>EPS をAIで直接動かす</h1>
+    </div>
+    <div class="content-area">
+      <!-- Flow -->
+      <div class="flow-row">
+        <div class="flow-box">
+          あなた<br>
+          <span class="label">自然言語で指示</span>
+        </div>
+        <span class="flow-arrow">&#10140;</span>
+        <div class="flow-box">
+          mio エージェント<br>
+          <span class="label">指示を解釈・実行</span>
+        </div>
+        <span class="flow-arrow">&#10140;</span>
+        <div class="flow-box">
+          SSL Tunnel Client<br>
+          <span class="label">安全な通信路</span>
+        </div>
+        <span class="flow-arrow">&#10140;</span>
+        <div class="flow-box">
+          EPS / PC<br>
+          <span class="label">物理・仮想CAN</span>
+        </div>
+      </div>
+      <!-- Columns -->
+      <div class="columns">
+        <!-- Left: できること -->
+        <div class="col">
+          <p class="col-title">できること（HSIレベル）</p>
+          <div class="feature-item">CAN / 仮想CAN を介した Vibe coding</div>
+          <div class="feature-item">UDS Diag での Diagnostic 自動操作</div>
+          <div class="feature-item">XCP 経由のキャリブレーション</div>
+          <div class="feature-item">無料リプロツール（vFlash代替）をその場で作成・実行</div>
+          <div class="feature-item">評価仕様書に沿った自動評価＋レポート出力</div>
+        </div>
+        <!-- Right: プロンプト例 -->
+        <div class="col">
+          <div class="prompt-box" style="flex: 1;">
+            <p class="prompt-label">プロンプト例</p>
+            <p style="color:#ffffff; font-size:7.5pt; margin-bottom:6pt; padding: 4pt 0; border-bottom: 1pt solid #444;">&ldquo;評価仕様書に従って EPSを直接評価して&rdquo;</p>
+            <p style="color:#ffffff; font-size:7.5pt; margin-bottom:6pt; padding: 4pt 0; border-bottom: 1pt solid #444;">&ldquo;VectorのvFlashみたいな無料リプロツールを作って&rdquo;</p>
+            <p style="color:#ffffff; font-size:7.5pt; padding: 4pt 0;">&ldquo;XXX.mdfのI軸電流をFFTで評価してグラフ出力して&rdquo;</p>
+          </div>
+        </div>
+      </div>
+      <!-- Point box -->
+      <div class="point-box">
+        &#128161; ポイント：物理CANでも仮想CANでも接続可能。ローカルPCのフォルダも直接操作。
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       Slide 4: Data Analysis
+       =========================== -->
+  <section class="slide" id="s4">
+    <div class="header-bar" style="background: #006633;">
+      <h1>波形・データ分析をAIに任せる</h1>
+    </div>
+    <div class="content-area">
+      <!-- Flow -->
+      <div class="flow-row">
+        <div class="flow-box">
+          ① mdfファイルを渡す<br>
+          <span class="label">ドラッグ&amp;ドロップ or パス指定</span>
+        </div>
+        <span class="flow-arrow">&#10140;</span>
+        <div class="flow-box">
+          ② AIがPythonコードを<br>自動生成・実行<br>
+          <span class="label">Code Interpreter</span>
+        </div>
+        <span class="flow-arrow">&#10140;</span>
+        <div class="flow-box">
+          ③ グラフ・分析結果を即表示<br>
+          <span class="label">その場で確認・修正指示</span>
+        </div>
+      </div>
+      <!-- Columns -->
+      <div class="columns">
+        <!-- Left: できる分析の例 -->
+        <div class="col">
+          <p class="col-title">できる分析の例</p>
+          <div class="feature-item">FFT解析（周波数特性）</div>
+          <div class="feature-item">トルクリップル解析</div>
+          <div class="feature-item">電流・電圧の時系列グラフ</div>
+          <div class="feature-item">複数ファイルの一括比較</div>
+          <div class="feature-item">異常値検出・レポート出力</div>
+        </div>
+        <!-- Right: プロンプト例 + Neuron連携 -->
+        <div class="col">
+          <div class="prompt-box">
+            <p class="prompt-label">プロンプト例</p>
+            <p style="color:#ffffff; font-size:7.5pt; margin-bottom:5pt;">&ldquo;XXX.mdfのI軸電流の周波数特性をFFTで評価して&rdquo;</p>
+            <p style="color:#ffffff; font-size:7.5pt;">&ldquo;MELMB EPS製部の過去評価結果とNeuronで比較して&rdquo;</p>
+          </div>
+          <div class="neuron-box">
+            <strong>さらにNeuronと連携すると</strong>
+            Neuronに蓄積した過去データ・手順書・判定基準と組み合わせることで、AIが自動判定まで実施可能
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       Slide 5: Use Cases Summary
+       =========================== -->
+  <section class="slide" id="s5">
+    <div class="header-bar" style="background: #003366;">
+      <h1>こんな時に使えます</h1>
+    </div>
+    <div class="content-area">
+      <div class="grid">
+        <!-- Card 1 -->
+        <div class="use-card">
+          <span class="use-label blue">評価</span>
+          <p class="use-title">評価を自動化したい</p>
+          <p class="use-arrow">&#8595;</p>
+          <p class="use-tool">HSI / SSL Tunnel</p>
+          <p class="use-prompt">&ldquo;評価仕様書に従ってEPSを直接評価して&rdquo;</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="use-card">
+          <span class="use-label green">解析</span>
+          <p class="use-title">mdfを分析したい</p>
+          <p class="use-arrow">&#8595;</p>
+          <p class="use-tool">Code Interpreter</p>
+          <p class="use-prompt">&ldquo;XXX.mdfをFFTで解析してグラフ出力して&rdquo;</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="use-card">
+          <span class="use-label red">リプロ</span>
+          <p class="use-title">リプロしたい（無料で）</p>
+          <p class="use-arrow">&#8595;</p>
+          <p class="use-tool">mio スキル</p>
+          <p class="use-prompt">&ldquo;vFlash代替ツールを作って実行して&rdquo;</p>
+        </div>
+        <!-- Card 4 -->
+        <div class="use-card">
+          <span class="use-label blue">ナレッジ</span>
+          <p class="use-title">過去の評価結果を探したい</p>
+          <p class="use-arrow">&#8595;</p>
+          <p class="use-tool">Neuron連携</p>
+          <p class="use-prompt">&ldquo;EPS制御ゲインの過去の評価結果をNeuronで探して&rdquo;</p>
+        </div>
+        <!-- Card 5 -->
+        <div class="use-card">
+          <span class="use-label red">帳票</span>
+          <p class="use-title">DRシートを作りたい</p>
+          <p class="use-arrow">&#8595;</p>
+          <p class="use-tool">DRシートエージェント</p>
+          <p class="use-prompt">&ldquo;PR#XXの議事録からDR帳票を作成して&rdquo;</p>
+        </div>
+        <!-- Card 6 -->
+        <div class="use-card">
+          <span class="use-label gray">スタート</span>
+          <p class="use-title">まず試してみたい</p>
+          <p class="use-arrow">&#8595;</p>
+          <p class="use-tool">Quick Start</p>
+          <p class="use-prompt">Open WebUIに登録 &rarr; チャットで試す &rarr; mioを使う</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bar">
+      詳細は OneNote ドキュメントを参照 ／ 登録・設定は Quick start ページへ
+    </div>
+  </section>
+
+</body>
+</html>
